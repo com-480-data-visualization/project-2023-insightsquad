@@ -23,6 +23,10 @@ Please, fill the following sections about your project.
 >
 > Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
 
+The [first dataset](https://www.kaggle.com/datasets/gauthamp10/apple-appstore-apps) from Kaggle is a collection of data related to iOS apps available on the Apple App Store. It includes information on over 1.2 million apps and similar to the previous dataset it contains details such as the app's name and ID, category, rating, price, developer information, content rating, and users' ratings and reviews.  
+
+The [second dataset](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps) is again from Kaggle, from the same author as the first one, and for this reason, it shares many similarities. It is a comprehensive collection of data related to Android apps available on the Google Play Store, with information on over 2.3 million apps. Among the information that can be found, there are the same as in the App Store one plus some precious data such as the number of installs, privacy policy, if it contains in-app purchases or not, and if it has been selected as "Editors' choice". This dataset will be even more useful to analyze the popularity of different types of Android apps and understand trends in the Android app market, while the Apple Store's dataset is more limited but can be used to do some comparison and spot possible differences among the two platforms.
+
 ### Problematic
 
 > Frame the general topic of your visualization and the main axis that you want to develop.
