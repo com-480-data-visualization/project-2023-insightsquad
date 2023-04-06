@@ -37,8 +37,7 @@ The goal of this project is then to develop such visualizations by analyzing Goo
 
 ### Exploratory Data Analysis
 
-> Pre-processing of the data set you chose
-> - Show some basic statistics and get insights about the data
+Our exploratory data analysis can be found in this [notebook](https://github.com/com-480-data-visualization/project-2023-insightsquad/blob/master/initial_notebook.ipynb)
 
 ### Related work
 
