@@ -43,6 +43,24 @@ Our exploratory data analysis can be found in this [notebook](https://github.com
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
 
+The Google Play Store dataset is a quite famous dataset on Kaggle and has already been explored by many notebooks, and some works can be found on the Apple Store dataset too. Most such notebooks do general exploratory data analysis of the dataset, while others try to train predictors of the number of reviews of a certain app or other simple classifiers. None of these works were trying to address the specific problem that we described and especially not by putting together Android and iOS data. Furthermore, these notebooks provided basic visualizations and statistics, while we plan to go further and tell a "story of success" by creating interactive visualizations that allow users to explore the data in a more intuitive way, as well as more insightful and aesthetically pleasant representations.
+
+To do so, we took inspiration from the best websites about data visualisation such as:
+
+- [The 25 Best Data Visualizations of 2023](https://visme.co/blog/best-data-visualizations/)
+- [Dataviz Inspiration](https://www.dataviz-inspiration.com/)
+- [Web Design Done Well: Delightful Data Visualization Examples](https://www.smashingmagazine.com/2022/06/web-design-done-well-delightful-data-visualization-examples/) 
+- [The D3 graph gallery](https://d3-graph-gallery.com/)
+- [DataIsBeautiful from Reddit](https://www.reddit.com/r/dataisbeautiful/)
+
+Among those, we found the first two full of very creative ideas, and we could learn how showing data in a visually pleasant way really makes the difference from learning something out of the data or not. We then aim to do similarly, not only showing useful data in a clear and useful way but also from an original point of view.  More precisely, the following projects really caught our attention:
+- [What it takes to go to space](https://www.behance.net/gallery/86241381/Data-Visualisation-What-it-takes-to-go-to-space)
+- [The Slow Loss](https://www.behance.net/gallery/151474693/The-Slow-Loss-La-Lettura-dataviz)
+- [X-Men comics exploration](https://r-graph-gallery.com/web-streamchart-with-ggstream.html)
+- [Adyen's Shareholder report](https://www.visualcinnamon.com/portfolio/adyen-report-2019/)
+
+Following these great examples, we'll try to create our own original and unique visualization.
+
 ## Milestone 2 (7th May, 5pm)
 
 **10% of the final grade**
