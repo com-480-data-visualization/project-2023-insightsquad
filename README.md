@@ -39,12 +39,6 @@ Our exploratory data analysis can be found in this [notebook](https://github.com
 
 ### Related work
 
-
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
-
 The Google Play Store dataset is a quite famous dataset on Kaggle and has already been explored by many notebooks, and some works can be found on the Apple Store dataset too. Most such notebooks do general exploratory data analysis of the dataset, while others try to train predictors of the number of reviews of a certain app or other simple classifiers. None of these works were trying to address the specific problem that we described and especially not by putting together Android and iOS data. Furthermore, these notebooks provided basic visualizations and statistics, while we plan to go further and tell a "story of success" by creating interactive visualizations that allow users to explore the data in a more intuitive way, as well as more insightful and aesthetically pleasant representations.
 
 To do so, we took inspiration from the best websites about data visualisation such as:
