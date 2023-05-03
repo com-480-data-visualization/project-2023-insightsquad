@@ -71,11 +71,29 @@ The website is designed to provide an overview and detailed analysis of mobile a
 
 #### First part: Homescreen
 At the top, there will be a horizontal menu to jump to each part of the website.
-In the first container, there is text with the headings: number of downloads and number of apps. This gives a general overview of the website's content and what users can expect to find.
+
+The first container is a general overview of the website's content and what users can expect to find. A big heading with the number of total apps covered by the dataset as well as the cumulative amount of downloads of such apps will be displayed. Then we might also put a short phrase to better explain the aim of the visualizations.
+
+<img width="805" alt="image" src="https://user-images.githubusercontent.com/62103572/235963915-40e1020a-cc07-4563-a643-66543f058a09.png">
 
 
-The second container contains a slider that users can use to switch between Apple and Android platforms. This container also includes a Sankey diagram, which provides a visual representation of the dataset and gives insight into the revenue model and success of different categories. The Sankey diagram contains the following information: categories, free/paid, with/without ads, with/without in-app purchases, number of downloads and reviews, stars, content rating. For Android apps, there is also a slider that users can use to change the Sankey diagram to editor choice apps diagram, containing the following information: categories , free/paid , with/without ads , with/without in-app purchases , top 10/100/1000 number of downloads and reviews , stars, content rating.
-In the third container, users can view a time evolution plot, which shows the evolution of the top 5 most present categories in time with a streamgraph. Users can switch from category to content rating. On the side, there are several famous apps and hovering/clicking on them show when they were launched in the timeline.
+### Second part: Sankey Diagram
+
+The second container contains a Sankey diagram, which provides a wider and more general visual representation of the dataset and gives insight into the revenue model and success of different categories. The Sankey diagram will contain all or a subset of the following information: categories, free/paid, with/without ads, with/without in-app purchases, number of downloads and reviews, stars, content rating. We will experiment the optimal order of such informations to better convey the message of different revenue models related to different categories, popularity level and so on.  
+
+A slider will allow users to switch between Apple and Android markets. In addition, it will allow users to switch to "Editor's choice", allowing the Sankey DIagram to show only the apps that were selected to be part of this special category on Google Play Store. This Sankey diagram could be slightly different, containing the following information: categories , free/paid , with/without ads , with/without in-app purchases , top 10/100/1000 number of downloads and reviews , stars, content rating.
+
+
+<img width="803" alt="image" src="https://user-images.githubusercontent.com/62103572/235966770-5d6852ed-0713-4b78-8377-b9ee28c81fff.png">
+
+
+### Third part: Streamgraph
+In the third container, users can view a time evolution plot, which shows the change of the top 5 most present categories in time with a Streamgraph. Users can switch from category to content rating. On the side, there are several famous apps and hovering/clicking on them show when they were launched in the timeline.
+
+Extra: we will display the logo of most famous apps directly on the plot, as shown in the sketch below.
+
+
+
 In the fourth container, users can choose among different categories using the Android/Apple slider. There is a treemap of all the categories, and when users click on one of them, they can zoom in to get extra information about it. The top 10 apps are displayed with their number of downloads. There is also a button to choose between free or paid apps, and users can view the proportion within each rectangle.
 Finally, there is also a stacked bar plot that shows free/paid apps and those with ads or not, with in-app purchases or not, of all apps of the category, or only the top 1000, 100, or 10.
 Overall, the website provides a comprehensive analysis of mobile apps on both Apple and Android platforms with multiple data visualizations and interactive features.
