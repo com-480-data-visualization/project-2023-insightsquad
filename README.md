@@ -63,6 +63,15 @@ Following these great examples, we'll try to create our own original and unique 
 
 The initial website of our website is accessible [here](https://com-480-data-visualization.github.io/project-2023-insightsquad/website/index.html)
 
+#### Table of contents:
+  * [Website description](#website-description)
+  *[First part: Homescreen](#first-part--homescreen)
+    + [Second part: Sankey Diagram](#second-part--sankey-diagram)
+    + [Third part: Streamgraph](#third-part--streamgraph)
+    + [Fourth part: Treemap](#fourth-part--treemap)
+  * [Tools to be used and inspirations from lectures](#tools-to-be-used-and-inspirations-from-lectures)
+
+
 A visual draft of the website is providede below:
 ![Homepage 1](https://user-images.githubusercontent.com/62103572/235930972-bbe4e114-932d-4167-bdfd-83ad363d4efc.png)
 
@@ -119,15 +128,18 @@ Finally, there is also a stacked bar plot that shows free/paid apps and those wi
 
 ### Tools to be used and inspirations from lectures
 Here are the tools and lectures we will use for our website and visualizations:
-- Python for data processing.
+- Python for data processingm. Pandas library for loading dataset. 
+Scikit-learn library  for more complex statistic to be done on the data.
+- HTML, CSS and JavaScript for the  website skeleton and behaviour.
 - D3.js for visualizations.
+- Lecture 1,2,3: basics of HTML, CSS, and JavaScript
 - Lecture 4: Presentation of D3.js and some basic use case.
 - Lecture 5: Interactivity for our charts.
+- Lecture 7: Used the advices on dos and donts of data visualizations for the design of our website and choice of the visualizations.
+- Lecture 9: Chose a donut chart instead of a word cloud for most common words due to the cons of word clouds explained in this lesson.
 - Lecture 10: Treemap.
 - Lecture 11.1: Stacked area chart, Sankey diagram.
 - Lecture 12.1: About how to display a chart to be more appealing and telling for the information we want to show, what kind of fonts to choose.
-
-
 
 
 
