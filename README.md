@@ -80,7 +80,7 @@ It is a general overview of the website's content and what users can expect to f
 <img width="805" alt="image" src="https://user-images.githubusercontent.com/62103572/235963915-40e1020a-cc07-4563-a643-66543f058a09.png">
 
 
-### Second part: Sankey Diagram
+#### Second part: Sankey Diagram
 
 We have a Sankey diagram, which provides a wider and more general visual representation of the dataset and gives insight into the revenue model and success of different categories. The Sankey diagram will contain all or a subset of the following information: categories, free/paid, with/without ads, with/without in-app purchases, number of downloads and reviews, stars, content rating. We will experiment to find the optimal order of such informations to better convey the message of different revenue models related to different categories, popularity level and so on.  
 
@@ -90,25 +90,38 @@ A slider will allow users to switch between Apple and Android markets. In additi
 <img width="803" alt="image" src="https://user-images.githubusercontent.com/62103572/235966770-5d6852ed-0713-4b78-8377-b9ee28c81fff.png">
 
 
-### Third part: Streamgraph
+#### Third part: Streamgraph
 
-Users can view a time evolution plot, which shows the change of the top 5 most present categories in time with a Streamgraph. Users can switch from category to content rating. On the side, there are several famous apps and hovering/clicking on them show when they were launched in the timeline.
+Users can view a time evolution plot, which shows the change of the top 5 most present categories in time with a Streamgraph. Users can switch from category to content rating with a slider. As previosuly, another slider will allow users to switch from "Android" to "Apple" or "Editor's choice". On the side, there are several famous apps and hovering/clicking on them show when they were launched in the timeline.
 
+**Extra ideas**: 
+- We will display the logo of most famous apps directly on the streamgraph timeline, as shown in the sketch below. \
+- Extract application’s logo with API and show logos together with apps' names. \
 
-### Fourth part: Treemap
+<img width="873" alt="image" src="https://user-images.githubusercontent.com/62103572/236196714-a8be2f7a-2049-4904-a955-6d1a554a3067.png">
 
-Users can choose among different categories using the Android/Apple slider. There is a treemap of all the categories, and when users click on one of them, they can zoom in to get extra information about it. The top 10 apps are displayed with their number of downloads. There is also a button to choose between free or paid apps, and users can view the proportion within each rectangle.
+#### Fourth part: Treemap
+
+Users can choose among different categories using the Android/Apple slider. There is a treemap of all the categories (the size of the category will be proportional to the number of downloads of apps in that category), and when users click on one of them, they  get extra information about it: the top 10 apps of that category will be displayed with their number of downloads. There is also a button to choose between free or paid apps, and users can view the proportion within each rectangle.
+
+There will be a Donut chart with the 10 most common words in that category's apps. The aim of this is to understand "trends" in that category, for example in "Tools" we migth find that "Calculator" is the most common word and therefore app.
+
 Finally, there is also a stacked bar plot that shows free/paid apps and those with ads or not, with in-app purchases or not, of all apps of the category, or only the top 1000, 100, or 10.
-Overall, the website provides a comprehensive analysis of mobile apps on both Apple and Android platforms with multiple data visualizations and interactive features.
+
+**Extra ideas**: \
+- Instead of showing the top 10 apps of that category as a list, clicking on a category on the treemap will turn the treemap in a circular packing chart of 10/100/1000 (can be chosen with a button) most downloaded apps. Hovering one of them will show specific information about that app as shown in the image below (top right). \
+- Extract application’s logo with API and show logos together with apps' names. \
+- Smoother transitions\animations when interacting with the visualizations and using sliders to change the content of plots. \
+- A 2D correlation density plot of reviews rating and install number, as in the image below. If users click a category, it goes from general data to that category's data. 
+
+<img width="712" alt="image" src="https://user-images.githubusercontent.com/62103572/236201533-57f1e961-ebc6-45f4-abed-0ea4bbf059e6.png">
 
 
-### Extra ideas
+### Tools to be used and inspirations from lectures:
 
-We will display the logo of most famous apps directly on the streamgraph timeline, as shown in the corresponding sketch. \
-The page with extra information will have a circular packing chart for most downloaded apps. Hovering one of them will show specific information about that app. \
-Extract application’s logo with API. \
-Smoother transition between pages. \
-2D correlation density plot of reviews rating and install number. If users click a category, it goes from general to that category. 
+
+
+
 
 
 
