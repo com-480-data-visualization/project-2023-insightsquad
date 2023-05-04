@@ -72,7 +72,7 @@ The initial website of our website is accessible [here](https://com-480-data-vis
   * [Tools to be used and inspirations from lectures](#tools-to-be-used-and-inspirations-from-lectures)
 
 
-A visual draft of the website is providede below:
+A visual draft of the website is provided below:
 ![Homepage 1](https://user-images.githubusercontent.com/62103572/235930972-bbe4e114-932d-4167-bdfd-83ad363d4efc.png)
 
 
