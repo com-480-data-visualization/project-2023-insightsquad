@@ -95,8 +95,8 @@ A slider will allow users to switch between Apple and Android markets. In additi
 Users can view a time evolution plot, which shows the change of the top 5 most present categories in time with a Streamgraph. Users can switch from category to content rating with a slider. As previosuly, another slider will allow users to switch from "Android" to "Apple" or "Editor's choice". On the side, there are several famous apps and hovering/clicking on them show when they were launched in the timeline.
 
 **Extra ideas**: 
-- We will display the logo of most famous apps directly on the streamgraph timeline, as shown in the sketch below. \
-- Extract application’s logo with API and show logos together with apps' names. \
+- We will display the logo of most famous apps directly on the streamgraph timeline, as shown in the sketch below.
+- Extract application’s logo with API and show logos together with apps' names.
 
 <img width="873" alt="image" src="https://user-images.githubusercontent.com/62103572/236196714-a8be2f7a-2049-4904-a955-6d1a554a3067.png">
 
@@ -108,16 +108,24 @@ There will be a Donut chart with the 10 most common words in that category's app
 
 Finally, there is also a stacked bar plot that shows free/paid apps and those with ads or not, with in-app purchases or not, of all apps of the category, or only the top 1000, 100, or 10.
 
-**Extra ideas**: \
-- Instead of showing the top 10 apps of that category as a list, clicking on a category on the treemap will turn the treemap in a circular packing chart of 10/100/1000 (can be chosen with a button) most downloaded apps. Hovering one of them will show specific information about that app as shown in the image below (top right). \
-- Extract application’s logo with API and show logos together with apps' names. \
-- Smoother transitions\animations when interacting with the visualizations and using sliders to change the content of plots. \
+**Extra ideas**:
+- Instead of showing the top 10 apps of that category as a list, clicking on a category on the treemap will turn the treemap in a circular packing chart of 10/100/1000 (can be chosen with a button) most downloaded apps. Hovering one of them will show specific information about that app as shown in the image below (top right).
+- Extract application’s logo with API and show logos together with apps' names.
+- Smoother transitions\animations when interacting with the visualizations and using sliders to change the content of plots.
 - A 2D correlation density plot of reviews rating and install number, as in the image below. If users click a category, it goes from general data to that category's data. 
 
 <img width="712" alt="image" src="https://user-images.githubusercontent.com/62103572/236201533-57f1e961-ebc6-45f4-abed-0ea4bbf059e6.png">
 
 
-### Tools to be used and inspirations from lectures:
+### Tools to be used and inspirations from lectures
+Here are the tools and lectures we will use for our website and visualizations:
+- Python for data processing.
+- D3.js for visualizations.
+- Lecture 4: Presentation of D3.js and some basic use case.
+- Lecture 5: Interactivity for our charts.
+- Lecture 10: Treemap.
+- Lecture 11.1: Stacked area chart, Sankey diagram.
+- Lecture 12.1: About how to display a chart to be more appealing and telling for the information we want to show, what kind of fonts to choose.
 
 
 
