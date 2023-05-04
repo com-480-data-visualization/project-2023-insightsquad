@@ -65,10 +65,10 @@ The initial website of our website is accessible [here](https://com-480-data-vis
 
 #### Table of contents:
   * [Website description](#website-description)
-    + [First part: Homescreen](#first-part--homescreen)
-    + [Second part: Sankey Diagram](#second-part--sankey-diagram)
-    + [Third part: Streamgraph](#third-part--streamgraph)
-    + [Fourth part: Treemap](#fourth-part--treemap)
+    + [First part: Homescreen](#first-part-homescreen)
+    + [Second part: Sankey Diagram](#second-part-sankey-diagram)
+    + [Third part: Streamgraph](#third-part-streamgraph)
+    + [Fourth part: Treemap](#fourth-part-treemap)
   * [Tools to be used and inspirations from lectures](#tools-to-be-used-and-inspirations-from-lectures)
 
 
