@@ -10,10 +10,24 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
     .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]);
 
 // Read data
-var android_data = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
-var apple_data = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
-  
+var android_data_path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
+var apple_data_path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
+var android_data
+var apple_data
+
+d3.csv(android_data_path, function(data) {
+  android_data = data
+  console.log("android data: " + android_data)
+})
+
+d3.csv(apple_data_path, function(data) {
+  apple_data = data
+  console.log("apple data: " + apple_data)
+})
+
 function update(data, isAndroid) {
+  console.log("update called with data: " + data)
+
   // Remove previous svg
   d3.select("#treemap").selectAll("svg").remove()
 
@@ -26,9 +40,6 @@ function update(data, isAndroid) {
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-
-
-  console.log(data)
 
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
@@ -176,29 +187,13 @@ function getTextWidth(text, fontSize) {
 }
 
 d3.select("#android_button_treemap").on("click", function() {
-  d3.csv(android_data, function(data) {
-    if (data) {
-      update(data, true)
-    } else {
-      console.log("Error loading data")
-    }
-  })
+  update(android_data, true)
 })
 
 d3.select("#apple_button_treemap").on("click", function() {
-  d3.csv(apple_data, function(data) {
-    if (data) {
-      update(data, false)
-    } else {
-      console.log("Error loading data")
-    }
-  })
+  update(apple_data, false)
 })
 
-d3.csv(android_data, function(data) {
-  if (data) {
-    update(data, true)
-  } else {
-    console.log("Error loading data")
-  }
+d3.csv(android_data_path, function(data) {
+  update(data, true)
 })
