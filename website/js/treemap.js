@@ -10,8 +10,8 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
     .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]);
 
 // Read data
-var android_data = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
-var apple_data = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
+var android_data = 'data/treemap/play_store_category_count.csv'
+var apple_data = 'data/treemap/apple_store_category_count.csv'
   
 function update(data, isAndroid) {
   // Remove previous svg
