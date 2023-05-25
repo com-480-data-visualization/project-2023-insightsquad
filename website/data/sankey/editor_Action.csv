@@ -1,0 +1,23 @@
+from,to,weight
+Action,>1M,73
+Action,100K-1M,3
+>1M,4 stars,68
+>1M,5 stars,5
+100K-1M,4 stars,3
+100K-1M,5 stars,0
+4 stars,Ads & IAP,54
+4 stars,IAP,13
+4 stars,None,2
+4 stars,Ads,2
+5 stars,Ads & IAP,5
+5 stars,IAP,0
+5 stars,None,0
+5 stars,Ads,0
+Ads & IAP,Free,58
+Ads & IAP,Paid,1
+IAP,Free,13
+IAP,Paid,0
+None,Free,2
+None,Paid,0
+Ads,Free,2
+Ads,Paid,0

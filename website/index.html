@@ -28,41 +28,28 @@
 <script src="https://d3js.org/d3.v4.js"></script>  
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
+<!-- google charts code -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <!-- Navigation -->
-<nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Logo and responsive toggle -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-fire"></span> 
-          LOGO
-        </a>
-    </div>
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active">
-          <a href="#">Intro</a>
-        </li>
-        <li class="active">
-          <a href="#plot1">Sankey Diagram</a>
-        </li>
-        <li class="active">
-          <a href="#plot2">Streamgraph</a>
-        </li>
-        <li class="active">
-          <a href="#plot3">Treemap</a>
-        </li class="active">
+<div id="top" class="navigation">
+  <div class="navigation__wrapper wrapper--large">
+    <p class="navigation__logo logo">InsightSquad</p>
+    <nav class="navigation__container">
+      <ul class="navigation__list">
+        <li><a href="#">Intro</a></li>
+        <li><a href="#plot1">Sankey</a></li>
+        <li><a href="#plot2">Streamgraph</a></li>
+        <li><a href="#plot3">Treemap</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav>
+    </nav>
+    <div class="navigation__burger">
+      <span class="navigation__burger-el navigation__burger-el--top"></span>
+      <span class="navigation__burger-el navigation__burger-el--middle"></span>
+      <span class="navigation__burger-el navigation__burger-el--bottom"></span>
+    </div>
+  </div>
+</div>
 
 <header>
     <div class="header-content">
@@ -78,10 +65,21 @@
 <section id="plot1" class="intro">
   <div class="container">
     <div class="row">
-      <div id="sankey-plot" class="col-lg-8 col-lg-offset-2">
-        <h2 class="section-heading">Sankey Diagram</h2>
+      <h2 class="section-heading">Sankey Diagram</h2>
+      <div id="slider-container">
+        <input type="range" min="1" max="3" value="1" id="slider">
+        <label for="slider">Select Data:</label>
       </div>
-      <script src="js/sankey.js"></script> 
+      <div id="category-container">
+        <label for="category">Select Category:</label>
+        <select id="category">
+          <option value="Education">Education</option>
+        </select>
+      </div>
+        <div id="sankey-labels">
+        </div>
+        <div id="sankey"></div>
+      <script src="js/sankey_g.js"></script> 
     </div>
   </div>
 </section>

@@ -1,0 +1,61 @@
+from,to,weight
+Trivia,0-1K,5774
+Trivia,1K-100k,4706
+Trivia,100K-1M,923
+Trivia,>1M,286
+0-1K,5 stars,928
+0-1K,0 stars,4164
+0-1K,4 stars,552
+0-1K,3 stars,102
+0-1K,2 stars,23
+0-1K,1 stars,5
+1K-100k,5 stars,649
+1K-100k,0 stars,312
+1K-100k,4 stars,3045
+1K-100k,3 stars,603
+1K-100k,2 stars,92
+1K-100k,1 stars,5
+100K-1M,5 stars,86
+100K-1M,0 stars,8
+100K-1M,4 stars,715
+100K-1M,3 stars,96
+100K-1M,2 stars,17
+100K-1M,1 stars,1
+>1M,5 stars,23
+>1M,0 stars,1
+>1M,4 stars,238
+>1M,3 stars,22
+>1M,2 stars,2
+>1M,1 stars,0
+5 stars,Ads,1024
+5 stars,Ads & IAP,329
+5 stars,None,293
+5 stars,IAP,40
+0 stars,Ads,3169
+0 stars,Ads & IAP,508
+0 stars,None,752
+0 stars,IAP,56
+4 stars,Ads,2905
+4 stars,Ads & IAP,1207
+4 stars,None,372
+4 stars,IAP,66
+3 stars,Ads,530
+3 stars,Ads & IAP,175
+3 stars,None,91
+3 stars,IAP,27
+2 stars,Ads,75
+2 stars,Ads & IAP,23
+2 stars,None,32
+2 stars,IAP,4
+1 stars,Ads,6
+1 stars,Ads & IAP,1
+1 stars,None,4
+1 stars,IAP,0
+Ads,Free,7703
+Ads,Paid,6
+Ads & IAP,Free,2242
+Ads & IAP,Paid,1
+None,Free,1452
+None,Paid,92
+IAP,Free,180
+IAP,Paid,13

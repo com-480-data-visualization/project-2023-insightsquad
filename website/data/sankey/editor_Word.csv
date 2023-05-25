@@ -1,0 +1,10 @@
+from,to,weight
+Word,>1M,10
+Word,100K-1M,2
+>1M,4 stars,7
+>1M,5 stars,3
+100K-1M,4 stars,2
+100K-1M,5 stars,0
+4 stars,Ads & IAP,9
+5 stars,Ads & IAP,3
+Ads & IAP,Free,12

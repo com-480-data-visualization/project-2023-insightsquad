@@ -1,0 +1,22 @@
+from,to,weight
+Lifestyle,>1M,8
+Lifestyle,100K-1M,5
+Lifestyle,1K-100k,2
+>1M,5 stars,2
+>1M,4 stars,6
+100K-1M,5 stars,3
+100K-1M,4 stars,2
+1K-100k,5 stars,1
+1K-100k,4 stars,1
+5 stars,Ads,1
+5 stars,Ads & IAP,2
+5 stars,IAP,1
+5 stars,None,2
+4 stars,Ads,2
+4 stars,Ads & IAP,3
+4 stars,IAP,1
+4 stars,None,3
+Ads,Free,3
+Ads & IAP,Free,5
+IAP,Free,2
+None,Free,5

@@ -1,0 +1,68 @@
+from,to,weight
+Food & Drink,0-10,68283
+Food & Drink,10-100,3644
+Food & Drink,100-1K,776
+Food & Drink,1K-10K,291
+Food & Drink,>10K,163
+0-10,0 stars,54163
+0-10,4 stars,1910
+0-10,3 stars,1104
+0-10,5 stars,9457
+0-10,1 stars,1021
+0-10,2 stars,628
+10-100,0 stars,0
+10-100,4 stars,810
+10-100,3 stars,424
+10-100,5 stars,2123
+10-100,1 stars,54
+10-100,2 stars,233
+100-1K,0 stars,0
+100-1K,4 stars,200
+100-1K,3 stars,56
+100-1K,5 stars,477
+100-1K,1 stars,8
+100-1K,2 stars,35
+1K-10K,0 stars,0
+1K-10K,4 stars,35
+1K-10K,3 stars,5
+1K-10K,5 stars,250
+1K-10K,1 stars,0
+1K-10K,2 stars,1
+>10K,0 stars,0
+>10K,4 stars,14
+>10K,3 stars,0
+>10K,5 stars,149
+>10K,1 stars,0
+>10K,2 stars,0
+0 stars,4+,40524
+0 stars,12+,5100
+0 stars,17+,8435
+0 stars,9+,104
+4 stars,4+,2276
+4 stars,12+,254
+4 stars,17+,428
+4 stars,9+,11
+3 stars,4+,1237
+3 stars,12+,134
+3 stars,17+,207
+3 stars,9+,11
+5 stars,4+,10093
+5 stars,12+,844
+5 stars,17+,1469
+5 stars,9+,50
+1 stars,4+,852
+1 stars,12+,63
+1 stars,17+,156
+1 stars,9+,12
+2 stars,4+,730
+2 stars,12+,63
+2 stars,17+,101
+2 stars,9+,3
+4+,Free,55105
+4+,Paid,607
+12+,Free,6368
+12+,Paid,90
+17+,Free,10616
+17+,Paid,180
+9+,Free,186
+9+,Paid,5

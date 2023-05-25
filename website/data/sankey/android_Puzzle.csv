@@ -1,0 +1,61 @@
+from,to,weight
+Puzzle,1K-100k,19708
+Puzzle,0-1K,24811
+Puzzle,>1M,1907
+Puzzle,100K-1M,3843
+1K-100k,4 stars,12680
+1K-100k,0 stars,1507
+1K-100k,2 stars,218
+1K-100k,5 stars,3528
+1K-100k,3 stars,1766
+1K-100k,1 stars,9
+0-1K,4 stars,2290
+0-1K,0 stars,16805
+0-1K,2 stars,78
+0-1K,5 stars,5286
+0-1K,3 stars,336
+0-1K,1 stars,16
+>1M,4 stars,1587
+>1M,0 stars,0
+>1M,2 stars,7
+>1M,5 stars,260
+>1M,3 stars,53
+>1M,1 stars,0
+100K-1M,4 stars,3194
+100K-1M,0 stars,18
+100K-1M,2 stars,22
+100K-1M,5 stars,385
+100K-1M,3 stars,224
+100K-1M,1 stars,0
+4 stars,Ads & IAP,6275
+4 stars,Ads,11111
+4 stars,None,1753
+4 stars,IAP,612
+0 stars,Ads & IAP,2122
+0 stars,Ads,12205
+0 stars,None,3713
+0 stars,IAP,290
+2 stars,Ads & IAP,40
+2 stars,Ads,214
+2 stars,None,65
+2 stars,IAP,6
+5 stars,Ads & IAP,2292
+5 stars,Ads,5362
+5 stars,None,1549
+5 stars,IAP,256
+3 stars,Ads & IAP,414
+3 stars,Ads,1583
+3 stars,None,328
+3 stars,IAP,54
+1 stars,Ads & IAP,3
+1 stars,Ads,11
+1 stars,None,11
+1 stars,IAP,0
+Ads & IAP,Free,11097
+Ads & IAP,Paid,49
+Ads,Free,30418
+Ads,Paid,68
+None,Free,6366
+None,Paid,1053
+IAP,Free,1145
+IAP,Paid,73

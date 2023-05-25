@@ -1,0 +1,53 @@
+from,to,weight
+Music,0-1K,1510
+Music,100K-1M,479
+Music,1K-100k,1949
+Music,>1M,205
+0-1K,0 stars,1169
+0-1K,5 stars,156
+0-1K,4 stars,134
+0-1K,3 stars,42
+0-1K,2 stars,9
+100K-1M,0 stars,2
+100K-1M,5 stars,26
+100K-1M,4 stars,379
+100K-1M,3 stars,66
+100K-1M,2 stars,6
+1K-100k,0 stars,140
+1K-100k,5 stars,126
+1K-100k,4 stars,1264
+1K-100k,3 stars,338
+1K-100k,2 stars,81
+>1M,0 stars,0
+>1M,5 stars,16
+>1M,4 stars,173
+>1M,3 stars,16
+>1M,2 stars,0
+0 stars,Ads,959
+0 stars,None,299
+0 stars,Ads & IAP,39
+0 stars,IAP,14
+5 stars,Ads,171
+5 stars,None,80
+5 stars,Ads & IAP,53
+5 stars,IAP,20
+4 stars,Ads,1359
+4 stars,None,165
+4 stars,Ads & IAP,367
+4 stars,IAP,59
+3 stars,Ads,365
+3 stars,None,31
+3 stars,Ads & IAP,52
+3 stars,IAP,14
+2 stars,Ads,76
+2 stars,None,11
+2 stars,Ads & IAP,7
+2 stars,IAP,2
+Ads,Free,2929
+Ads,Paid,1
+None,Free,486
+None,Paid,100
+Ads & IAP,Free,516
+Ads & IAP,Paid,2
+IAP,Free,103
+IAP,Paid,6

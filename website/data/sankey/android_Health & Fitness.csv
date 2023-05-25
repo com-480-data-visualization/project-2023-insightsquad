@@ -1,0 +1,61 @@
+from,to,weight
+Health & Fitness,1K-100k,25263
+Health & Fitness,0-1K,53454
+Health & Fitness,>1M,774
+Health & Fitness,100K-1M,3107
+1K-100k,2 stars,1657
+1K-100k,0 stars,3196
+1K-100k,4 stars,12043
+1K-100k,5 stars,4349
+1K-100k,3 stars,3876
+1K-100k,1 stars,142
+0-1K,2 stars,222
+0-1K,0 stars,45984
+0-1K,4 stars,2122
+0-1K,5 stars,4569
+0-1K,3 stars,500
+0-1K,1 stars,57
+>1M,2 stars,10
+>1M,0 stars,0
+>1M,4 stars,431
+>1M,5 stars,281
+>1M,3 stars,52
+>1M,1 stars,0
+100K-1M,2 stars,146
+100K-1M,0 stars,36
+100K-1M,4 stars,1897
+100K-1M,5 stars,608
+100K-1M,3 stars,410
+100K-1M,1 stars,10
+2 stars,Ads,245
+2 stars,None,1651
+2 stars,IAP,101
+2 stars,Ads & IAP,38
+0 stars,Ads,9656
+0 stars,None,37864
+0 stars,IAP,1225
+0 stars,Ads & IAP,471
+4 stars,Ads,5815
+4 stars,None,7902
+4 stars,IAP,1477
+4 stars,Ads & IAP,1299
+5 stars,Ads,2451
+5 stars,None,5906
+5 stars,IAP,824
+5 stars,Ads & IAP,626
+3 stars,Ads,1136
+3 stars,None,3145
+3 stars,IAP,345
+3 stars,Ads & IAP,212
+1 stars,Ads,26
+1 stars,None,171
+1 stars,IAP,10
+1 stars,Ads & IAP,2
+Ads,Free,19278
+Ads,Paid,51
+None,Free,55337
+None,Paid,1302
+IAP,Free,3928
+IAP,Paid,54
+Ads & IAP,Free,2644
+Ads & IAP,Paid,4

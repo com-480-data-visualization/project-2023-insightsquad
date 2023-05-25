@@ -1,0 +1,61 @@
+from,to,weight
+Casino,0-1K,1188
+Casino,1K-100k,2687
+Casino,100K-1M,821
+Casino,>1M,339
+0-1K,0 stars,880
+0-1K,4 stars,143
+0-1K,3 stars,38
+0-1K,5 stars,120
+0-1K,2 stars,7
+0-1K,1 stars,0
+1K-100k,0 stars,146
+1K-100k,4 stars,1925
+1K-100k,3 stars,258
+1K-100k,5 stars,332
+1K-100k,2 stars,25
+1K-100k,1 stars,1
+100K-1M,0 stars,6
+100K-1M,4 stars,622
+100K-1M,3 stars,35
+100K-1M,5 stars,152
+100K-1M,2 stars,6
+100K-1M,1 stars,0
+>1M,0 stars,0
+>1M,4 stars,245
+>1M,3 stars,2
+>1M,5 stars,91
+>1M,2 stars,1
+>1M,1 stars,0
+0 stars,Ads & IAP,200
+0 stars,Ads,502
+0 stars,IAP,52
+0 stars,None,278
+4 stars,Ads & IAP,1325
+4 stars,Ads,999
+4 stars,IAP,375
+4 stars,None,236
+3 stars,Ads & IAP,107
+3 stars,Ads,141
+3 stars,IAP,42
+3 stars,None,43
+5 stars,Ads & IAP,329
+5 stars,Ads,127
+5 stars,IAP,69
+5 stars,None,170
+2 stars,Ads & IAP,11
+2 stars,Ads,16
+2 stars,IAP,3
+2 stars,None,9
+1 stars,Ads & IAP,1
+1 stars,Ads,0
+1 stars,IAP,0
+1 stars,None,0
+Ads & IAP,Free,1969
+Ads & IAP,Paid,4
+Ads,Free,1773
+Ads,Paid,12
+IAP,Free,536
+IAP,Paid,5
+None,Free,681
+None,Paid,55

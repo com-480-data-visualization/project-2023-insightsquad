@@ -1,0 +1,19 @@
+from,to,weight
+Photography,>1M,8
+Photography,100K-1M,1
+>1M,4 stars,7
+>1M,5 stars,1
+100K-1M,4 stars,1
+100K-1M,5 stars,0
+4 stars,Ads & IAP,3
+4 stars,None,1
+4 stars,IAP,4
+5 stars,Ads & IAP,0
+5 stars,None,1
+5 stars,IAP,0
+Ads & IAP,Free,3
+Ads & IAP,Paid,0
+None,Free,1
+None,Paid,1
+IAP,Free,4
+IAP,Paid,0

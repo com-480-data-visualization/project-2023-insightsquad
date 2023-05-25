@@ -1,0 +1,68 @@
+from,to,weight
+Developer Tools,0-10,1828
+Developer Tools,10-100,83
+Developer Tools,100-1K,31
+Developer Tools,1K-10K,8
+Developer Tools,>10K,1
+0-10,0 stars,1593
+0-10,5 stars,147
+0-10,2 stars,3
+0-10,4 stars,39
+0-10,3 stars,22
+0-10,1 stars,24
+10-100,0 stars,0
+10-100,5 stars,45
+10-100,2 stars,0
+10-100,4 stars,31
+10-100,3 stars,7
+10-100,1 stars,0
+100-1K,0 stars,0
+100-1K,5 stars,16
+100-1K,2 stars,0
+100-1K,4 stars,15
+100-1K,3 stars,0
+100-1K,1 stars,0
+1K-10K,0 stars,0
+1K-10K,5 stars,6
+1K-10K,2 stars,0
+1K-10K,4 stars,2
+1K-10K,3 stars,0
+1K-10K,1 stars,0
+>10K,0 stars,0
+>10K,5 stars,1
+>10K,2 stars,0
+>10K,4 stars,0
+>10K,3 stars,0
+>10K,1 stars,0
+0 stars,4+,1536
+0 stars,17+,53
+0 stars,12+,2
+0 stars,9+,2
+5 stars,4+,200
+5 stars,17+,12
+5 stars,12+,3
+5 stars,9+,0
+2 stars,4+,3
+2 stars,17+,0
+2 stars,12+,0
+2 stars,9+,0
+4 stars,4+,80
+4 stars,17+,7
+4 stars,12+,0
+4 stars,9+,0
+3 stars,4+,27
+3 stars,17+,1
+3 stars,12+,1
+3 stars,9+,0
+1 stars,4+,21
+1 stars,17+,3
+1 stars,12+,0
+1 stars,9+,0
+4+,Free,1117
+4+,Paid,750
+17+,Free,57
+17+,Paid,19
+12+,Free,5
+12+,Paid,1
+9+,Free,1
+9+,Paid,1

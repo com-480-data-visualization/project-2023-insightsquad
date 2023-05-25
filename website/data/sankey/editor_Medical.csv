@@ -1,0 +1,5 @@
+from,to,weight
+Medical,>1M,1
+>1M,4 stars,1
+4 stars,IAP,1
+IAP,Free,1

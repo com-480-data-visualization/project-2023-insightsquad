@@ -1,0 +1,68 @@
+from,to,weight
+News,0-10,17215
+News,10-100,1916
+News,100-1K,754
+News,1K-10K,423
+News,>10K,115
+0-10,0 stars,12238
+0-10,3 stars,558
+0-10,2 stars,307
+0-10,4 stars,980
+0-10,5 stars,2649
+0-10,1 stars,483
+10-100,0 stars,0
+10-100,3 stars,290
+10-100,2 stars,182
+10-100,4 stars,659
+10-100,5 stars,757
+10-100,1 stars,28
+100-1K,0 stars,0
+100-1K,3 stars,24
+100-1K,2 stars,32
+100-1K,4 stars,288
+100-1K,5 stars,407
+100-1K,1 stars,3
+1K-10K,0 stars,0
+1K-10K,3 stars,3
+1K-10K,2 stars,1
+1K-10K,4 stars,110
+1K-10K,5 stars,309
+1K-10K,1 stars,0
+>10K,0 stars,0
+>10K,3 stars,0
+>10K,2 stars,0
+>10K,4 stars,13
+>10K,5 stars,102
+>10K,1 stars,0
+0 stars,4+,8230
+0 stars,12+,1903
+0 stars,17+,1942
+0 stars,9+,163
+3 stars,4+,463
+3 stars,12+,256
+3 stars,17+,132
+3 stars,9+,24
+2 stars,4+,266
+2 stars,12+,187
+2 stars,17+,59
+2 stars,9+,10
+4 stars,4+,980
+4 stars,12+,794
+4 stars,17+,227
+4 stars,9+,49
+5 stars,4+,2258
+5 stars,12+,1281
+5 stars,17+,579
+5 stars,9+,106
+1 stars,4+,331
+1 stars,12+,105
+1 stars,17+,65
+1 stars,9+,13
+4+,Free,12386
+4+,Paid,142
+12+,Free,4491
+12+,Paid,35
+17+,Free,2950
+17+,Paid,54
+9+,Free,354
+9+,Paid,11

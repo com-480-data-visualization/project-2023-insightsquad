@@ -1,0 +1,61 @@
+from,to,weight
+Parenting,0-1K,1641
+Parenting,1K-100k,1681
+Parenting,100K-1M,359
+Parenting,>1M,83
+0-1K,0 stars,1310
+0-1K,3 stars,20
+0-1K,4 stars,101
+0-1K,5 stars,190
+0-1K,2 stars,16
+0-1K,1 stars,4
+1K-100k,0 stars,178
+1K-100k,3 stars,242
+1K-100k,4 stars,864
+1K-100k,5 stars,295
+1K-100k,2 stars,94
+1K-100k,1 stars,8
+100K-1M,0 stars,8
+100K-1M,3 stars,36
+100K-1M,4 stars,213
+100K-1M,5 stars,96
+100K-1M,2 stars,6
+100K-1M,1 stars,0
+>1M,0 stars,0
+>1M,3 stars,3
+>1M,4 stars,45
+>1M,5 stars,35
+>1M,2 stars,0
+>1M,1 stars,0
+0 stars,None,814
+0 stars,IAP,79
+0 stars,Ads,556
+0 stars,Ads & IAP,47
+3 stars,None,150
+3 stars,IAP,41
+3 stars,Ads,85
+3 stars,Ads & IAP,25
+4 stars,None,369
+4 stars,IAP,150
+4 stars,Ads,537
+4 stars,Ads & IAP,167
+5 stars,None,226
+5 stars,IAP,54
+5 stars,Ads,240
+5 stars,Ads & IAP,96
+2 stars,None,81
+2 stars,IAP,13
+2 stars,Ads,20
+2 stars,Ads & IAP,2
+1 stars,None,11
+1 stars,IAP,0
+1 stars,Ads,1
+1 stars,Ads & IAP,0
+None,Free,1561
+None,Paid,90
+IAP,Free,336
+IAP,Paid,1
+Ads,Free,1432
+Ads,Paid,7
+Ads & IAP,Free,337
+Ads & IAP,Paid,0

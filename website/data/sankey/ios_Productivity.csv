@@ -1,0 +1,68 @@
+from,to,weight
+Productivity,10-100,4360
+Productivity,0-10,52718
+Productivity,1K-10K,608
+Productivity,>10K,221
+Productivity,100-1K,1523
+10-100,5 stars,1346
+10-100,0 stars,0
+10-100,3 stars,712
+10-100,1 stars,97
+10-100,4 stars,1768
+10-100,2 stars,437
+0-10,5 stars,7556
+0-10,0 stars,38055
+0-10,3 stars,1757
+0-10,1 stars,1606
+0-10,4 stars,2680
+0-10,2 stars,1064
+1K-10K,5 stars,405
+1K-10K,0 stars,0
+1K-10K,3 stars,11
+1K-10K,1 stars,2
+1K-10K,4 stars,186
+1K-10K,2 stars,4
+>10K,5 stars,188
+>10K,0 stars,0
+>10K,3 stars,3
+>10K,1 stars,0
+>10K,4 stars,30
+>10K,2 stars,0
+100-1K,5 stars,709
+100-1K,0 stars,0
+100-1K,3 stars,107
+100-1K,1 stars,10
+100-1K,4 stars,630
+100-1K,2 stars,67
+5 stars,4+,9346
+5 stars,12+,246
+5 stars,17+,555
+5 stars,9+,57
+0 stars,4+,34730
+0 stars,12+,624
+0 stars,17+,2541
+0 stars,9+,160
+3 stars,4+,2381
+3 stars,12+,48
+3 stars,17+,147
+3 stars,9+,14
+1 stars,4+,1582
+1 stars,12+,22
+1 stars,17+,104
+1 stars,9+,7
+4 stars,4+,4873
+4 stars,12+,87
+4 stars,17+,301
+4 stars,9+,33
+2 stars,4+,1450
+2 stars,12+,22
+2 stars,17+,90
+2 stars,9+,10
+4+,Free,48696
+4+,Paid,5666
+12+,Free,1010
+12+,Paid,39
+17+,Free,3467
+17+,Paid,271
+9+,Free,251
+9+,Paid,30

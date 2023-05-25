@@ -1,0 +1,61 @@
+from,to,weight
+News & Magazines,1K-100k,18564
+News & Magazines,0-1K,21460
+News & Magazines,100K-1M,2114
+News & Magazines,>1M,446
+1K-100k,3 stars,2314
+1K-100k,0 stars,1701
+1K-100k,5 stars,3652
+1K-100k,4 stars,10259
+1K-100k,1 stars,30
+1K-100k,2 stars,608
+0-1K,3 stars,279
+0-1K,0 stars,15347
+0-1K,5 stars,4097
+0-1K,4 stars,1637
+0-1K,1 stars,12
+0-1K,2 stars,88
+100K-1M,3 stars,306
+100K-1M,0 stars,30
+100K-1M,5 stars,176
+100K-1M,4 stars,1540
+100K-1M,1 stars,3
+100K-1M,2 stars,59
+>1M,3 stars,58
+>1M,0 stars,0
+>1M,5 stars,24
+>1M,4 stars,354
+>1M,1 stars,1
+>1M,2 stars,9
+3 stars,Ads,1452
+3 stars,IAP,330
+3 stars,None,663
+3 stars,Ads & IAP,512
+0 stars,Ads,8929
+0 stars,IAP,960
+0 stars,None,6448
+0 stars,Ads & IAP,741
+5 stars,Ads,4319
+5 stars,IAP,158
+5 stars,None,3279
+5 stars,Ads & IAP,193
+4 stars,Ads,8419
+4 stars,IAP,768
+4 stars,None,3400
+4 stars,Ads & IAP,1203
+1 stars,Ads,14
+1 stars,IAP,7
+1 stars,None,19
+1 stars,Ads & IAP,6
+2 stars,Ads,291
+2 stars,IAP,112
+2 stars,None,190
+2 stars,Ads & IAP,171
+Ads,Free,23409
+Ads,Paid,15
+IAP,Free,2332
+IAP,Paid,3
+None,Free,13909
+None,Paid,90
+Ads & IAP,Free,2826
+Ads & IAP,Paid,0

@@ -1,0 +1,61 @@
+from,to,weight
+Adventure,0-1K,10106
+Adventure,1K-100k,9227
+Adventure,100K-1M,2345
+Adventure,>1M,1109
+0-1K,0 stars,6502
+0-1K,4 stars,1178
+0-1K,5 stars,2141
+0-1K,3 stars,216
+0-1K,2 stars,65
+0-1K,1 stars,4
+1K-100k,0 stars,539
+1K-100k,4 stars,5978
+1K-100k,5 stars,1200
+1K-100k,3 stars,1334
+1K-100k,2 stars,171
+1K-100k,1 stars,5
+100K-1M,0 stars,12
+100K-1M,4 stars,1779
+100K-1M,5 stars,182
+100K-1M,3 stars,347
+100K-1M,2 stars,25
+100K-1M,1 stars,0
+>1M,0 stars,1
+>1M,4 stars,897
+>1M,5 stars,96
+>1M,3 stars,112
+>1M,2 stars,3
+>1M,1 stars,0
+0 stars,None,1733
+0 stars,Ads,4656
+0 stars,Ads & IAP,556
+0 stars,IAP,109
+4 stars,None,1301
+4 stars,Ads,5699
+4 stars,Ads & IAP,2280
+4 stars,IAP,552
+5 stars,None,860
+5 stars,Ads,2010
+5 stars,Ads & IAP,670
+5 stars,IAP,79
+3 stars,None,254
+3 stars,Ads,1413
+3 stars,Ads & IAP,276
+3 stars,IAP,66
+2 stars,None,43
+2 stars,Ads,178
+2 stars,Ads & IAP,31
+2 stars,IAP,12
+1 stars,None,3
+1 stars,Ads,5
+1 stars,Ads & IAP,1
+1 stars,IAP,0
+None,Free,3410
+None,Paid,784
+Ads,Free,13848
+Ads,Paid,113
+Ads & IAP,Free,3790
+Ads & IAP,Paid,24
+IAP,Free,760
+IAP,Paid,58

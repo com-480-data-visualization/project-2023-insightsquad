@@ -1,0 +1,20 @@
+from,to,weight
+Music,>1M,11
+>1M,4 stars,7
+>1M,5 stars,4
+4 stars,Ads & IAP,5
+4 stars,Ads,1
+4 stars,IAP,0
+4 stars,None,1
+5 stars,Ads & IAP,3
+5 stars,Ads,0
+5 stars,IAP,1
+5 stars,None,0
+Ads & IAP,Free,8
+Ads & IAP,Paid,0
+Ads,Free,1
+Ads,Paid,0
+IAP,Free,0
+IAP,Paid,1
+None,Free,1
+None,Paid,0

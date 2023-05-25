@@ -1,0 +1,61 @@
+from,to,weight
+Comics,1K-100k,1469
+Comics,0-1K,794
+Comics,100K-1M,424
+Comics,>1M,134
+1K-100k,3 stars,232
+1K-100k,0 stars,150
+1K-100k,4 stars,826
+1K-100k,5 stars,199
+1K-100k,2 stars,59
+1K-100k,1 stars,3
+0-1K,3 stars,22
+0-1K,0 stars,607
+0-1K,4 stars,64
+0-1K,5 stars,95
+0-1K,2 stars,6
+0-1K,1 stars,0
+100K-1M,3 stars,58
+100K-1M,0 stars,7
+100K-1M,4 stars,299
+100K-1M,5 stars,47
+100K-1M,2 stars,12
+100K-1M,1 stars,1
+>1M,3 stars,14
+>1M,0 stars,0
+>1M,4 stars,107
+>1M,5 stars,10
+>1M,2 stars,3
+>1M,1 stars,0
+3 stars,Ads,224
+3 stars,None,44
+3 stars,Ads & IAP,36
+3 stars,IAP,22
+0 stars,Ads,479
+0 stars,None,228
+0 stars,Ads & IAP,38
+0 stars,IAP,19
+4 stars,Ads,861
+4 stars,None,162
+4 stars,Ads & IAP,211
+4 stars,IAP,62
+5 stars,Ads,191
+5 stars,None,100
+5 stars,Ads & IAP,48
+5 stars,IAP,12
+2 stars,Ads,41
+2 stars,None,20
+2 stars,Ads & IAP,15
+2 stars,IAP,4
+1 stars,Ads,3
+1 stars,None,0
+1 stars,Ads & IAP,1
+1 stars,IAP,0
+Ads,Free,1798
+Ads,Paid,1
+None,Free,501
+None,Paid,53
+Ads & IAP,Free,349
+Ads & IAP,Paid,0
+IAP,Free,117
+IAP,Paid,2

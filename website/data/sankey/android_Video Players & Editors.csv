@@ -1,0 +1,61 @@
+from,to,weight
+Video Players & Editors,1K-100k,7184
+Video Players & Editors,100K-1M,1960
+Video Players & Editors,0-1K,3784
+Video Players & Editors,>1M,997
+1K-100k,4 stars,3939
+1K-100k,0 stars,570
+1K-100k,5 stars,753
+1K-100k,3 stars,1437
+1K-100k,2 stars,467
+1K-100k,1 stars,18
+100K-1M,4 stars,1286
+100K-1M,0 stars,21
+100K-1M,5 stars,116
+100K-1M,3 stars,432
+100K-1M,2 stars,104
+100K-1M,1 stars,1
+0-1K,4 stars,404
+0-1K,0 stars,2741
+0-1K,5 stars,460
+0-1K,3 stars,132
+0-1K,2 stars,42
+0-1K,1 stars,5
+>1M,4 stars,762
+>1M,0 stars,0
+>1M,5 stars,110
+>1M,3 stars,109
+>1M,2 stars,15
+>1M,1 stars,1
+4 stars,Ads,4152
+4 stars,None,1514
+4 stars,Ads & IAP,573
+4 stars,IAP,152
+0 stars,Ads,1993
+0 stars,None,1272
+0 stars,Ads & IAP,38
+0 stars,IAP,29
+5 stars,Ads,843
+5 stars,None,456
+5 stars,Ads & IAP,115
+5 stars,IAP,25
+3 stars,Ads,1187
+3 stars,None,742
+3 stars,Ads & IAP,134
+3 stars,IAP,47
+2 stars,Ads,303
+2 stars,None,291
+2 stars,Ads & IAP,19
+2 stars,IAP,15
+1 stars,Ads,15
+1 stars,None,10
+1 stars,Ads & IAP,0
+1 stars,IAP,0
+Ads,Free,8481
+Ads,Paid,12
+None,Free,3965
+None,Paid,320
+Ads & IAP,Free,879
+Ads & IAP,Paid,0
+IAP,Free,258
+IAP,Paid,10

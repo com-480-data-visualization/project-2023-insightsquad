@@ -1,0 +1,61 @@
+from,to,weight
+Food & Drink,1K-100k,16954
+Food & Drink,0-1K,54897
+Food & Drink,100K-1M,1266
+Food & Drink,>1M,327
+1K-100k,4 stars,7871
+1K-100k,3 stars,2042
+1K-100k,0 stars,2638
+1K-100k,5 stars,3618
+1K-100k,2 stars,720
+1K-100k,1 stars,65
+0-1K,4 stars,1991
+0-1K,3 stars,445
+0-1K,0 stars,47895
+0-1K,5 stars,4368
+0-1K,2 stars,154
+0-1K,1 stars,44
+100K-1M,4 stars,806
+100K-1M,3 stars,180
+100K-1M,0 stars,20
+100K-1M,5 stars,193
+100K-1M,2 stars,63
+100K-1M,1 stars,4
+>1M,4 stars,209
+>1M,3 stars,33
+>1M,0 stars,2
+>1M,5 stars,76
+>1M,2 stars,7
+>1M,1 stars,0
+4 stars,None,6861
+4 stars,Ads,3313
+4 stars,Ads & IAP,590
+4 stars,IAP,113
+3 stars,None,2156
+3 stars,Ads,431
+3 stars,Ads & IAP,73
+3 stars,IAP,40
+0 stars,None,40473
+0 stars,Ads,9140
+0 stars,Ads & IAP,785
+0 stars,IAP,157
+5 stars,None,6220
+5 stars,Ads,1738
+5 stars,Ads & IAP,237
+5 stars,IAP,60
+2 stars,None,813
+2 stars,Ads,95
+2 stars,Ads & IAP,17
+2 stars,IAP,19
+1 stars,None,96
+1 stars,Ads,8
+1 stars,Ads & IAP,1
+1 stars,IAP,8
+None,Free,56431
+None,Paid,188
+Ads,Free,14718
+Ads,Paid,7
+Ads & IAP,Free,1702
+Ads & IAP,Paid,1
+IAP,Free,389
+IAP,Paid,8

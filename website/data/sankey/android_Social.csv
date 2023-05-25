@@ -1,0 +1,61 @@
+from,to,weight
+Social,0-1K,24481
+Social,1K-100k,16176
+Social,100K-1M,2444
+Social,>1M,943
+0-1K,0 stars,17362
+0-1K,4 stars,1816
+0-1K,5 stars,4841
+0-1K,3 stars,339
+0-1K,2 stars,102
+0-1K,1 stars,21
+1K-100k,0 stars,1413
+1K-100k,4 stars,8537
+1K-100k,5 stars,3754
+1K-100k,3 stars,1891
+1K-100k,2 stars,548
+1K-100k,1 stars,33
+100K-1M,0 stars,22
+100K-1M,4 stars,1654
+100K-1M,5 stars,308
+100K-1M,3 stars,347
+100K-1M,2 stars,105
+100K-1M,1 stars,8
+>1M,0 stars,4
+>1M,4 stars,754
+>1M,5 stars,82
+>1M,3 stars,84
+>1M,2 stars,17
+>1M,1 stars,2
+0 stars,IAP,366
+0 stars,None,12061
+0 stars,Ads,6103
+0 stars,Ads & IAP,271
+4 stars,IAP,782
+4 stars,None,5314
+4 stars,Ads,5564
+4 stars,Ads & IAP,1101
+5 stars,IAP,221
+5 stars,None,5217
+5 stars,Ads,3300
+5 stars,Ads & IAP,247
+3 stars,IAP,166
+3 stars,None,1303
+3 stars,Ads,990
+3 stars,Ads & IAP,202
+2 stars,IAP,59
+2 stars,None,416
+2 stars,Ads,248
+2 stars,Ads & IAP,49
+1 stars,IAP,1
+1 stars,None,43
+1 stars,Ads,17
+1 stars,Ads & IAP,3
+IAP,Free,1580
+IAP,Paid,15
+None,Free,24160
+None,Paid,194
+Ads,Free,16208
+Ads,Paid,14
+Ads & IAP,Free,1871
+Ads & IAP,Paid,2

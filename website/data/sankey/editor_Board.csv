@@ -1,0 +1,14 @@
+from,to,weight
+Board,100K-1M,2
+Board,>1M,1
+100K-1M,4 stars,2
+>1M,4 stars,1
+4 stars,IAP,1
+4 stars,Ads,1
+4 stars,Ads & IAP,1
+IAP,Paid,1
+IAP,Free,0
+Ads,Paid,0
+Ads,Free,1
+Ads & IAP,Paid,0
+Ads & IAP,Free,1

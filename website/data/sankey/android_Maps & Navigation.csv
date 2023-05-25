@@ -1,0 +1,61 @@
+from,to,weight
+Maps & Navigation,0-1K,13271
+Maps & Navigation,1K-100k,11030
+Maps & Navigation,100K-1M,1577
+Maps & Navigation,>1M,472
+0-1K,0 stars,10425
+0-1K,4 stars,1061
+0-1K,2 stars,104
+0-1K,5 stars,1414
+0-1K,3 stars,236
+0-1K,1 stars,31
+1K-100k,0 stars,867
+1K-100k,4 stars,6086
+1K-100k,2 stars,684
+1K-100k,5 stars,1305
+1K-100k,3 stars,2048
+1K-100k,1 stars,40
+100K-1M,0 stars,20
+100K-1M,4 stars,989
+100K-1M,2 stars,93
+100K-1M,5 stars,121
+100K-1M,3 stars,352
+100K-1M,1 stars,2
+>1M,0 stars,1
+>1M,4 stars,346
+>1M,2 stars,8
+>1M,5 stars,62
+>1M,3 stars,55
+>1M,1 stars,0
+0 stars,None,7689
+0 stars,Ads,3434
+0 stars,IAP,100
+0 stars,Ads & IAP,90
+4 stars,None,5650
+4 stars,Ads,1955
+4 stars,IAP,258
+4 stars,Ads & IAP,619
+2 stars,None,701
+2 stars,Ads,140
+2 stars,IAP,21
+2 stars,Ads & IAP,27
+5 stars,None,2272
+5 stars,Ads,501
+5 stars,IAP,45
+5 stars,Ads & IAP,84
+3 stars,None,1981
+3 stars,Ads,527
+3 stars,IAP,83
+3 stars,Ads & IAP,100
+1 stars,None,45
+1 stars,Ads,26
+1 stars,IAP,1
+1 stars,Ads & IAP,1
+None,Free,17744
+None,Paid,594
+Ads,Free,6576
+Ads,Paid,7
+IAP,Free,468
+IAP,Paid,40
+Ads & IAP,Free,919
+Ads & IAP,Paid,2

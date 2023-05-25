@@ -1,0 +1,68 @@
+from,to,weight
+Magazines & Newspapers,0-10,1141
+Magazines & Newspapers,10-100,110
+Magazines & Newspapers,100-1K,36
+Magazines & Newspapers,1K-10K,9
+Magazines & Newspapers,>10K,1
+0-10,0 stars,796
+0-10,4 stars,72
+0-10,5 stars,181
+0-10,2 stars,29
+0-10,3 stars,35
+0-10,1 stars,28
+10-100,0 stars,0
+10-100,4 stars,33
+10-100,5 stars,68
+10-100,2 stars,3
+10-100,3 stars,5
+10-100,1 stars,1
+100-1K,0 stars,0
+100-1K,4 stars,11
+100-1K,5 stars,25
+100-1K,2 stars,0
+100-1K,3 stars,0
+100-1K,1 stars,0
+1K-10K,0 stars,0
+1K-10K,4 stars,3
+1K-10K,5 stars,6
+1K-10K,2 stars,0
+1K-10K,3 stars,0
+1K-10K,1 stars,0
+>10K,0 stars,0
+>10K,4 stars,0
+>10K,5 stars,1
+>10K,2 stars,0
+>10K,3 stars,0
+>10K,1 stars,0
+0 stars,4+,561
+0 stars,12+,132
+0 stars,9+,11
+0 stars,17+,92
+4 stars,4+,85
+4 stars,12+,15
+4 stars,9+,4
+4 stars,17+,15
+5 stars,4+,193
+5 stars,12+,54
+5 stars,9+,10
+5 stars,17+,24
+2 stars,4+,18
+2 stars,12+,9
+2 stars,9+,1
+2 stars,17+,4
+3 stars,4+,25
+3 stars,12+,7
+3 stars,9+,1
+3 stars,17+,7
+1 stars,4+,19
+1 stars,12+,6
+1 stars,9+,0
+1 stars,17+,4
+4+,Free,899
+4+,Paid,2
+12+,Free,222
+12+,Paid,1
+9+,Free,26
+9+,Paid,1
+17+,Free,146
+17+,Paid,0

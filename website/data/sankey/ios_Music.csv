@@ -1,0 +1,68 @@
+from,to,weight
+Music,0-10,24025
+Music,10-100,4204
+Music,100-1K,1185
+Music,1K-10K,343
+Music,>10K,141
+0-10,1 stars,900
+0-10,5 stars,5681
+0-10,0 stars,13468
+0-10,4 stars,2133
+0-10,3 stars,1202
+0-10,2 stars,641
+10-100,1 stars,24
+10-100,5 stars,1850
+10-100,0 stars,0
+10-100,4 stars,1528
+10-100,3 stars,543
+10-100,2 stars,259
+100-1K,1 stars,4
+100-1K,5 stars,636
+100-1K,0 stars,0
+100-1K,4 stars,408
+100-1K,3 stars,99
+100-1K,2 stars,38
+1K-10K,1 stars,0
+1K-10K,5 stars,220
+1K-10K,0 stars,0
+1K-10K,4 stars,110
+1K-10K,3 stars,12
+1K-10K,2 stars,1
+>10K,1 stars,0
+>10K,5 stars,107
+>10K,0 stars,0
+>10K,4 stars,34
+>10K,3 stars,0
+>10K,2 stars,0
+1 stars,4+,773
+1 stars,12+,46
+1 stars,17+,87
+1 stars,9+,22
+5 stars,4+,5746
+5 stars,12+,840
+5 stars,17+,1340
+5 stars,9+,568
+0 stars,4+,9980
+0 stars,12+,778
+0 stars,17+,2264
+0 stars,9+,446
+4 stars,4+,3427
+4 stars,12+,343
+4 stars,17+,300
+4 stars,9+,143
+3 stars,4+,1553
+3 stars,12+,105
+3 stars,17+,140
+3 stars,9+,58
+2 stars,4+,837
+2 stars,12+,30
+2 stars,17+,51
+2 stars,9+,21
+4+,Free,17162
+4+,Paid,5154
+12+,Free,2076
+12+,Paid,66
+17+,Free,4083
+17+,Paid,99
+9+,Free,1210
+9+,Paid,48

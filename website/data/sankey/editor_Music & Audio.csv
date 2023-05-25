@@ -1,0 +1,16 @@
+from,to,weight
+Music & Audio,>1M,11
+Music & Audio,100K-1M,1
+>1M,5 stars,3
+>1M,4 stars,8
+100K-1M,5 stars,1
+100K-1M,4 stars,0
+5 stars,Ads & IAP,2
+5 stars,Ads,1
+5 stars,None,1
+4 stars,Ads & IAP,6
+4 stars,Ads,1
+4 stars,None,1
+Ads & IAP,Free,8
+Ads,Free,2
+None,Free,2

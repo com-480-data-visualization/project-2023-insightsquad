@@ -1,0 +1,21 @@
+from,to,weight
+Casual,>1M,39
+Casual,100K-1M,5
+>1M,4 stars,33
+>1M,5 stars,6
+>1M,3 stars,0
+100K-1M,4 stars,4
+100K-1M,5 stars,0
+100K-1M,3 stars,1
+4 stars,Ads & IAP,31
+4 stars,IAP,3
+4 stars,Ads,3
+5 stars,Ads & IAP,6
+5 stars,IAP,0
+5 stars,Ads,0
+3 stars,Ads & IAP,0
+3 stars,IAP,0
+3 stars,Ads,1
+Ads & IAP,Free,37
+IAP,Free,3
+Ads,Free,4

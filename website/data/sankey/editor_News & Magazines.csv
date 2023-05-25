@@ -1,0 +1,25 @@
+from,to,weight
+News & Magazines,>1M,15
+News & Magazines,100K-1M,2
+>1M,4 stars,12
+>1M,5 stars,2
+>1M,3 stars,1
+100K-1M,4 stars,1
+100K-1M,5 stars,1
+100K-1M,3 stars,0
+4 stars,Ads & IAP,2
+4 stars,Ads,10
+4 stars,None,1
+4 stars,IAP,0
+5 stars,Ads & IAP,1
+5 stars,Ads,0
+5 stars,None,1
+5 stars,IAP,1
+3 stars,Ads & IAP,0
+3 stars,Ads,1
+3 stars,None,0
+3 stars,IAP,0
+Ads & IAP,Free,3
+Ads,Free,11
+None,Free,2
+IAP,Free,1

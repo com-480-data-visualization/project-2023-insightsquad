@@ -1,0 +1,26 @@
+from,to,weight
+Role Playing,100K-1M,21
+Role Playing,>1M,55
+Role Playing,1K-100k,3
+100K-1M,4 stars,19
+100K-1M,5 stars,2
+>1M,4 stars,47
+>1M,5 stars,8
+1K-100k,4 stars,2
+1K-100k,5 stars,1
+4 stars,Ads & IAP,31
+4 stars,None,9
+4 stars,IAP,25
+4 stars,Ads,3
+5 stars,Ads & IAP,5
+5 stars,None,3
+5 stars,IAP,3
+5 stars,Ads,0
+Ads & IAP,Free,36
+Ads & IAP,Paid,0
+None,Free,7
+None,Paid,5
+IAP,Free,28
+IAP,Paid,0
+Ads,Free,3
+Ads,Paid,0

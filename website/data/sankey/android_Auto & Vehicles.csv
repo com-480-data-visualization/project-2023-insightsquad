@@ -1,0 +1,61 @@
+from,to,weight
+Auto & Vehicles,1K-100k,7036
+Auto & Vehicles,0-1K,9850
+Auto & Vehicles,100K-1M,852
+Auto & Vehicles,>1M,213
+1K-100k,3 stars,1386
+1K-100k,4 stars,3521
+1K-100k,0 stars,741
+1K-100k,5 stars,842
+1K-100k,2 stars,525
+1K-100k,1 stars,21
+0-1K,3 stars,231
+0-1K,4 stars,706
+0-1K,0 stars,7737
+0-1K,5 stars,1095
+0-1K,2 stars,70
+0-1K,1 stars,11
+100K-1M,3 stars,140
+100K-1M,4 stars,549
+100K-1M,0 stars,15
+100K-1M,5 stars,105
+100K-1M,2 stars,37
+100K-1M,1 stars,6
+>1M,3 stars,15
+>1M,4 stars,158
+>1M,0 stars,0
+>1M,5 stars,39
+>1M,2 stars,1
+>1M,1 stars,0
+3 stars,None,1202
+3 stars,Ads & IAP,48
+3 stars,Ads,471
+3 stars,IAP,51
+4 stars,None,2858
+4 stars,Ads & IAP,313
+4 stars,Ads,1619
+4 stars,IAP,144
+0 stars,None,6887
+0 stars,Ads & IAP,64
+0 stars,Ads,1460
+0 stars,IAP,82
+5 stars,None,1505
+5 stars,Ads & IAP,93
+5 stars,Ads,433
+5 stars,IAP,50
+2 stars,None,508
+2 stars,Ads & IAP,10
+2 stars,Ads,97
+2 stars,IAP,18
+1 stars,None,28
+1 stars,Ads & IAP,0
+1 stars,Ads,8
+1 stars,IAP,2
+None,Free,12725
+None,Paid,263
+Ads & IAP,Free,528
+Ads & IAP,Paid,0
+Ads,Free,4083
+Ads,Paid,5
+IAP,Free,335
+IAP,Paid,12

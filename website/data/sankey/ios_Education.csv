@@ -1,0 +1,68 @@
+from,to,weight
+Education,0-10,105270
+Education,10-100,10114
+Education,100-1K,2708
+Education,1K-10K,845
+Education,>10K,236
+0-10,0 stars,66355
+0-10,3 stars,4518
+0-10,5 stars,20031
+0-10,1 stars,3869
+0-10,4 stars,7656
+0-10,2 stars,2841
+10-100,0 stars,0
+10-100,3 stars,1508
+10-100,5 stars,3542
+10-100,1 stars,119
+10-100,4 stars,4236
+10-100,2 stars,709
+100-1K,0 stars,0
+100-1K,3 stars,117
+100-1K,5 stars,1380
+100-1K,1 stars,26
+100-1K,4 stars,1109
+100-1K,2 stars,76
+1K-10K,0 stars,0
+1K-10K,3 stars,13
+1K-10K,5 stars,493
+1K-10K,1 stars,1
+1K-10K,4 stars,330
+1K-10K,2 stars,8
+>10K,0 stars,0
+>10K,3 stars,2
+>10K,5 stars,163
+>10K,1 stars,2
+>10K,4 stars,66
+>10K,2 stars,3
+0 stars,4+,58963
+0 stars,17+,3867
+0 stars,12+,2935
+0 stars,9+,590
+3 stars,4+,5592
+3 stars,17+,249
+3 stars,12+,253
+3 stars,9+,64
+5 stars,4+,22492
+5 stars,17+,1299
+5 stars,12+,1526
+5 stars,9+,292
+1 stars,4+,3610
+1 stars,17+,191
+1 stars,12+,189
+1 stars,9+,27
+4 stars,4+,12125
+4 stars,17+,488
+4 stars,12+,637
+4 stars,9+,147
+2 stars,4+,3267
+2 stars,17+,171
+2 stars,12+,170
+2 stars,9+,29
+4+,Free,90092
+4+,Paid,15957
+17+,Free,5806
+17+,Paid,459
+12+,Free,4876
+12+,Paid,834
+9+,Free,1025
+9+,Paid,124

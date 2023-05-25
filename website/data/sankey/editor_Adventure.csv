@@ -1,0 +1,22 @@
+from,to,weight
+Adventure,>1M,22
+Adventure,100K-1M,14
+Adventure,1K-100k,1
+>1M,4 stars,19
+>1M,5 stars,3
+100K-1M,4 stars,11
+100K-1M,5 stars,3
+1K-100k,4 stars,1
+1K-100k,5 stars,0
+4 stars,IAP,8
+4 stars,None,4
+4 stars,Ads & IAP,19
+5 stars,IAP,2
+5 stars,None,1
+5 stars,Ads & IAP,3
+IAP,Free,10
+IAP,Paid,0
+None,Free,1
+None,Paid,4
+Ads & IAP,Free,22
+Ads & IAP,Paid,0

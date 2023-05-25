@@ -1,0 +1,61 @@
+from,to,weight
+Weather,1K-100k,3324
+Weather,100K-1M,1076
+Weather,0-1K,2160
+Weather,>1M,570
+1K-100k,4 stars,2088
+1K-100k,3 stars,345
+1K-100k,5 stars,626
+1K-100k,0 stars,173
+1K-100k,2 stars,84
+1K-100k,1 stars,8
+100K-1M,4 stars,752
+100K-1M,3 stars,87
+100K-1M,5 stars,215
+100K-1M,0 stars,14
+100K-1M,2 stars,8
+100K-1M,1 stars,0
+0-1K,4 stars,250
+0-1K,3 stars,85
+0-1K,5 stars,280
+0-1K,0 stars,1516
+0-1K,2 stars,27
+0-1K,1 stars,2
+>1M,4 stars,421
+>1M,3 stars,14
+>1M,5 stars,134
+>1M,0 stars,0
+>1M,2 stars,1
+>1M,1 stars,0
+4 stars,Ads & IAP,962
+4 stars,Ads,1518
+4 stars,None,927
+4 stars,IAP,104
+3 stars,Ads & IAP,53
+3 stars,Ads,212
+3 stars,None,248
+3 stars,IAP,18
+5 stars,Ads & IAP,451
+5 stars,Ads,449
+5 stars,None,324
+5 stars,IAP,31
+0 stars,Ads & IAP,74
+0 stars,Ads,687
+0 stars,None,926
+0 stars,IAP,16
+2 stars,Ads & IAP,5
+2 stars,Ads,27
+2 stars,None,81
+2 stars,IAP,7
+1 stars,Ads & IAP,0
+1 stars,Ads,2
+1 stars,None,7
+1 stars,IAP,1
+Ads & IAP,Free,1544
+Ads & IAP,Paid,1
+Ads,Free,2890
+Ads,Paid,5
+None,Free,2319
+None,Paid,194
+IAP,Free,140
+IAP,Paid,37

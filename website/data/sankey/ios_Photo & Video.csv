@@ -1,0 +1,68 @@
+from,to,weight
+Photo & Video,0-10,18793
+Photo & Video,10-100,4128
+Photo & Video,100-1K,1874
+Photo & Video,>10K,368
+Photo & Video,1K-10K,793
+0-10,1 stars,1547
+0-10,5 stars,3272
+0-10,0 stars,9754
+0-10,3 stars,1336
+0-10,4 stars,1787
+0-10,2 stars,1097
+10-100,1 stars,115
+10-100,5 stars,1052
+10-100,0 stars,0
+10-100,3 stars,742
+10-100,4 stars,1668
+10-100,2 stars,551
+100-1K,1 stars,10
+100-1K,5 stars,873
+100-1K,0 stars,0
+100-1K,3 stars,118
+100-1K,4 stars,811
+100-1K,2 stars,62
+>10K,1 stars,0
+>10K,5 stars,284
+>10K,0 stars,0
+>10K,3 stars,2
+>10K,4 stars,82
+>10K,2 stars,0
+1K-10K,1 stars,1
+1K-10K,5 stars,508
+1K-10K,0 stars,0
+1K-10K,3 stars,22
+1K-10K,4 stars,257
+1K-10K,2 stars,5
+1 stars,4+,1552
+1 stars,17+,52
+1 stars,9+,28
+1 stars,12+,41
+5 stars,4+,5255
+5 stars,17+,230
+5 stars,9+,146
+5 stars,12+,358
+0 stars,4+,8994
+0 stars,17+,349
+0 stars,9+,128
+0 stars,12+,283
+3 stars,4+,2003
+3 stars,17+,69
+3 stars,9+,56
+3 stars,12+,92
+4 stars,4+,4118
+4 stars,17+,175
+4 stars,9+,105
+4 stars,12+,207
+2 stars,4+,1565
+2 stars,17+,53
+2 stars,9+,28
+2 stars,12+,69
+4+,Free,18891
+4+,Paid,4596
+17+,Free,795
+17+,Paid,133
+9+,Free,447
+9+,Paid,44
+12+,Free,962
+12+,Paid,88

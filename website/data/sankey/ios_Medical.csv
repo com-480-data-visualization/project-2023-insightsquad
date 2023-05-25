@@ -1,0 +1,68 @@
+from,to,weight
+Medical,0-10,24580
+Medical,10-100,2331
+Medical,100-1K,703
+Medical,1K-10K,288
+Medical,>10K,93
+0-10,4 stars,1528
+0-10,2 stars,576
+0-10,1 stars,854
+0-10,0 stars,16076
+0-10,5 stars,4659
+0-10,3 stars,887
+10-100,4 stars,806
+10-100,2 stars,214
+10-100,1 stars,41
+10-100,0 stars,0
+10-100,5 stars,898
+10-100,3 stars,372
+100-1K,4 stars,179
+100-1K,2 stars,36
+100-1K,1 stars,5
+100-1K,0 stars,0
+100-1K,5 stars,430
+100-1K,3 stars,53
+1K-10K,4 stars,28
+1K-10K,2 stars,4
+1K-10K,1 stars,0
+1K-10K,0 stars,0
+1K-10K,5 stars,251
+1K-10K,3 stars,5
+>10K,4 stars,6
+>10K,2 stars,0
+>10K,1 stars,0
+>10K,0 stars,0
+>10K,5 stars,87
+>10K,3 stars,0
+4 stars,17+,901
+4 stars,4+,866
+4 stars,12+,778
+4 stars,9+,2
+2 stars,17+,262
+2 stars,4+,322
+2 stars,12+,246
+2 stars,9+,0
+1 stars,17+,295
+1 stars,4+,344
+1 stars,12+,259
+1 stars,9+,2
+0 stars,17+,6571
+0 stars,4+,5688
+0 stars,12+,3795
+0 stars,9+,22
+5 stars,17+,2478
+5 stars,4+,1896
+5 stars,12+,1943
+5 stars,9+,8
+3 stars,17+,438
+3 stars,4+,498
+3 stars,12+,379
+3 stars,9+,2
+17+,Free,10091
+17+,Paid,854
+4+,Free,8662
+4+,Paid,952
+12+,Free,6740
+12+,Paid,660
+9+,Free,31
+9+,Paid,5
