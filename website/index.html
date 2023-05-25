@@ -98,11 +98,14 @@
 <section id="plot3" class="content content-2">
   <div class="container">
     <div class="row">
-        <h2 class="section-header">Treemap</h2>
-        <div class="button-group">
-          <button id="apple_button_treemap" class="button">Apple</button>
-          <button id="android_button_treemap" class="button">Android</button>
-        </div>
+        <h2 class="section-heading">Apps per category</h2>
+        <div id="slider-container-treemap">
+          <label for="slider-treemap">Select Data:</label>
+          <input type="range" min="1" max="2" value="1" id="slider-treemap" list="slider-treemap-labels">
+          <datalist id="slider-treemap-labels">
+            <option value="1" label="Android"></option>
+            <option value="2" label="Apple"></option>
+          </datalist>
         <div id="treemap"></div>
       <script src="js/treemap.js"></script>
     </div>

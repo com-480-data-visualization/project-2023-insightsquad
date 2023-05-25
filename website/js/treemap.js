@@ -9,25 +9,35 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
   colorsApple = d3.scaleOrdinal()
     .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]);
 
+var sliderTreemap = d3.select("#slider-treemap")
+
 // Read data
-var android_data_path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
-var apple_data_path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
-var android_data
+var androidDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
+var appleDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
+var androidData
 var apple_data
 
-d3.csv(android_data_path, function(data) {
-  android_data = data
-  console.log("android data: " + android_data)
+d3.csv(androidDataPath, function(data) {
+  androidData = data
 })
 
-d3.csv(apple_data_path, function(data) {
+d3.csv(appleDataPath, function(data) {
   apple_data = data
-  console.log("apple data: " + apple_data)
 })
+
+function updateTreemapOnSliderChange() {
+  var sliderValue = parseInt(sliderTreemap.node().value)
+  var isAndroid = sliderValue === 1
+
+  if (isAndroid) {
+    update(androidData, isAndroid)
+  }
+  else {
+    update(apple_data, isAndroid)
+  }
+}
 
 function update(data, isAndroid) {
-  console.log("update called with data: " + data)
-
   // Remove previous svg
   d3.select("#treemap").selectAll("svg").remove()
 
@@ -84,10 +94,11 @@ function update(data, isAndroid) {
   tiles
     .enter()
     .append("rect")
-    .attr("x", function (d) { return d.x0 })
-    .attr("y", function (d) { return d.y0 })
-    .attr("width", function (d) { return d.x1 - d.x0 })
-    .attr("height", function (d) { return d.y1 - d.y0 })
+      .attr("x", function (d) { return d.x0 })
+      .attr("y", function (d) { return d.y0 })
+      .attr("width", function (d) { return d.x1 - d.x0 })
+      .attr("height", function (d) { return d.y1 - d.y0 })
+      .style("stroke", "black")
       .style("fill", function(d) { 
         if (isAndroid) {
           return colorsAndroid(d.data.name)
@@ -105,7 +116,7 @@ function update(data, isAndroid) {
       })
       .on("mouseout", function() {
         tooltip.style("visibility", "hidden")
-      });
+      })
 
   // and to add the text labels
   var textLabels = svgTreemap.selectAll("text")
@@ -120,8 +131,10 @@ function update(data, isAndroid) {
       .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
       .attr("opacity", 0)
       .transition()
-      .duration(500)
+      .duration(800)
       .attr("opacity", 1)
+      .attr("x", function(d){ return d.x0 + 8})    // +8 to adjust position (more right)
+      .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
       .text(function(d){ 
         var name = d.data.name
         var width = d.x1 - d.x0
@@ -186,14 +199,18 @@ function getTextWidth(text, fontSize) {
   return width;
 }
 
-d3.select("#android_button_treemap").on("click", function() {
-  update(android_data, true)
-})
+sliderTreemap.on("input", updateTreemapOnSliderChange)
 
-d3.select("#apple_button_treemap").on("click", function() {
-  update(apple_data, false)
-})
+var sliderValue = parseInt(sliderTreemap.node().value)
+var isAndroid = sliderValue === 1
 
-d3.csv(android_data_path, function(data) {
-  update(data, true)
-})
+if (isAndroid) {
+  d3.csv(androidDataPath, function(data) {
+    update(data, isAndroid)
+  })
+}
+else {
+  d3.csv(appleDataPath, function(data) {
+    update(data, isAndroid)
+  })
+}
