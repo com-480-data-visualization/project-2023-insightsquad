@@ -89,6 +89,17 @@ header .header-content .header-content-inner p {
     }
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .section-heading {
     margin-top: 0;
     margin-bottom: 20px;
@@ -102,7 +113,7 @@ header .header-content .header-content-inner p {
 }
 
 .content {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .content-2 {
@@ -113,6 +124,42 @@ header .header-content .header-content-inner p {
 .content-3 {
 	padding: 20px 0 40px;
 	text-align: center;
+}
+
+.button-group button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #04AA6D; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: right; /* Float the buttons side by side */
+}
+
+.button-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.button-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.button-group button:hover {
+    background-color: #3e8e41;
+}
+
+.button-group button.active {
+    background-color: #3e8e41;
+    color: white;
+}
+
+.button {
+    width: 120px;
 }
 
 .promo,
