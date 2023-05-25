@@ -1,0 +1,68 @@
+from,to,weight
+Games,0-10,141375
+Games,100-1K,13991
+Games,10-100,29356
+Games,1K-10K,6243
+Games,>10K,2784
+0-10,5 stars,31506
+0-10,0 stars,69830
+0-10,2 stars,5911
+0-10,3 stars,10593
+0-10,4 stars,16792
+0-10,1 stars,6743
+100-1K,5 stars,6001
+100-1K,0 stars,0
+100-1K,2 stars,135
+100-1K,3 stars,778
+100-1K,4 stars,7068
+100-1K,1 stars,9
+10-100,5 stars,9000
+10-100,0 stars,0
+10-100,2 stars,1299
+10-100,3 stars,4311
+10-100,4 stars,14598
+10-100,1 stars,148
+1K-10K,5 stars,3955
+1K-10K,0 stars,0
+1K-10K,2 stars,17
+1K-10K,3 stars,83
+1K-10K,4 stars,2188
+1K-10K,1 stars,0
+>10K,5 stars,2289
+>10K,0 stars,0
+>10K,2 stars,2
+>10K,3 stars,2
+>10K,4 stars,491
+>10K,1 stars,0
+5 stars,4+,37439
+5 stars,12+,6060
+5 stars,9+,6060
+5 stars,17+,3192
+0 stars,4+,55848
+0 stars,12+,4591
+0 stars,9+,6139
+0 stars,17+,3252
+2 stars,4+,5359
+2 stars,12+,770
+2 stars,9+,711
+2 stars,17+,524
+3 stars,4+,11051
+3 stars,12+,1964
+3 stars,9+,1660
+3 stars,17+,1092
+4 stars,4+,28036
+4 stars,12+,5348
+4 stars,9+,5011
+4 stars,17+,2742
+1 stars,4+,5359
+1 stars,12+,616
+1 stars,9+,494
+1 stars,17+,431
+4+,Free,131892
+4+,Paid,11200
+12+,Free,17235
+12+,Paid,2114
+9+,Free,17675
+9+,Paid,2400
+17+,Free,10607
+17+,Paid,626

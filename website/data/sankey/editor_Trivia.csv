@@ -1,0 +1,5 @@
+from,to,weight
+Trivia,>1M,1
+>1M,4 stars,1
+4 stars,Ads & IAP,1
+Ads & IAP,Free,1

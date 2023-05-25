@@ -1,0 +1,13 @@
+from,to,weight
+Art & Design,>1M,6
+>1M,4 stars,5
+>1M,5 stars,1
+4 stars,Ads & IAP,3
+4 stars,None,1
+4 stars,IAP,1
+5 stars,Ads & IAP,0
+5 stars,None,0
+5 stars,IAP,1
+Ads & IAP,Free,3
+None,Free,1
+IAP,Free,2

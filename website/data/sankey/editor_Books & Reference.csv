@@ -1,0 +1,23 @@
+from,to,weight
+Books & Reference,>1M,6
+Books & Reference,100K-1M,2
+>1M,4 stars,6
+>1M,5 stars,0
+100K-1M,4 stars,0
+100K-1M,5 stars,2
+4 stars,None,3
+4 stars,IAP,1
+4 stars,Ads,1
+4 stars,Ads & IAP,1
+5 stars,None,2
+5 stars,IAP,0
+5 stars,Ads,0
+5 stars,Ads & IAP,0
+None,Free,3
+None,Paid,2
+IAP,Free,1
+IAP,Paid,0
+Ads,Free,1
+Ads,Paid,0
+Ads & IAP,Free,1
+Ads & IAP,Paid,0

@@ -1,0 +1,61 @@
+from,to,weight
+Stickers,0-10,11620
+Stickers,100-1K,79
+Stickers,10-100,701
+Stickers,1K-10K,7
+0-10,0 stars,7934
+0-10,5 stars,2269
+0-10,4 stars,507
+0-10,3 stars,339
+0-10,1 stars,367
+0-10,2 stars,204
+100-1K,0 stars,0
+100-1K,5 stars,37
+100-1K,4 stars,30
+100-1K,3 stars,8
+100-1K,1 stars,1
+100-1K,2 stars,3
+10-100,0 stars,0
+10-100,5 stars,329
+10-100,4 stars,215
+10-100,3 stars,95
+10-100,1 stars,9
+10-100,2 stars,53
+1K-10K,0 stars,0
+1K-10K,5 stars,4
+1K-10K,4 stars,1
+1K-10K,3 stars,1
+1K-10K,1 stars,0
+1K-10K,2 stars,1
+0 stars,4+,7064
+0 stars,12+,314
+0 stars,9+,471
+0 stars,17+,85
+5 stars,4+,2094
+5 stars,12+,210
+5 stars,9+,293
+5 stars,17+,42
+4 stars,4+,612
+4 stars,12+,55
+4 stars,9+,71
+4 stars,17+,15
+3 stars,4+,341
+3 stars,12+,40
+3 stars,9+,52
+3 stars,17+,10
+1 stars,4+,317
+1 stars,12+,14
+1 stars,9+,30
+1 stars,17+,16
+2 stars,4+,201
+2 stars,12+,17
+2 stars,9+,32
+2 stars,17+,11
+4+,Free,2876
+4+,Paid,7753
+12+,Free,249
+12+,Paid,401
+9+,Free,353
+9+,Paid,596
+17+,Free,64
+17+,Paid,115

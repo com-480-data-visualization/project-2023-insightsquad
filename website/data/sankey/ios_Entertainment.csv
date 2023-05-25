@@ -1,0 +1,68 @@
+from,to,weight
+Entertainment,0-10,42974
+Entertainment,10-100,6539
+Entertainment,100-1K,2381
+Entertainment,1K-10K,912
+Entertainment,>10K,340
+0-10,0 stars,25694
+0-10,2 stars,1398
+0-10,4 stars,3325
+0-10,5 stars,8549
+0-10,1 stars,1739
+0-10,3 stars,2269
+10-100,0 stars,0
+10-100,2 stars,737
+10-100,4 stars,2497
+10-100,5 stars,1904
+10-100,1 stars,111
+10-100,3 stars,1290
+100-1K,0 stars,0
+100-1K,2 stars,173
+100-1K,4 stars,952
+100-1K,5 stars,943
+100-1K,1 stars,26
+100-1K,3 stars,287
+1K-10K,0 stars,0
+1K-10K,2 stars,17
+1K-10K,4 stars,384
+1K-10K,5 stars,438
+1K-10K,1 stars,1
+1K-10K,3 stars,72
+>10K,0 stars,0
+>10K,2 stars,6
+>10K,4 stars,90
+>10K,5 stars,237
+>10K,1 stars,0
+>10K,3 stars,7
+0 stars,4+,18495
+0 stars,12+,2606
+0 stars,17+,3570
+0 stars,9+,1023
+2 stars,4+,1702
+2 stars,12+,275
+2 stars,17+,243
+2 stars,9+,111
+4 stars,4+,4843
+4 stars,12+,1030
+4 stars,17+,863
+4 stars,9+,512
+5 stars,4+,7842
+5 stars,12+,1666
+5 stars,17+,1751
+5 stars,9+,812
+1 stars,4+,1397
+1 stars,12+,206
+1 stars,17+,191
+1 stars,9+,83
+3 stars,4+,2672
+3 stars,12+,544
+3 stars,17+,431
+3 stars,9+,278
+4+,Free,33764
+4+,Paid,3187
+12+,Free,5946
+12+,Paid,381
+17+,Free,6769
+17+,Paid,280
+9+,Free,2568
+9+,Paid,251

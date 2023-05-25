@@ -1,0 +1,61 @@
+from,to,weight
+Dating,0-1K,2397
+Dating,1K-100k,3297
+Dating,>1M,169
+Dating,100K-1M,585
+0-1K,0 stars,1927
+0-1K,4 stars,154
+0-1K,5 stars,238
+0-1K,3 stars,52
+0-1K,2 stars,20
+0-1K,1 stars,6
+1K-100k,0 stars,388
+1K-100k,4 stars,1634
+1K-100k,5 stars,420
+1K-100k,3 stars,649
+1K-100k,2 stars,195
+1K-100k,1 stars,11
+>1M,0 stars,0
+>1M,4 stars,136
+>1M,5 stars,5
+>1M,3 stars,24
+>1M,2 stars,3
+>1M,1 stars,1
+100K-1M,0 stars,4
+100K-1M,4 stars,369
+100K-1M,5 stars,58
+100K-1M,3 stars,130
+100K-1M,2 stars,23
+100K-1M,1 stars,1
+0 stars,None,900
+0 stars,Ads,954
+0 stars,Ads & IAP,282
+0 stars,IAP,183
+4 stars,None,396
+4 stars,Ads,1120
+4 stars,Ads & IAP,441
+4 stars,IAP,336
+5 stars,None,170
+5 stars,Ads,383
+5 stars,Ads & IAP,69
+5 stars,IAP,99
+3 stars,None,178
+3 stars,Ads,306
+3 stars,Ads & IAP,204
+3 stars,IAP,167
+2 stars,None,72
+2 stars,Ads,75
+2 stars,Ads & IAP,65
+2 stars,IAP,29
+1 stars,None,7
+1 stars,Ads,6
+1 stars,Ads & IAP,3
+1 stars,IAP,3
+None,Free,1712
+None,Paid,11
+Ads,Free,2841
+Ads,Paid,3
+Ads & IAP,Free,1059
+Ads & IAP,Paid,5
+IAP,Free,812
+IAP,Paid,5

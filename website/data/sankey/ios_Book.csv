@@ -1,0 +1,68 @@
+from,to,weight
+Book,0-10,9362
+Book,1K-10K,162
+Book,10-100,1395
+Book,100-1K,494
+Book,>10K,59
+0-10,5 stars,2069
+0-10,0 stars,5341
+0-10,3 stars,412
+0-10,4 stars,857
+0-10,1 stars,426
+0-10,2 stars,257
+1K-10K,5 stars,130
+1K-10K,0 stars,0
+1K-10K,3 stars,2
+1K-10K,4 stars,27
+1K-10K,1 stars,1
+1K-10K,2 stars,2
+10-100,5 stars,635
+10-100,0 stars,0
+10-100,3 stars,164
+10-100,4 stars,523
+10-100,1 stars,12
+10-100,2 stars,61
+100-1K,5 stars,322
+100-1K,0 stars,0
+100-1K,3 stars,19
+100-1K,4 stars,146
+100-1K,1 stars,0
+100-1K,2 stars,7
+>10K,5 stars,53
+>10K,0 stars,0
+>10K,3 stars,1
+>10K,4 stars,5
+>10K,1 stars,0
+>10K,2 stars,0
+5 stars,4+,2648
+5 stars,17+,205
+5 stars,9+,99
+5 stars,12+,257
+0 stars,4+,4415
+0 stars,17+,373
+0 stars,9+,163
+0 stars,12+,390
+3 stars,4+,460
+3 stars,17+,41
+3 stars,9+,25
+3 stars,12+,72
+4 stars,4+,1225
+4 stars,17+,141
+4 stars,9+,57
+4 stars,12+,135
+1 stars,4+,360
+1 stars,17+,31
+1 stars,9+,11
+1 stars,12+,37
+2 stars,4+,241
+2 stars,17+,32
+2 stars,9+,9
+2 stars,12+,45
+4+,Free,7958
+4+,Paid,1391
+17+,Free,759
+17+,Paid,64
+9+,Free,328
+9+,Paid,36
+12+,Free,864
+12+,Paid,72

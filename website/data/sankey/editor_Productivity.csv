@@ -1,0 +1,19 @@
+from,to,weight
+Productivity,>1M,13
+Productivity,100K-1M,2
+>1M,4 stars,8
+>1M,5 stars,5
+100K-1M,4 stars,2
+100K-1M,5 stars,0
+4 stars,Ads & IAP,2
+4 stars,IAP,3
+4 stars,None,5
+4 stars,Ads,0
+5 stars,Ads & IAP,2
+5 stars,IAP,1
+5 stars,None,1
+5 stars,Ads,1
+Ads & IAP,Free,4
+IAP,Free,4
+None,Free,6
+Ads,Free,1

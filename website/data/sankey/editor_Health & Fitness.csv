@@ -1,0 +1,25 @@
+from,to,weight
+Health & Fitness,>1M,34
+Health & Fitness,1K-100k,2
+Health & Fitness,100K-1M,5
+>1M,4 stars,17
+>1M,5 stars,17
+>1M,2 stars,0
+1K-100k,4 stars,2
+1K-100k,5 stars,0
+1K-100k,2 stars,0
+100K-1M,4 stars,3
+100K-1M,5 stars,1
+100K-1M,2 stars,1
+4 stars,IAP,15
+4 stars,Ads & IAP,6
+4 stars,None,1
+5 stars,IAP,8
+5 stars,Ads & IAP,9
+5 stars,None,1
+2 stars,IAP,0
+2 stars,Ads & IAP,0
+2 stars,None,1
+IAP,Free,23
+Ads & IAP,Free,15
+None,Free,3

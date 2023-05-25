@@ -1,0 +1,13 @@
+from,to,weight
+Weather,>1M,5
+>1M,4 stars,3
+>1M,5 stars,2
+4 stars,Ads,1
+4 stars,IAP,0
+4 stars,Ads & IAP,2
+5 stars,Ads,0
+5 stars,IAP,1
+5 stars,Ads & IAP,1
+Ads,Free,1
+IAP,Free,1
+Ads & IAP,Free,3

@@ -1,0 +1,68 @@
+from,to,weight
+Navigation,100-1K,342
+Navigation,0-10,11058
+Navigation,10-100,1033
+Navigation,1K-10K,156
+Navigation,>10K,46
+100-1K,5 stars,165
+100-1K,0 stars,0
+100-1K,2 stars,15
+100-1K,4 stars,132
+100-1K,3 stars,25
+100-1K,1 stars,5
+0-10,5 stars,1506
+0-10,0 stars,7319
+0-10,2 stars,345
+0-10,4 stars,668
+0-10,3 stars,454
+0-10,1 stars,766
+10-100,5 stars,270
+10-100,0 stars,0
+10-100,2 stars,141
+10-100,4 stars,409
+10-100,3 stars,182
+10-100,1 stars,31
+1K-10K,5 stars,112
+1K-10K,0 stars,0
+1K-10K,2 stars,1
+1K-10K,4 stars,39
+1K-10K,3 stars,4
+1K-10K,1 stars,0
+>10K,5 stars,43
+>10K,0 stars,0
+>10K,2 stars,0
+>10K,4 stars,3
+>10K,3 stars,0
+>10K,1 stars,0
+5 stars,4+,1964
+5 stars,12+,57
+5 stars,17+,62
+5 stars,9+,13
+0 stars,4+,6885
+0 stars,12+,67
+0 stars,17+,342
+0 stars,9+,25
+2 stars,4+,485
+2 stars,12+,2
+2 stars,17+,14
+2 stars,9+,1
+4 stars,4+,1184
+4 stars,12+,26
+4 stars,17+,36
+4 stars,9+,5
+3 stars,4+,631
+3 stars,12+,11
+3 stars,17+,20
+3 stars,9+,3
+1 stars,4+,779
+1 stars,12+,3
+1 stars,17+,19
+1 stars,9+,1
+4+,Free,10475
+4+,Paid,1453
+12+,Free,146
+12+,Paid,20
+17+,Free,453
+17+,Paid,40
+9+,Free,44
+9+,Paid,4

@@ -1,0 +1,61 @@
+from,to,weight
+Libraries & Demo,1K-100k,1835
+Libraries & Demo,0-1K,2885
+Libraries & Demo,100K-1M,268
+Libraries & Demo,>1M,80
+1K-100k,4 stars,938
+1K-100k,0 stars,176
+1K-100k,3 stars,244
+1K-100k,5 stars,380
+1K-100k,2 stars,92
+1K-100k,1 stars,5
+0-1K,4 stars,178
+0-1K,0 stars,2295
+0-1K,3 stars,60
+0-1K,5 stars,335
+0-1K,2 stars,15
+0-1K,1 stars,2
+100K-1M,4 stars,185
+100K-1M,0 stars,3
+100K-1M,3 stars,28
+100K-1M,5 stars,45
+100K-1M,2 stars,7
+100K-1M,1 stars,0
+>1M,4 stars,61
+>1M,0 stars,0
+>1M,3 stars,8
+>1M,5 stars,10
+>1M,2 stars,1
+>1M,1 stars,0
+4 stars,Ads,495
+4 stars,None,723
+4 stars,Ads & IAP,134
+4 stars,IAP,10
+0 stars,Ads,546
+0 stars,None,1889
+0 stars,Ads & IAP,21
+0 stars,IAP,18
+3 stars,Ads,91
+3 stars,None,236
+3 stars,Ads & IAP,8
+3 stars,IAP,5
+5 stars,Ads,200
+5 stars,None,510
+5 stars,Ads & IAP,55
+5 stars,IAP,5
+2 stars,Ads,24
+2 stars,None,87
+2 stars,Ads & IAP,1
+2 stars,IAP,3
+1 stars,Ads,1
+1 stars,None,6
+1 stars,Ads & IAP,0
+1 stars,IAP,0
+Ads,Free,1354
+Ads,Paid,3
+None,Free,3383
+None,Paid,68
+Ads & IAP,Free,219
+Ads & IAP,Paid,0
+IAP,Free,40
+IAP,Paid,1

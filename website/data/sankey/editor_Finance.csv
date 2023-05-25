@@ -1,0 +1,25 @@
+from,to,weight
+Finance,>1M,14
+Finance,100K-1M,3
+>1M,5 stars,4
+>1M,4 stars,8
+>1M,3 stars,2
+100K-1M,5 stars,0
+100K-1M,4 stars,3
+100K-1M,3 stars,0
+5 stars,Ads & IAP,2
+5 stars,None,0
+5 stars,IAP,2
+5 stars,Ads,0
+4 stars,Ads & IAP,5
+4 stars,None,3
+4 stars,IAP,1
+4 stars,Ads,2
+3 stars,Ads & IAP,1
+3 stars,None,1
+3 stars,IAP,0
+3 stars,Ads,0
+Ads & IAP,Free,8
+None,Free,4
+IAP,Free,3
+Ads,Free,2

@@ -1,0 +1,61 @@
+from,to,weight
+House & Home,1K-100k,4226
+House & Home,0-1K,9459
+House & Home,100K-1M,370
+House & Home,>1M,118
+1K-100k,3 stars,840
+1K-100k,0 stars,642
+1K-100k,4 stars,1846
+1K-100k,5 stars,414
+1K-100k,2 stars,441
+1K-100k,1 stars,43
+0-1K,3 stars,175
+0-1K,0 stars,7985
+0-1K,4 stars,400
+0-1K,5 stars,811
+0-1K,2 stars,68
+0-1K,1 stars,20
+100K-1M,3 stars,70
+100K-1M,0 stars,4
+100K-1M,4 stars,233
+100K-1M,5 stars,30
+100K-1M,2 stars,32
+100K-1M,1 stars,1
+>1M,3 stars,12
+>1M,0 stars,0
+>1M,4 stars,88
+>1M,5 stars,16
+>1M,2 stars,2
+>1M,1 stars,0
+3 stars,None,689
+3 stars,Ads,366
+3 stars,Ads & IAP,28
+3 stars,IAP,14
+0 stars,None,5612
+0 stars,Ads,2907
+0 stars,Ads & IAP,52
+0 stars,IAP,60
+4 stars,None,1454
+4 stars,Ads,943
+4 stars,Ads & IAP,109
+4 stars,IAP,61
+5 stars,None,998
+5 stars,Ads,237
+5 stars,Ads & IAP,14
+5 stars,IAP,22
+2 stars,None,384
+2 stars,Ads,145
+2 stars,Ads & IAP,9
+2 stars,IAP,5
+1 stars,None,48
+1 stars,Ads,14
+1 stars,Ads & IAP,0
+1 stars,IAP,2
+None,Free,9123
+None,Paid,62
+Ads,Free,4611
+Ads,Paid,1
+Ads & IAP,Free,212
+Ads & IAP,Paid,0
+IAP,Free,163
+IAP,Paid,1

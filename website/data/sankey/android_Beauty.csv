@@ -1,0 +1,61 @@
+from,to,weight
+Beauty,0-1K,7784
+Beauty,100K-1M,453
+Beauty,1K-100k,3343
+Beauty,>1M,119
+0-1K,0 stars,6918
+0-1K,5 stars,598
+0-1K,4 stars,196
+0-1K,3 stars,50
+0-1K,2 stars,19
+0-1K,1 stars,3
+100K-1M,0 stars,10
+100K-1M,5 stars,39
+100K-1M,4 stars,335
+100K-1M,3 stars,53
+100K-1M,2 stars,16
+100K-1M,1 stars,0
+1K-100k,0 stars,638
+1K-100k,5 stars,492
+1K-100k,4 stars,1641
+1K-100k,3 stars,432
+1K-100k,2 stars,127
+1K-100k,1 stars,13
+>1M,0 stars,0
+>1M,5 stars,11
+>1M,4 stars,98
+>1M,3 stars,8
+>1M,2 stars,2
+>1M,1 stars,0
+0 stars,None,4225
+0 stars,Ads,3290
+0 stars,IAP,30
+0 stars,Ads & IAP,21
+5 stars,None,730
+5 stars,Ads,383
+5 stars,IAP,10
+5 stars,Ads & IAP,17
+4 stars,None,493
+4 stars,Ads,1667
+4 stars,IAP,26
+4 stars,Ads & IAP,84
+3 stars,None,148
+3 stars,Ads,370
+3 stars,IAP,8
+3 stars,Ads & IAP,17
+2 stars,None,58
+2 stars,Ads,95
+2 stars,IAP,6
+2 stars,Ads & IAP,5
+1 stars,None,9
+1 stars,Ads,6
+1 stars,IAP,1
+1 stars,Ads & IAP,0
+None,Free,5650
+None,Paid,13
+Ads,Free,5811
+Ads,Paid,0
+IAP,Free,80
+IAP,Paid,1
+Ads & IAP,Free,144
+Ads & IAP,Paid,0

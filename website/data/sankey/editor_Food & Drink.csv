@@ -1,0 +1,25 @@
+from,to,weight
+Food & Drink,>1M,21
+Food & Drink,100K-1M,3
+>1M,4 stars,15
+>1M,5 stars,5
+>1M,3 stars,1
+100K-1M,4 stars,3
+100K-1M,5 stars,0
+100K-1M,3 stars,0
+4 stars,Ads,5
+4 stars,Ads & IAP,4
+4 stars,IAP,2
+4 stars,None,7
+5 stars,Ads,0
+5 stars,Ads & IAP,3
+5 stars,IAP,1
+5 stars,None,1
+3 stars,Ads,0
+3 stars,Ads & IAP,0
+3 stars,IAP,0
+3 stars,None,1
+Ads,Free,5
+Ads & IAP,Free,7
+IAP,Free,3
+None,Free,9

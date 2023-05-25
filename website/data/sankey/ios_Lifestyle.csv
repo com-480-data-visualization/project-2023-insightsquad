@@ -1,0 +1,68 @@
+from,to,weight
+Lifestyle,100-1K,2034
+Lifestyle,10-100,7176
+Lifestyle,0-10,74326
+Lifestyle,1K-10K,741
+Lifestyle,>10K,288
+100-1K,5 stars,1047
+100-1K,2 stars,115
+100-1K,4 stars,703
+100-1K,3 stars,155
+100-1K,1 stars,14
+100-1K,0 stars,0
+10-100,5 stars,3354
+10-100,2 stars,708
+10-100,4 stars,2099
+10-100,3 stars,857
+10-100,1 stars,158
+10-100,0 stars,0
+0-10,5 stars,16787
+0-10,2 stars,1354
+0-10,4 stars,3698
+0-10,3 stars,2151
+0-10,1 stars,2048
+0-10,0 stars,48288
+1K-10K,5 stars,482
+1K-10K,2 stars,11
+1K-10K,4 stars,215
+1K-10K,3 stars,29
+1K-10K,1 stars,4
+1K-10K,0 stars,0
+>10K,5 stars,221
+>10K,2 stars,0
+>10K,4 stars,62
+>10K,3 stars,4
+>10K,1 stars,1
+>10K,0 stars,0
+5 stars,4+,16098
+5 stars,17+,2166
+5 stars,9+,294
+5 stars,12+,3333
+2 stars,4+,1837
+2 stars,17+,178
+2 stars,9+,39
+2 stars,12+,134
+4 stars,4+,5205
+4 stars,17+,884
+4 stars,9+,132
+4 stars,12+,556
+3 stars,4+,2579
+3 stars,17+,339
+3 stars,9+,55
+3 stars,12+,223
+1 stars,4+,1854
+1 stars,17+,210
+1 stars,9+,34
+1 stars,12+,127
+0 stars,4+,39834
+0 stars,17+,4812
+0 stars,9+,434
+0 stars,12+,3208
+4+,Paid,2778
+4+,Free,64629
+17+,Paid,219
+17+,Free,8370
+9+,Paid,79
+9+,Free,909
+12+,Paid,194
+12+,Free,7387

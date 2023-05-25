@@ -1,0 +1,61 @@
+from,to,weight
+Simulation,1K-100k,10104
+Simulation,>1M,2785
+Simulation,100K-1M,5347
+Simulation,0-1K,4488
+1K-100k,3 stars,2114
+1K-100k,4 stars,6338
+1K-100k,0 stars,629
+1K-100k,2 stars,354
+1K-100k,5 stars,620
+1K-100k,1 stars,49
+>1M,3 stars,255
+>1M,4 stars,2404
+>1M,0 stars,1
+>1M,2 stars,19
+>1M,5 stars,106
+>1M,1 stars,0
+100K-1M,3 stars,933
+100K-1M,4 stars,4075
+100K-1M,0 stars,36
+100K-1M,2 stars,91
+100K-1M,5 stars,211
+100K-1M,1 stars,1
+0-1K,3 stars,222
+0-1K,4 stars,682
+0-1K,0 stars,2928
+0-1K,2 stars,79
+0-1K,5 stars,562
+0-1K,1 stars,15
+3 stars,Ads,2338
+3 stars,Ads & IAP,775
+3 stars,None,303
+3 stars,IAP,108
+4 stars,Ads,7431
+4 stars,Ads & IAP,4824
+4 stars,None,842
+4 stars,IAP,402
+0 stars,Ads,2246
+0 stars,Ads & IAP,320
+0 stars,None,966
+0 stars,IAP,62
+2 stars,Ads,330
+2 stars,Ads & IAP,72
+2 stars,None,118
+2 stars,IAP,23
+5 stars,Ads,680
+5 stars,Ads & IAP,479
+5 stars,None,284
+5 stars,IAP,56
+1 stars,Ads,17
+1 stars,Ads & IAP,0
+1 stars,None,47
+1 stars,IAP,1
+Ads,Free,13008
+Ads,Paid,34
+Ads & IAP,Free,6426
+Ads & IAP,Paid,44
+None,Free,2085
+None,Paid,475
+IAP,Free,561
+IAP,Paid,91

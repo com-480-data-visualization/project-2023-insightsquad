@@ -1,0 +1,22 @@
+from,to,weight
+Card,100K-1M,9
+Card,>1M,6
+Card,1K-100k,1
+100K-1M,5 stars,3
+100K-1M,4 stars,6
+>1M,5 stars,1
+>1M,4 stars,5
+1K-100k,5 stars,0
+1K-100k,4 stars,1
+5 stars,None,1
+5 stars,Ads & IAP,1
+5 stars,IAP,2
+4 stars,None,2
+4 stars,Ads & IAP,9
+4 stars,IAP,1
+None,Paid,3
+None,Free,0
+Ads & IAP,Paid,0
+Ads & IAP,Free,10
+IAP,Paid,2
+IAP,Free,1

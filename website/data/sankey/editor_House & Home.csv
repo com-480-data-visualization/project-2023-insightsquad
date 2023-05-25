@@ -1,0 +1,10 @@
+from,to,weight
+House & Home,>1M,7
+>1M,4 stars,5
+>1M,5 stars,2
+4 stars,None,2
+4 stars,Ads,3
+5 stars,None,1
+5 stars,Ads,1
+None,Free,3
+Ads,Free,4

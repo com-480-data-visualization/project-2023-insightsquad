@@ -1,0 +1,68 @@
+from,to,weight
+Graphics & Design,0-10,2236
+Graphics & Design,10-100,251
+Graphics & Design,1K-10K,100
+Graphics & Design,100-1K,158
+Graphics & Design,>10K,36
+0-10,0 stars,1803
+0-10,5 stars,261
+0-10,4 stars,77
+0-10,1 stars,36
+0-10,3 stars,41
+0-10,2 stars,18
+10-100,0 stars,0
+10-100,5 stars,124
+10-100,4 stars,104
+10-100,1 stars,2
+10-100,3 stars,18
+10-100,2 stars,3
+1K-10K,0 stars,0
+1K-10K,5 stars,64
+1K-10K,4 stars,35
+1K-10K,1 stars,0
+1K-10K,3 stars,1
+1K-10K,2 stars,0
+100-1K,0 stars,0
+100-1K,5 stars,95
+100-1K,4 stars,58
+100-1K,1 stars,0
+100-1K,3 stars,4
+100-1K,2 stars,1
+>10K,0 stars,0
+>10K,5 stars,33
+>10K,4 stars,3
+>10K,1 stars,0
+>10K,3 stars,0
+>10K,2 stars,0
+0 stars,4+,1725
+0 stars,12+,33
+0 stars,17+,34
+0 stars,9+,11
+5 stars,4+,515
+5 stars,12+,32
+5 stars,17+,13
+5 stars,9+,17
+4 stars,4+,254
+4 stars,12+,7
+4 stars,17+,4
+4 stars,9+,12
+1 stars,4+,36
+1 stars,12+,1
+1 stars,17+,0
+1 stars,9+,1
+3 stars,4+,58
+3 stars,12+,2
+3 stars,17+,0
+3 stars,9+,4
+2 stars,4+,20
+2 stars,12+,0
+2 stars,17+,1
+2 stars,9+,1
+4+,Paid,1091
+4+,Free,1517
+12+,Paid,17
+12+,Free,58
+17+,Paid,8
+17+,Free,44
+9+,Paid,3
+9+,Free,43

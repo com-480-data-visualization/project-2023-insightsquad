@@ -1,0 +1,13 @@
+from,to,weight
+Social,>1M,10
+>1M,4 stars,7
+>1M,5 stars,3
+4 stars,Ads & IAP,4
+4 stars,None,3
+4 stars,Ads,0
+5 stars,Ads & IAP,2
+5 stars,None,0
+5 stars,Ads,1
+Ads & IAP,Free,6
+None,Free,3
+Ads,Free,1

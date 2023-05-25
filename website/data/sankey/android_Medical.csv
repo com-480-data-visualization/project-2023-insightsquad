@@ -1,0 +1,61 @@
+from,to,weight
+Medical,0-1K,19112
+Medical,100K-1M,1145
+Medical,1K-100k,11265
+Medical,>1M,168
+0-1K,0 stars,15881
+0-1K,5 stars,1888
+0-1K,4 stars,955
+0-1K,3 stars,270
+0-1K,2 stars,101
+0-1K,1 stars,17
+100K-1M,0 stars,8
+100K-1M,5 stars,198
+100K-1M,4 stars,744
+100K-1M,3 stars,156
+100K-1M,2 stars,35
+100K-1M,1 stars,4
+1K-100k,0 stars,1366
+1K-100k,5 stars,2092
+1K-100k,4 stars,5661
+1K-100k,3 stars,1588
+1K-100k,2 stars,527
+1K-100k,1 stars,31
+>1M,0 stars,0
+>1M,5 stars,45
+>1M,4 stars,100
+>1M,3 stars,18
+>1M,2 stars,5
+>1M,1 stars,0
+0 stars,None,14835
+0 stars,Ads,2025
+0 stars,Ads & IAP,106
+0 stars,IAP,289
+5 stars,None,3111
+5 stars,Ads,882
+5 stars,Ads & IAP,101
+5 stars,IAP,129
+4 stars,None,4903
+4 stars,Ads,1798
+4 stars,Ads & IAP,318
+4 stars,IAP,441
+3 stars,None,1619
+3 stars,Ads,269
+3 stars,Ads & IAP,31
+3 stars,IAP,113
+2 stars,None,595
+2 stars,Ads,44
+2 stars,Ads & IAP,6
+2 stars,IAP,23
+1 stars,None,42
+1 stars,Ads,8
+1 stars,Ads & IAP,0
+1 stars,IAP,2
+None,Free,23850
+None,Paid,1255
+Ads,Free,4943
+Ads,Paid,83
+Ads & IAP,Free,560
+Ads & IAP,Paid,2
+IAP,Free,973
+IAP,Paid,24

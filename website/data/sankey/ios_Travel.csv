@@ -1,0 +1,68 @@
+from,to,weight
+Travel,0-10,39619
+Travel,10-100,2761
+Travel,100-1K,843
+Travel,>10K,172
+Travel,1K-10K,331
+0-10,1 stars,1512
+0-10,0 stars,29190
+0-10,2 stars,825
+0-10,3 stars,1107
+0-10,4 stars,1652
+0-10,5 stars,5333
+10-100,1 stars,68
+10-100,0 stars,0
+10-100,2 stars,270
+10-100,3 stars,409
+10-100,4 stars,871
+10-100,5 stars,1143
+100-1K,1 stars,8
+100-1K,0 stars,0
+100-1K,2 stars,29
+100-1K,3 stars,67
+100-1K,4 stars,209
+100-1K,5 stars,530
+>10K,1 stars,0
+>10K,0 stars,0
+>10K,2 stars,0
+>10K,3 stars,0
+>10K,4 stars,5
+>10K,5 stars,167
+1K-10K,1 stars,0
+1K-10K,0 stars,0
+1K-10K,2 stars,1
+1K-10K,3 stars,7
+1K-10K,4 stars,57
+1K-10K,5 stars,266
+1 stars,4+,1425
+1 stars,12+,41
+1 stars,9+,3
+1 stars,17+,119
+0 stars,4+,24992
+0 stars,12+,944
+0 stars,9+,148
+0 stars,17+,3106
+2 stars,4+,996
+2 stars,12+,40
+2 stars,9+,8
+2 stars,17+,81
+3 stars,4+,1418
+3 stars,12+,59
+3 stars,9+,9
+3 stars,17+,104
+4 stars,4+,2432
+4 stars,12+,154
+4 stars,9+,31
+4 stars,17+,177
+5 stars,4+,6397
+5 stars,12+,430
+5 stars,9+,79
+5 stars,17+,533
+4+,Free,34583
+4+,Paid,3077
+12+,Free,1580
+12+,Paid,88
+9+,Free,239
+9+,Paid,39
+17+,Free,3980
+17+,Paid,140

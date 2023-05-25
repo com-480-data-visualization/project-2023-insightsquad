@@ -1,0 +1,15 @@
+from,to,weight
+Arcade,>1M,17
+Arcade,100K-1M,1
+>1M,5 stars,5
+>1M,4 stars,12
+100K-1M,5 stars,0
+100K-1M,4 stars,1
+5 stars,Ads & IAP,4
+5 stars,IAP,1
+4 stars,Ads & IAP,13
+4 stars,IAP,0
+Ads & IAP,Free,17
+Ads & IAP,Paid,0
+IAP,Free,0
+IAP,Paid,1

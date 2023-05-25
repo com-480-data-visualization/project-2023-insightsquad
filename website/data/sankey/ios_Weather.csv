@@ -1,0 +1,68 @@
+from,to,weight
+Weather,0-10,2379
+Weather,10-100,604
+Weather,100-1K,304
+Weather,>10K,78
+Weather,1K-10K,198
+0-10,0 stars,1187
+0-10,3 stars,189
+0-10,1 stars,151
+0-10,5 stars,446
+0-10,4 stars,297
+0-10,2 stars,109
+10-100,0 stars,0
+10-100,3 stars,152
+10-100,1 stars,11
+10-100,5 stars,144
+10-100,4 stars,258
+10-100,2 stars,39
+100-1K,0 stars,0
+100-1K,3 stars,25
+100-1K,1 stars,1
+100-1K,5 stars,170
+100-1K,4 stars,100
+100-1K,2 stars,8
+>10K,0 stars,0
+>10K,3 stars,0
+>10K,1 stars,0
+>10K,5 stars,73
+>10K,4 stars,5
+>10K,2 stars,0
+1K-10K,0 stars,0
+1K-10K,3 stars,2
+1K-10K,1 stars,0
+1K-10K,5 stars,176
+1K-10K,4 stars,20
+1K-10K,2 stars,0
+0 stars,12+,9
+0 stars,4+,1139
+0 stars,17+,35
+0 stars,9+,4
+3 stars,12+,7
+3 stars,4+,354
+3 stars,17+,4
+3 stars,9+,3
+1 stars,12+,2
+1 stars,4+,158
+1 stars,17+,3
+1 stars,9+,0
+5 stars,12+,27
+5 stars,4+,951
+5 stars,17+,22
+5 stars,9+,9
+4 stars,12+,20
+4 stars,4+,644
+4 stars,17+,10
+4 stars,9+,6
+2 stars,12+,2
+2 stars,4+,152
+2 stars,17+,1
+2 stars,9+,1
+12+,Free,52
+12+,Paid,15
+4+,Free,2827
+4+,Paid,571
+17+,Free,63
+17+,Paid,12
+9+,Free,23
+9+,Paid,0

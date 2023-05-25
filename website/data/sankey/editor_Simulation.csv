@@ -1,0 +1,23 @@
+from,to,weight
+Simulation,>1M,48
+Simulation,100K-1M,9
+>1M,5 stars,13
+>1M,4 stars,35
+100K-1M,5 stars,3
+100K-1M,4 stars,6
+5 stars,Ads & IAP,13
+5 stars,IAP,1
+5 stars,None,2
+5 stars,Ads,0
+4 stars,Ads & IAP,35
+4 stars,IAP,5
+4 stars,None,0
+4 stars,Ads,1
+Ads & IAP,Free,48
+Ads & IAP,Paid,0
+IAP,Free,5
+IAP,Paid,1
+None,Free,1
+None,Paid,1
+Ads,Free,1
+Ads,Paid,0

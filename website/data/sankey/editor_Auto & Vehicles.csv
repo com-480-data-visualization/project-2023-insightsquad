@@ -1,0 +1,5 @@
+from,to,weight
+Auto & Vehicles,>1M,1
+>1M,5 stars,1
+5 stars,Ads & IAP,1
+Ads & IAP,Free,1

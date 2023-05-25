@@ -1,0 +1,61 @@
+from,to,weight
+Shopping,1K-100k,21220
+Shopping,0-1K,49964
+Shopping,100K-1M,2499
+Shopping,>1M,1070
+1K-100k,5 stars,4525
+1K-100k,0 stars,2540
+1K-100k,4 stars,10245
+1K-100k,3 stars,3002
+1K-100k,2 stars,849
+1K-100k,1 stars,59
+0-1K,5 stars,7525
+0-1K,0 stars,39346
+0-1K,4 stars,2550
+0-1K,3 stars,419
+0-1K,2 stars,102
+0-1K,1 stars,22
+100K-1M,5 stars,314
+100K-1M,0 stars,52
+100K-1M,4 stars,1503
+100K-1M,3 stars,469
+100K-1M,2 stars,154
+100K-1M,1 stars,7
+>1M,5 stars,235
+>1M,0 stars,1
+>1M,4 stars,713
+>1M,3 stars,103
+>1M,2 stars,17
+>1M,1 stars,1
+5 stars,None,10847
+5 stars,Ads & IAP,77
+5 stars,Ads,1647
+5 stars,IAP,28
+0 stars,None,37036
+0 stars,Ads & IAP,97
+0 stars,Ads,4726
+0 stars,IAP,80
+4 stars,None,11715
+4 stars,Ads & IAP,198
+4 stars,Ads,3010
+4 stars,IAP,88
+3 stars,None,3155
+3 stars,Ads & IAP,29
+3 stars,Ads,781
+3 stars,IAP,28
+2 stars,None,936
+2 stars,Ads & IAP,6
+2 stars,Ads,177
+2 stars,IAP,3
+1 stars,None,77
+1 stars,Ads & IAP,0
+1 stars,Ads,12
+1 stars,IAP,0
+None,Free,63682
+None,Paid,84
+Ads & IAP,Free,407
+Ads & IAP,Paid,0
+Ads,Free,10349
+Ads,Paid,4
+IAP,Free,224
+IAP,Paid,3

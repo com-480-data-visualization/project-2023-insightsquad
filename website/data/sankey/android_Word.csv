@@ -1,0 +1,61 @@
+from,to,weight
+Word,100K-1M,920
+Word,1K-100k,3689
+Word,>1M,444
+Word,0-1K,3472
+100K-1M,5 stars,176
+100K-1M,4 stars,676
+100K-1M,3 stars,57
+100K-1M,0 stars,9
+100K-1M,2 stars,2
+100K-1M,1 stars,0
+1K-100k,5 stars,680
+1K-100k,4 stars,2406
+1K-100k,3 stars,321
+1K-100k,0 stars,223
+1K-100k,2 stars,57
+1K-100k,1 stars,2
+>1M,5 stars,128
+>1M,4 stars,306
+>1M,3 stars,9
+>1M,0 stars,0
+>1M,2 stars,1
+>1M,1 stars,0
+0-1K,5 stars,644
+0-1K,4 stars,339
+0-1K,3 stars,44
+0-1K,0 stars,2434
+0-1K,2 stars,10
+0-1K,1 stars,1
+5 stars,Ads & IAP,699
+5 stars,Ads,734
+5 stars,IAP,37
+5 stars,None,158
+4 stars,Ads & IAP,1590
+4 stars,Ads,1764
+4 stars,IAP,107
+4 stars,None,266
+3 stars,Ads & IAP,126
+3 stars,Ads,241
+3 stars,IAP,25
+3 stars,None,39
+0 stars,Ads & IAP,447
+0 stars,Ads,1754
+0 stars,IAP,62
+0 stars,None,403
+2 stars,Ads & IAP,11
+2 stars,Ads,36
+2 stars,IAP,9
+2 stars,None,14
+1 stars,Ads & IAP,0
+1 stars,Ads,3
+1 stars,IAP,0
+1 stars,None,0
+Ads & IAP,Free,2869
+Ads & IAP,Paid,4
+Ads,Free,4523
+Ads,Paid,9
+IAP,Free,227
+IAP,Paid,13
+None,Free,723
+None,Paid,157

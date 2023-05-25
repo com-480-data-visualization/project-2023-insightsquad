@@ -1,0 +1,26 @@
+from,to,weight
+Puzzle,1K-100k,5
+Puzzle,>1M,44
+Puzzle,100K-1M,17
+1K-100k,4 stars,4
+1K-100k,5 stars,1
+>1M,4 stars,32
+>1M,5 stars,12
+100K-1M,4 stars,12
+100K-1M,5 stars,5
+4 stars,None,4
+4 stars,Ads,1
+4 stars,Ads & IAP,36
+4 stars,IAP,7
+5 stars,None,4
+5 stars,Ads,0
+5 stars,Ads & IAP,12
+5 stars,IAP,2
+None,Paid,8
+None,Free,0
+Ads,Paid,0
+Ads,Free,1
+Ads & IAP,Paid,0
+Ads & IAP,Free,48
+IAP,Paid,3
+IAP,Free,6

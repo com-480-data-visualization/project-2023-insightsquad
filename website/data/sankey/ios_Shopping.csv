@@ -1,0 +1,68 @@
+from,to,weight
+Shopping,0-10,43931
+Shopping,10-100,3667
+Shopping,100-1K,1183
+Shopping,1K-10K,448
+Shopping,>10K,308
+0-10,0 stars,32548
+0-10,4 stars,1500
+0-10,5 stars,8081
+0-10,2 stars,386
+0-10,3 stars,773
+0-10,1 stars,643
+10-100,0 stars,0
+10-100,4 stars,933
+10-100,5 stars,2232
+10-100,2 stars,161
+10-100,3 stars,313
+10-100,1 stars,28
+100-1K,0 stars,0
+100-1K,4 stars,262
+100-1K,5 stars,828
+100-1K,2 stars,27
+100-1K,3 stars,63
+100-1K,1 stars,3
+1K-10K,0 stars,0
+1K-10K,4 stars,91
+1K-10K,5 stars,346
+1K-10K,2 stars,5
+1K-10K,3 stars,6
+1K-10K,1 stars,0
+>10K,0 stars,0
+>10K,4 stars,23
+>10K,5 stars,285
+>10K,2 stars,0
+>10K,3 stars,0
+>10K,1 stars,0
+0 stars,4+,25286
+0 stars,17+,4470
+0 stars,9+,892
+0 stars,12+,1900
+4 stars,4+,2144
+4 stars,17+,339
+4 stars,9+,100
+4 stars,12+,226
+5 stars,4+,8129
+5 stars,17+,1223
+5 stars,9+,1771
+5 stars,12+,649
+2 stars,4+,465
+2 stars,17+,56
+2 stars,9+,10
+2 stars,12+,48
+3 stars,4+,907
+3 stars,17+,127
+3 stars,9+,24
+3 stars,12+,97
+1 stars,4+,543
+1 stars,17+,81
+1 stars,9+,11
+1 stars,12+,39
+4+,Free,37253
+4+,Paid,221
+17+,Free,6280
+17+,Paid,16
+9+,Free,2800
+9+,Paid,8
+12+,Free,2949
+12+,Paid,10

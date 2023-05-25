@@ -1,0 +1,16 @@
+from,to,weight
+Sports,>1M,31
+Sports,100K-1M,2
+>1M,5 stars,2
+>1M,4 stars,29
+100K-1M,5 stars,0
+100K-1M,4 stars,2
+5 stars,Ads,1
+5 stars,Ads & IAP,1
+5 stars,IAP,0
+4 stars,Ads,1
+4 stars,Ads & IAP,29
+4 stars,IAP,1
+Ads,Free,2
+Ads & IAP,Free,30
+IAP,Free,1

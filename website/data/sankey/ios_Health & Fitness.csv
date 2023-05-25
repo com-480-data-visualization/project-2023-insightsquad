@@ -1,0 +1,68 @@
+from,to,weight
+Health & Fitness,1K-10K,750
+Health & Fitness,0-10,51747
+Health & Fitness,100-1K,2041
+Health & Fitness,10-100,5872
+Health & Fitness,>10K,314
+1K-10K,5 stars,609
+1K-10K,1 stars,0
+1K-10K,4 stars,127
+1K-10K,0 stars,0
+1K-10K,3 stars,13
+1K-10K,2 stars,1
+0-10,5 stars,10834
+0-10,1 stars,1562
+0-10,4 stars,2932
+0-10,0 stars,33792
+0-10,3 stars,1613
+0-10,2 stars,1014
+100-1K,5 stars,1303
+100-1K,1 stars,11
+100-1K,4 stars,550
+100-1K,0 stars,0
+100-1K,3 stars,118
+100-1K,2 stars,59
+10-100,5 stars,2744
+10-100,1 stars,99
+10-100,4 stars,1813
+10-100,0 stars,0
+10-100,3 stars,723
+10-100,2 stars,493
+>10K,5 stars,283
+>10K,1 stars,0
+>10K,4 stars,31
+>10K,0 stars,0
+>10K,3 stars,0
+>10K,2 stars,0
+5 stars,17+,1799
+5 stars,4+,11180
+5 stars,12+,2638
+5 stars,9+,156
+1 stars,17+,202
+1 stars,4+,1178
+1 stars,12+,281
+1 stars,9+,11
+4 stars,17+,609
+4 stars,4+,3918
+4 stars,12+,881
+4 stars,9+,45
+0 stars,17+,4849
+0 stars,4+,23573
+0 stars,12+,5242
+0 stars,9+,128
+3 stars,17+,257
+3 stars,4+,1796
+3 stars,12+,387
+3 stars,9+,27
+2 stars,17+,162
+2 stars,4+,1166
+2 stars,12+,232
+2 stars,9+,7
+17+,Free,7635
+17+,Paid,243
+4+,Free,40146
+4+,Paid,2665
+12+,Free,9208
+12+,Paid,453
+9+,Free,342
+9+,Paid,32

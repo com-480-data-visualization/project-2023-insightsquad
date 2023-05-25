@@ -1,0 +1,61 @@
+from,to,weight
+Role Playing,0-1K,2136
+Role Playing,100K-1M,2151
+Role Playing,1K-100k,4215
+Role Playing,>1M,1155
+0-1K,0 stars,1215
+0-1K,4 stars,423
+0-1K,3 stars,127
+0-1K,5 stars,311
+0-1K,2 stars,54
+0-1K,1 stars,6
+100K-1M,0 stars,23
+100K-1M,4 stars,1755
+100K-1M,3 stars,228
+100K-1M,5 stars,134
+100K-1M,2 stars,11
+100K-1M,1 stars,0
+1K-100k,0 stars,177
+1K-100k,4 stars,2841
+1K-100k,3 stars,649
+1K-100k,5 stars,437
+1K-100k,2 stars,109
+1K-100k,1 stars,2
+>1M,0 stars,3
+>1M,4 stars,1014
+>1M,3 stars,41
+>1M,5 stars,92
+>1M,2 stars,5
+>1M,1 stars,0
+0 stars,Ads,710
+0 stars,Ads & IAP,167
+0 stars,None,474
+0 stars,IAP,67
+4 stars,Ads,1819
+4 stars,Ads & IAP,2335
+4 stars,None,835
+4 stars,IAP,1044
+3 stars,Ads,390
+3 stars,Ads & IAP,307
+3 stars,None,170
+3 stars,IAP,178
+5 stars,Ads,323
+5 stars,Ads & IAP,278
+5 stars,None,269
+5 stars,IAP,104
+2 stars,Ads,64
+2 stars,Ads & IAP,46
+2 stars,None,37
+2 stars,IAP,32
+1 stars,Ads,3
+1 stars,Ads & IAP,0
+1 stars,None,3
+1 stars,IAP,2
+Ads,Free,3285
+Ads,Paid,24
+Ads & IAP,Free,3019
+Ads & IAP,Paid,114
+None,Free,1347
+None,Paid,441
+IAP,Free,1343
+IAP,Paid,84

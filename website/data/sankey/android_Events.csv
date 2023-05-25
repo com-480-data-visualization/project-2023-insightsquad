@@ -1,0 +1,61 @@
+from,to,weight
+Events,0-1K,9994
+Events,1K-100k,2545
+Events,100K-1M,111
+Events,>1M,25
+0-1K,5 stars,1148
+0-1K,0 stars,8455
+0-1K,3 stars,63
+0-1K,4 stars,304
+0-1K,2 stars,16
+0-1K,1 stars,8
+1K-100k,5 stars,629
+1K-100k,0 stars,460
+1K-100k,3 stars,290
+1K-100k,4 stars,1047
+1K-100k,2 stars,108
+1K-100k,1 stars,11
+100K-1M,5 stars,16
+100K-1M,0 stars,1
+100K-1M,3 stars,15
+100K-1M,4 stars,72
+100K-1M,2 stars,7
+100K-1M,1 stars,0
+>1M,5 stars,6
+>1M,0 stars,0
+>1M,3 stars,3
+>1M,4 stars,14
+>1M,2 stars,2
+>1M,1 stars,0
+5 stars,None,1455
+5 stars,Ads,309
+5 stars,Ads & IAP,21
+5 stars,IAP,14
+0 stars,None,7236
+0 stars,Ads,1635
+0 stars,Ads & IAP,12
+0 stars,IAP,33
+3 stars,None,268
+3 stars,Ads,94
+3 stars,Ads & IAP,3
+3 stars,IAP,6
+4 stars,None,952
+4 stars,Ads,428
+4 stars,Ads & IAP,42
+4 stars,IAP,15
+2 stars,None,104
+2 stars,Ads,23
+2 stars,Ads & IAP,4
+2 stars,IAP,2
+1 stars,None,13
+1 stars,Ads,5
+1 stars,Ads & IAP,0
+1 stars,IAP,1
+None,Free,10015
+None,Paid,13
+Ads,Free,2493
+Ads,Paid,1
+Ads & IAP,Free,82
+Ads & IAP,Paid,0
+IAP,Free,71
+IAP,Paid,0

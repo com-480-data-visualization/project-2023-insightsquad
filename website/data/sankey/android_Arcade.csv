@@ -1,0 +1,61 @@
+from,to,weight
+Arcade,0-1K,34365
+Arcade,1K-100k,14269
+Arcade,>1M,1635
+Arcade,100K-1M,2438
+0-1K,5 stars,9269
+0-1K,0 stars,20927
+0-1K,3 stars,513
+0-1K,2 stars,99
+0-1K,4 stars,3539
+0-1K,1 stars,18
+1K-100k,5 stars,2376
+1K-100k,0 stars,1454
+1K-100k,3 stars,1889
+1K-100k,2 stars,303
+1K-100k,4 stars,8232
+1K-100k,1 stars,15
+>1M,5 stars,86
+>1M,0 stars,0
+>1M,3 stars,98
+>1M,2 stars,7
+>1M,4 stars,1443
+>1M,1 stars,1
+100K-1M,5 stars,122
+100K-1M,0 stars,11
+100K-1M,3 stars,335
+100K-1M,2 stars,47
+100K-1M,4 stars,1923
+100K-1M,1 stars,0
+5 stars,Ads & IAP,2196
+5 stars,None,2230
+5 stars,Ads,7271
+5 stars,IAP,156
+0 stars,Ads & IAP,2319
+0 stars,None,5499
+0 stars,Ads,14358
+0 stars,IAP,216
+3 stars,Ads & IAP,504
+3 stars,None,454
+3 stars,Ads,1819
+3 stars,IAP,58
+2 stars,Ads & IAP,64
+2 stars,None,100
+2 stars,Ads,286
+2 stars,IAP,6
+4 stars,Ads & IAP,4366
+4 stars,None,1983
+4 stars,Ads,8464
+4 stars,IAP,324
+1 stars,Ads & IAP,2
+1 stars,None,11
+1 stars,Ads,20
+1 stars,IAP,1
+Ads & IAP,Free,9420
+Ads & IAP,Paid,31
+None,Free,9660
+None,Paid,617
+Ads,Free,32154
+Ads,Paid,64
+IAP,Free,712
+IAP,Paid,49

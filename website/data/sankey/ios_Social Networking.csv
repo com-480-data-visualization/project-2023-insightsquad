@@ -1,0 +1,68 @@
+from,to,weight
+Social Networking,10-100,2835
+Social Networking,0-10,21125
+Social Networking,100-1K,927
+Social Networking,>10K,167
+Social Networking,1K-10K,375
+10-100,4 stars,947
+10-100,5 stars,1306
+10-100,0 stars,0
+10-100,2 stars,166
+10-100,3 stars,370
+10-100,1 stars,46
+0-10,4 stars,1210
+0-10,5 stars,4838
+0-10,0 stars,13298
+0-10,2 stars,411
+0-10,3 stars,721
+0-10,1 stars,647
+100-1K,4 stars,418
+100-1K,5 stars,392
+100-1K,0 stars,0
+100-1K,2 stars,22
+100-1K,3 stars,89
+100-1K,1 stars,6
+>10K,4 stars,70
+>10K,5 stars,91
+>10K,0 stars,0
+>10K,2 stars,2
+>10K,3 stars,4
+>10K,1 stars,0
+1K-10K,4 stars,169
+1K-10K,5 stars,189
+1K-10K,0 stars,0
+1K-10K,2 stars,7
+1K-10K,3 stars,8
+1K-10K,1 stars,2
+4 stars,4+,1255
+4 stars,12+,453
+4 stars,9+,97
+4 stars,17+,1009
+5 stars,4+,3321
+5 stars,12+,1485
+5 stars,9+,256
+5 stars,17+,1754
+0 stars,4+,8855
+0 stars,12+,1287
+0 stars,9+,378
+0 stars,17+,2778
+2 stars,4+,302
+2 stars,12+,69
+2 stars,9+,23
+2 stars,17+,214
+3 stars,4+,595
+3 stars,12+,150
+3 stars,9+,28
+3 stars,17+,419
+1 stars,4+,391
+1 stars,12+,75
+1 stars,9+,22
+1 stars,17+,213
+4+,Free,14141
+4+,Paid,578
+12+,Free,3454
+12+,Paid,65
+9+,Free,769
+9+,Paid,35
+17+,Free,6252
+17+,Paid,135

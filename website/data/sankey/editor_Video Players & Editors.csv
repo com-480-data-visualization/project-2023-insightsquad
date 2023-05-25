@@ -1,0 +1,9 @@
+from,to,weight
+Video Players & Editors,>1M,9
+>1M,4 stars,9
+4 stars,Ads & IAP,6
+4 stars,IAP,2
+4 stars,None,1
+Ads & IAP,Free,6
+IAP,Free,2
+None,Free,1

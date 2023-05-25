@@ -1,0 +1,61 @@
+from,to,weight
+Music & Audio,0-1K,84507
+Music & Audio,1K-100k,62367
+Music & Audio,100K-1M,6271
+Music & Audio,>1M,1444
+0-1K,0 stars,68410
+0-1K,5 stars,10027
+0-1K,4 stars,5017
+0-1K,3 stars,821
+0-1K,2 stars,202
+0-1K,1 stars,30
+1K-100k,0 stars,5923
+1K-100k,5 stars,18195
+1K-100k,4 stars,33364
+1K-100k,3 stars,4055
+1K-100k,2 stars,802
+1K-100k,1 stars,28
+100K-1M,0 stars,72
+100K-1M,5 stars,1450
+100K-1M,4 stars,4142
+100K-1M,3 stars,532
+100K-1M,2 stars,74
+100K-1M,1 stars,1
+>1M,0 stars,1
+>1M,5 stars,279
+>1M,4 stars,1063
+>1M,3 stars,82
+>1M,2 stars,18
+>1M,1 stars,1
+0 stars,None,13185
+0 stars,Ads,60271
+0 stars,Ads & IAP,775
+0 stars,IAP,175
+5 stars,None,7976
+5 stars,Ads,21082
+5 stars,Ads & IAP,739
+5 stars,IAP,154
+4 stars,None,6115
+4 stars,Ads,35268
+4 stars,Ads & IAP,1677
+4 stars,IAP,526
+3 stars,None,1163
+3 stars,Ads,3982
+3 stars,Ads & IAP,193
+3 stars,IAP,152
+2 stars,None,340
+2 stars,Ads,690
+2 stars,Ads & IAP,36
+2 stars,IAP,30
+1 stars,None,21
+1 stars,Ads,38
+1 stars,Ads & IAP,1
+1 stars,IAP,0
+None,Free,27346
+None,Paid,1454
+Ads,Free,121307
+Ads,Paid,24
+Ads & IAP,Free,3419
+Ads & IAP,Paid,2
+IAP,Free,994
+IAP,Paid,43
