@@ -96,18 +96,24 @@
 </section>
 
 <section id="plot3" class="content content-2">
-  <div class="container">
+  <div class="container-treemap">
     <div class="row">
-        <h2 class="section-heading">Apps per category</h2>
-        <div id="slider-container-treemap">
-          <label for="slider-treemap">Select Data:</label>
-          <input type="range" min="1" max="2" value="1" id="slider-treemap" list="slider-treemap-labels">
-          <datalist id="slider-treemap-labels">
-            <option value="1" label="Android"></option>
-            <option value="2" label="Apple"></option>
-          </datalist>
+      <h2 class="section-heading">Apps per category</h2>
+      <div id="slider-container-treemap">
+        <label for="slider-treemap">Select Data:</label>
+        <input type="range" min="1" max="2" value="1" id="slider-treemap" list="slider-treemap-labels">
+        <datalist id="slider-treemap-labels">
+          <option value="1" label="Android"></option>
+          <option value="2" label="Apple"></option>
+        </datalist>
+      </div>
+      <div class="column column-left">
         <div id="treemap"></div>
       <script src="js/treemap.js"></script>
+      </div>
+      <div class="column column-right">
+        <div id="category-info"></div>
+      </div>  
     </div>
   </div>
 </section>    

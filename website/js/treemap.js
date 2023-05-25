@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
-  width = document.getElementsByClassName("row")[0].offsetWidth,
+  width = document.getElementsByClassName("column-left")[0].offsetWidth,
   height = 1000,
   tile = d3.treemapResquarify
   fontSize = "16px"
@@ -9,13 +9,30 @@ var margin = {top: 10, right: 10, bottom: 10, left: 10},
   colorsApple = d3.scaleOrdinal()
     .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]);
 
+var androidCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Personalization', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Libraries & Demo', 'Casino', 'Music', 'Parenting', 'Comics'];
+var appleCategories = ['Games', 'Business', 'Education', 'Utilities', 'Lifestyle', 'Food & Drink', 'Health & Fitness', 'Productivity', 'Entertainment', 'Shopping', 'Finance', 'Travel', 'Sports', 'Music', 'Medical', 'Photo & Video', 'Social Networking', 'News', 'Reference', 'Navigation', 'Stickers', 'Book', 'Weather', 'Graphics & Design', 'Developer Tools', 'Magazines & Newspapers'];
+
 var sliderTreemap = d3.select("#slider-treemap")
 
 // Read data
+var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/'
 var androidDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
 var appleDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
 var androidData
 var apple_data
+var androidTopAppsAction, androidTopAppsAdventure, androidTopAppsArcade, androidTopAppsArtDesign, androidTopAppsAutoVehicles, androidTopAppsBeauty, 
+  androidTopAppsBoard, androidTopAppsBooksReference, androidTopAppsBusiness, androidTopAppsCard, androidTopAppsCasino, androidTopAppsCasual, androidTopAppsComics, 
+  androidTopAppsCommunication, androidTopAppsDating, androidTopAppsEducation, androidTopAppsEducational, androidTopAppsEntertainment, androidTopAppsEvents, 
+  androidTopAppsFinance, androidTopAppsFoodDrink, androidTopAppsHealthFitness, androidTopAppsHouseHome, androidTopAppsLibrariesDemo, androidTopAppsLifestyle, 
+  androidTopAppsMapsNavigation, androidTopAppsMedical, androidTopAppsMusic, androidTopAppsMusicAudio, androidTopAppsNewsMagazines, androidTopAppsParenting, 
+  androidTopAppsPersonalization, androidTopAppsPhotography, androidTopAppsPuzzle, androidTopAppsRacing, androidTopAppsRolePlaying, androidTopAppsShopping, 
+  androidTopAppsSimulation, androidTopAppsSocial, androidTopAppsSports, androidTopAppsStrategy, androidTopAppsTools, androidTopAppsTravelLocal, androidTopAppsTrivia, 
+  androidTopAppsVideoPlayersEditors, androidTopAppsWeather, androidTopAppsWord
+
+var appleTopAppsBook, appleTopAppsBusiness, appleTopAppsDeveloperTools, appleTopAppsEducation, appleTopAppsEntertainment, appleTopAppsFinance, appleTopAppsFoodDrink,
+  appleTopAppsGames, appleTopAppsGraphicsDesign, appleTopAppsHealthFitness, appleTopAppsLifestyle, appleTopAppsMagazinesNewspapers, appleTopAppsMedical, appleTopAppsMusic,
+  appleTopAppsNavigation, appleTopAppsNews, appleTopAppsPhotoVideo, appleTopAppsProductivity, appleTopAppsReference, appleTopAppsShopping, appleTopAppsSocialNetworking,
+  appleTopAppsSports, appleTopAppsStickers, appleTopAppsTravel, appleTopAppsUtilities, appleTopAppsWeather
 
 d3.csv(androidDataPath, function(data) {
   androidData = data
@@ -25,7 +42,35 @@ d3.csv(appleDataPath, function(data) {
   apple_data = data
 })
 
+androidCategories.forEach(function(category) {
+  d3.csv(path + "play_store_top_apps_in_" + category + ".csv", function(data) {
+    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
+    window["androidTopApps" + categoryFormatted] = data
+  })
+})
+
+appleCategories.forEach(function(category) {
+  d3.csv(path + "apple_store_top_apps_in_" + category + ".csv", function(data) {
+    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
+    window["appleTopApps" + categoryFormatted] = data
+  })
+})
+
 function updateTreemapOnSliderChange() {
+  d3.select("#category-info")
+    .style("opacity", 1)
+    .transition()
+    .duration(500) // Set the duration of the transition in milliseconds
+    .style("opacity", 0)
+    .on("start", function() {
+      // This function is called when the transition starts
+      // You can perform any necessary tasks here before the transition begins
+    })
+    .on("end", function() {
+      // This function is called when the transition ends
+      // Set the HTML content to an empty string
+      d3.select("#category-info").html("").style("opacity", 1);
+    });
   var sliderValue = parseInt(sliderTreemap.node().value)
   var isAndroid = sliderValue === 1
 
@@ -85,12 +130,17 @@ function update(data, isAndroid) {
     .style("font-size", fontSize)
     .style("border-radius", "3px");
 
-  // use this information to add rectangles:
+  // Category info
+  var categoryInfo = d3.select("#category-info")
+    
+  // Use this information to add rectangles:
   var tiles = svgTreemap.selectAll("rect")
     .data(root.leaves())
 
+  // Remove previous tiles
   tiles.exit().remove()
 
+  // Add new tiles
   tiles
     .enter()
     .append("rect")
@@ -108,7 +158,8 @@ function update(data, isAndroid) {
         }
       })
       .on("mouseover", function(d) {
-        tooltip.html(d.data.name + "<br>" + d.data.value + " apps" + "<br>" + d.data.percentage.toFixed(2) + "%")
+        htmlContent = d.data.name + "<br>" + d.data.value + " apps" + "<br>" + d.data.percentage.toFixed(2) + "%"
+        tooltip.html(htmlContent)
         tooltip.style("visibility", "visible")
       })
       .on("mousemove", function() {
@@ -117,13 +168,35 @@ function update(data, isAndroid) {
       .on("mouseout", function() {
         tooltip.style("visibility", "hidden")
       })
+      .on("click", function(d) {
+          if (isAndroid) {
+            var topApps = window["androidTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
+            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
+            topApps.forEach(function(app, index) {
+              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
+            })
+            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
+          } 
+          else {
+            var topApps = window["appleTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
+            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of reviews)</h3>"
+            topApps.forEach(function(app, index) {
+              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
+            })
+            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
+          }
 
-  // and to add the text labels
+      })
+
+
+  // And to add the text labels
   var textLabels = svgTreemap.selectAll("text")
     .data(root.leaves())
 
+  // Remove previous text labels
   textLabels.exit().remove()
 
+  // Add new text labels
   textLabels
     .enter()
     .append("text")
