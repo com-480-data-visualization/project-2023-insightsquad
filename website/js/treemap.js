@@ -121,10 +121,10 @@ function updateTreemapOnSliderChange() {
   if (sliderValue === 1) {
     update(androidData, sliderValue)
   }
-  if (sliderValue === 2) {
+  else if (sliderValue === 2) {
     update(appleData, sliderValue)
   }
-  else {
+  else if (sliderValue === 3) {
     update(editorsChoiceData, sliderValue)
   }
 }
@@ -223,7 +223,7 @@ function update(data, dataType) {
             })
             categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
           } 
-          if (dataType === 2){
+          else if (dataType === 2){
             var topApps = window["appleTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
             var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of reviews)</h3>"
             topApps.forEach(function(app, index) {
@@ -231,7 +231,7 @@ function update(data, dataType) {
             })
             categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
           }
-          else {
+          else if (dataType === 3) {
             var topApps = window["editorsChoiceTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
             var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
             topApps.forEach(function(app, index) {
@@ -342,12 +342,12 @@ if (sliderValue === 1) {
     update(data, sliderValue)
   })
 }
-if (sliderValue === 2) {
+else if (sliderValue === 2) {
   d3.csv(appleDataPath, function(data) {
     update(data, sliderValue)
   })
 }
-else {
+else if (sliderValue === 3) {
   d3.csv(editorsChoiceDataPath, function(data) {
     update(data, sliderValue)
   })
