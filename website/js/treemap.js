@@ -2,15 +2,38 @@
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = document.getElementsByClassName("column-left")[0].offsetWidth,
   height = 900,
-  tile = d3.treemapResquarify
-  fontSize = "16px"
+  tile = d3.treemapResquarify,
+  fontSize = "16px",
   colorsAndroid = d3.scaleOrdinal()
-    .range(["#6eb728", "#589220", "#426d18", "#8bc552", "#a8d37e"]);
+    .range(["#6eb728", "#589220", "#426d18", "#8bc552", "#a8d37e"]),
   colorsApple = d3.scaleOrdinal()
-    .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]);
+    .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]),
+  palettes = {
+    1: ["264653","3d85c6", "2a9d8f","e9c46a","f4a261","e76f51"], // OUI
+    2: ["1b54b4","023e8a","0077b6","00b4d8","90e0ef","caf0f8"],
+    3: ["264653","3d85c6", "2a9d8f","e9c46a","f4a261","e76f51"], // OUI
+    4: ["1b54b4","023e8a","0077b6","0096c7","00b4d8","48cae4","90e0ef","ade8f4","caf0f8"],  
+    5: ["0f4094","1b54b4","0077b6","00b4d8","90e0ef","caf0f8"],
+    6: ['e9c46a', 'ffa62b', '16697a', '82c0cc', 'ede7e3', '489fb5'],
+    7: ['f7b267', 'd8433b', 'f79d65', 'f25c54', 'f4845f', 'f27059'],
+    8: ["16697a","489fb5","82c0cc","ede7e3","e9c46a","ffa62b"],
+    9: ["f7b267","f79d65","f4845f","f27059","f25c54", "d8433b"],
+    10: ["ffc4d6","ffa6c1","ff87ab","ff5d8f","ff97b7","ffacc5","ffcad4","f4acb7"],
+    11: ['ccff33', '70e000', '007200', '004b23', '9ef01a', '008000', '006400', '38b000'],
+    12: ["250902","38040e","640d14","800e13","ad2831", "eb4954"],
+    13: ["30f2f2","ffd23f","ff6f59","3066be","a0a4b8","8e7cc3"],
+    14: ['9336fd', 'f050ae', 'fdf148', 'a0e426', 'f77976', '52e3e1', '33a8c7', 'd883ff', 'ffab00'],
+    15: ['e76f51', '2a9d8f', 'f4a261', '264653', 'e9c46a', '3d85c6'], // OUI
+    16: ['e9c46a', 'f4a261', '3d85c6', '2a9d8f', '264653', 'e76f51'], // OUI
+    17: ['94d2bd', '0a9396', 'bb3e03', 'ca6702', '001219', 'e9d8a6', 'ee9b00', 'ae2012', '005f73', '9b2226'], // OUI
+    18: ['bb3e03', '001219', '94d2bd', '9b2226', 'ee9b00', 'ca6702', 'e9d8a6', '0a9396', '005f73', 'ae2012'], // OUI
+    19: ['9b2226', '0a9396', 'bb3e03', '94d2bd', 'ee9b00', '001219', 'e9d8a6', 'ae2012', '005f73', 'ca6702'], // OUI
+    20: ["001219","005f73","0a9396","94d2bd","e9d8a6","ee9b00","ca6702","bb3e03","ae2012","9b2226"] // OUI
+  };
 
 var androidCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Personalization', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Libraries & Demo', 'Casino', 'Music', 'Parenting', 'Comics'];
 var appleCategories = ['Games', 'Business', 'Education', 'Utilities', 'Lifestyle', 'Food & Drink', 'Health & Fitness', 'Productivity', 'Entertainment', 'Shopping', 'Finance', 'Travel', 'Sports', 'Music', 'Medical', 'Photo & Video', 'Social Networking', 'News', 'Reference', 'Navigation', 'Stickers', 'Book', 'Weather', 'Graphics & Design', 'Developer Tools', 'Magazines & Newspapers'];
+var editorsChoiceCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Music', 'Parenting', 'Comics'];
 
 var sliderTreemap = d3.select("#slider-treemap")
 
@@ -18,8 +41,10 @@ var sliderTreemap = d3.select("#slider-treemap")
 var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/'
 var androidDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
 var appleDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
+var editorsChoiceDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_editors_choice_category_count.csv'
 var androidData
-var apple_data
+var appleData
+var editorsChoiceData
 var androidTopAppsAction, androidTopAppsAdventure, androidTopAppsArcade, androidTopAppsArtDesign, androidTopAppsAutoVehicles, androidTopAppsBeauty, 
   androidTopAppsBoard, androidTopAppsBooksReference, androidTopAppsBusiness, androidTopAppsCard, androidTopAppsCasino, androidTopAppsCasual, androidTopAppsComics, 
   androidTopAppsCommunication, androidTopAppsDating, androidTopAppsEducation, androidTopAppsEducational, androidTopAppsEntertainment, androidTopAppsEvents, 
@@ -34,12 +59,25 @@ var appleTopAppsBook, appleTopAppsBusiness, appleTopAppsDeveloperTools, appleTop
   appleTopAppsNavigation, appleTopAppsNews, appleTopAppsPhotoVideo, appleTopAppsProductivity, appleTopAppsReference, appleTopAppsShopping, appleTopAppsSocialNetworking,
   appleTopAppsSports, appleTopAppsStickers, appleTopAppsTravel, appleTopAppsUtilities, appleTopAppsWeather
 
+var editorsChoiceTopAppsAction, editorsChoiceTopAppsAdventure, editorsChoiceTopAppsArcade, editorsChoiceTopAppsArtDesign, editorsChoiceTopAppsAutoVehicles, editorsChoiceTopAppsBeauty,
+  editorsChoiceTopAppsBoard, editorsChoiceTopAppsBooksReference, editorsChoiceTopAppsBusiness, editorsChoiceTopAppsCard, editorsChoiceTopAppsCasual, editorsChoiceTopAppsComics,
+  editorsChoiceTopAppsCommunication, editorsChoiceTopAppsDating, editorsChoiceTopAppsEducation, editorsChoiceTopAppsEducational, editorsChoiceTopAppsEntertainment, editorsChoiceTopAppsEvents,
+  editorsChoiceTopAppsFinance, editorsChoiceTopAppsFoodDrink, editorsChoiceTopAppsHealthFitness, editorsChoiceTopAppsHouseHome, editorsChoiceTopAppsLifestyle,
+  editorsChoiceTopAppsMapsNavigation, editorsChoiceTopAppsMedical, editorsChoiceTopAppsMusic, editorsChoiceTopAppsMusicAudio, editorsChoiceTopAppsNewsMagazines, editorsChoiceTopAppsParenting,
+  editorsChoiceTopAppsPhotography, editorsChoiceTopAppsPuzzle, editorsChoiceTopAppsRacing, editorsChoiceTopAppsRolePlaying, editorsChoiceTopAppsShopping,
+  editorsChoiceTopAppsSimulation, editorsChoiceTopAppsSocial, editorsChoiceTopAppsSports, editorsChoiceTopAppsStrategy, editorsChoiceTopAppsTools, editorsChoiceTopAppsTravelLocal, editorsChoiceTopAppsTrivia,
+  editorsChoiceTopAppsVideoPlayersEditors, editorsChoiceTopAppsWeather, editorsChoiceTopAppsWord
+
 d3.csv(androidDataPath, function(data) {
   androidData = data
 })
 
 d3.csv(appleDataPath, function(data) {
-  apple_data = data
+  appleData = data
+})
+
+d3.csv(editorsChoiceDataPath, function(data) {
+  editorsChoiceData = data
 })
 
 androidCategories.forEach(function(category) {
@@ -53,6 +91,13 @@ appleCategories.forEach(function(category) {
   d3.csv(path + "apple_store_top_apps_in_" + category + ".csv", function(data) {
     categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
     window["appleTopApps" + categoryFormatted] = data
+  })
+})
+
+editorsChoiceCategories.forEach(function(category) {
+  d3.csv(path + "play_store_editors_choice_top_apps_in_" + category + ".csv", function(data) {
+    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
+    window["editorsChoiceTopApps" + categoryFormatted] = data
   })
 })
 
@@ -72,17 +117,22 @@ function updateTreemapOnSliderChange() {
       d3.select("#category-info").html("").style("opacity", 1);
     });
   var sliderValue = parseInt(sliderTreemap.node().value)
-  var isAndroid = sliderValue === 1
 
-  if (isAndroid) {
-    update(androidData, isAndroid)
+  if (sliderValue === 1) {
+    update(androidData, sliderValue)
+  }
+  if (sliderValue === 2) {
+    update(appleData, sliderValue)
   }
   else {
-    update(apple_data, isAndroid)
+    update(editorsChoiceData, sliderValue)
   }
 }
 
-function update(data, isAndroid) {
+function update(data, dataType) {
+  var color = d3.scaleOrdinal()
+  .range(palettes[Math.floor(Math.random() * 20) + 1])
+
   // Remove previous svg
   d3.select("#treemap").selectAll("svg").remove()
 
@@ -149,13 +199,9 @@ function update(data, isAndroid) {
       .attr("width", function (d) { return d.x1 - d.x0 })
       .attr("height", function (d) { return d.y1 - d.y0 })
       .style("stroke", "black")
+      .style("opacity", 0.75)
       .style("fill", function(d) { 
-        if (isAndroid) {
-          return colorsAndroid(d.data.name)
-        }
-        else {
-          return colorsApple(d.data.name)
-        }
+        return "#" + color(d.data.name)
       })
       .on("mouseover", function(d) {
         htmlContent = d.data.name + "<br>" + d.data.value + " apps" + "<br>" + d.data.percentage.toFixed(2) + "%"
@@ -169,7 +215,7 @@ function update(data, isAndroid) {
         tooltip.style("visibility", "hidden")
       })
       .on("click", function(d) {
-          if (isAndroid) {
+          if (dataType === 1) {
             var topApps = window["androidTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
             var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
             topApps.forEach(function(app, index) {
@@ -177,9 +223,17 @@ function update(data, isAndroid) {
             })
             categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
           } 
-          else {
+          if (dataType === 2){
             var topApps = window["appleTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
             var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of reviews)</h3>"
+            topApps.forEach(function(app, index) {
+              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
+            })
+            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
+          }
+          else {
+            var topApps = window["editorsChoiceTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
+            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
             topApps.forEach(function(app, index) {
               topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
             })
@@ -211,7 +265,9 @@ function update(data, isAndroid) {
       .text(function(d){ 
         var name = d.data.name
         var width = d.x1 - d.x0
+        var height = d.y1 - d.y0
         var textWidth = getTextWidth(name, fontSize) + margin.right
+        var textHeight = parseInt(fontSize.substring(0, 2)) + 8
         var truncatedName = name
 
         if (textWidth > width) {
@@ -224,6 +280,11 @@ function update(data, isAndroid) {
             truncatedName = ""
           }
         }
+
+        if (textHeight > height) {
+          truncatedName = ""
+        }
+
         return truncatedName
       })
       .attr("font-size", fontSize)
@@ -275,15 +336,19 @@ function getTextWidth(text, fontSize) {
 sliderTreemap.on("input", updateTreemapOnSliderChange)
 
 var sliderValue = parseInt(sliderTreemap.node().value)
-var isAndroid = sliderValue === 1
 
-if (isAndroid) {
+if (sliderValue === 1) {
   d3.csv(androidDataPath, function(data) {
-    update(data, isAndroid)
+    update(data, sliderValue)
+  })
+}
+if (sliderValue === 2) {
+  d3.csv(appleDataPath, function(data) {
+    update(data, sliderValue)
   })
 }
 else {
-  d3.csv(appleDataPath, function(data) {
-    update(data, isAndroid)
+  d3.csv(editorsChoiceDataPath, function(data) {
+    update(data, sliderValue)
   })
 }
