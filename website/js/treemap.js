@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = document.getElementsByClassName("column-left")[0].offsetWidth,
-  height = 1000,
+  height = 900,
   tile = d3.treemapResquarify
   fontSize = "16px"
   colorsAndroid = d3.scaleOrdinal()
