@@ -149,17 +149,25 @@ var outerArc = d3.arc()
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 svg.selectAll('allSlices')
-  .data(pie(data))
-  .enter()
-  .append('path')
-  .attr('d', arc)
-  .attr('fill', function(d){ return(colorDonut(d.data.word)) })
-  .attr("stroke", "white")
-  .style("stroke-width", "2px")
-  .style("opacity", 0.7)
+    .data(pie(data))
+    .enter()
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', function(d){ return(colorDonut(d.data.word)) })
+    .attr("stroke", "white")
+    .style("stroke-width", "2px")
+    .style("opacity", 0.7)
+    .transition()
+    .duration(1000)
+    .attrTween("d", function(d) {
+        var interpolate = d3.interpolate({startAngle: 0, endAngle: 0}, d);
+        return function(t) {
+            return arc(interpolate(t));
+        };
+    });
 
 // Add the polylines between chart and labels:
-svg.selectAll('allPolylines')
+var polylinesDonut = svg.selectAll('allPolylines')
   .data(pie(data))
   .enter()
   .append('polyline')
@@ -175,8 +183,8 @@ svg.selectAll('allPolylines')
       return [posA, posB, posC]
     })
 
-// Add the polylines between chart and labels:
-svg.selectAll('allLabels')
+// Add the labels:
+var labelsDonut = svg.selectAll('allLabels')
   .data(pie(data))
   .enter()
   .append('text')
@@ -191,6 +199,18 @@ svg.selectAll('allLabels')
         var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
         return (midangle < Math.PI ? 'start' : 'end')
     })
+
+polylinesDonut
+    .style("opacity", 0)
+    .transition()
+    .duration(1000)
+    .style("opacity", 1)
+
+labelsDonut
+    .style("opacity", 0)
+    .transition()
+    .duration(1000)
+    .style("opacity", 1)
 }
 
 function updateDonutChartCategoryChange() {
