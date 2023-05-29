@@ -158,7 +158,7 @@ svg.selectAll('allSlices')
     .style("stroke-width", "2px")
     .style("opacity", 0.7)
     .transition()
-    .duration(1000)
+    .duration(500)
     .attrTween("d", function(d) {
         var interpolate = d3.interpolate({startAngle: 0, endAngle: 0}, d);
         return function(t) {
@@ -203,13 +203,13 @@ var labelsDonut = svg.selectAll('allLabels')
 polylinesDonut
     .style("opacity", 0)
     .transition()
-    .duration(1000)
+    .duration(500)
     .style("opacity", 1)
 
 labelsDonut
     .style("opacity", 0)
     .transition()
-    .duration(1000)
+    .duration(500)
     .style("opacity", 1)
 }
 
