@@ -41,6 +41,7 @@
         <li><a href="#plot1">Sankey</a></li>
         <li><a href="#plot2">Streamgraph</a></li>
         <li><a href="#plot3">Treemap</a></li>
+        <li><a href="#plot4">Donut</a></li>
       </ul>
     </nav>
     <div class="navigation__burger">
@@ -120,7 +121,27 @@
 </section>
 
 <section id="plot4" class="content">
-  
+  <div class="container">
+    <div class="row">
+      <h2 class="section-heading">More results</h2>
+      <div id="slider-container-donut">
+        <label for="slider-donut">Select Data:</label>
+        <input type="range" min="1" max="3" value="1" id="slider-donut" list="slider-donut-labels">
+        <datalist id="slider-donut-labels">
+          <option value="1" label="Android"></option>
+          <option value="2" id="apple-label" label="Apple"></option>
+          <option value="3" label="Editors Choice"></option>
+        </datalist>
+      </div>
+      <div id="category-container-donut">
+        <label for="category-donut">Select Category:</label>
+        <select id="category-donut">
+          <option value="---">---</option>
+        </select>
+        <div id="donutchart"></div>
+        <script src="js/donutchart.js"></script>
+      </div>        
+    </div>
 </section>
 
 <!-- jQuery -->
