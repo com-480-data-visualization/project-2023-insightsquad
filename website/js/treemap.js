@@ -1,14 +1,14 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 10, bottom: 10, left: 10},
-  width = document.getElementsByClassName("column-left")[0].offsetWidth,
-  height = 900,
+var marginTreemap = {top: 10, right: 10, bottom: 10, left: 10},
+  widthTreemap = document.getElementsByClassName("column-left")[0].offsetWidth,
+  heightTreemap = 900,
   tile = d3.treemapResquarify,
-  fontSize = "16px",
+  fontSizeTreemap = "16px",
   colorsAndroid = d3.scaleOrdinal()
     .range(["#6eb728", "#589220", "#426d18", "#8bc552", "#a8d37e"]),
   colorsApple = d3.scaleOrdinal()
     .range(["#2359b5", "#1c4790", "#15356c", "#4e7ac3", "#7b9bd2"]),
-  palettes = {
+  palettesTreemap = {
     1: ["264653","3d85c6", "2a9d8f","e9c46a","f4a261","e76f51"], // OUI
     2: ["1b54b4","023e8a","0077b6","00b4d8","90e0ef","caf0f8"],
     3: ["264653","3d85c6", "2a9d8f","e9c46a","f4a261","e76f51"], // OUI
@@ -131,7 +131,7 @@ function updateTreemapOnSliderChange() {
 
 function update(data, dataType) {
   var color = d3.scaleOrdinal()
-  .range(palettes[Math.floor(Math.random() * 20) + 1])
+  .range(palettesTreemap[Math.floor(Math.random() * 20) + 1])
 
   // Remove previous svg
   d3.select("#treemap").selectAll("svg").remove()
@@ -139,12 +139,12 @@ function update(data, dataType) {
   // append the svg object to the body of the page
   var svgTreemap = d3.select("#treemap")
   .append("svg")
-    .attr("viewBox", [-margin.left, -margin.bottom, width, height])
-    .attr("width", width)
-    .attr("height", height)
+    .attr("viewBox", [-marginTreemap.left, -marginTreemap.bottom, widthTreemap, heightTreemap])
+    .attr("width", widthTreemap)
+    .attr("height", heightTreemap)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + marginTreemap.left + "," + marginTreemap.top + ")");
 
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
@@ -164,7 +164,7 @@ function update(data, dataType) {
   // The coordinates are added to the root object above
   d3.treemap()
     .tile(tile)
-    .size([width - margin.left - margin.right, height - margin.top - margin.bottom])
+    .size([widthTreemap - marginTreemap.left - marginTreemap.right, heightTreemap - marginTreemap.top - marginTreemap.bottom])
     .padding(4)
     .round(true)
     (root)
@@ -177,7 +177,7 @@ function update(data, dataType) {
     .style("background-color", "rgba(0, 0, 0, 0.8)")
     .style("color", "#fff")
     .style("padding", "5px")
-    .style("font-size", fontSize)
+    .style("font-size", fontSizeTreemap)
     .style("border-radius", "3px");
 
   // Category info
@@ -264,30 +264,30 @@ function update(data, dataType) {
       .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
       .text(function(d){ 
         var name = d.data.name
-        var width = d.x1 - d.x0
-        var height = d.y1 - d.y0
-        var textWidth = getTextWidth(name, fontSize) + margin.right
-        var textHeight = parseInt(fontSize.substring(0, 2)) + 8
+        var widthTemp = d.x1 - d.x0
+        var heightTemp = d.y1 - d.y0
+        var textWidth = getTextWidth(name, fontSizeTreemap) + marginTreemap.right
+        var textHeight = parseInt(fontSizeTreemap.substring(0, 2)) + 8
         var truncatedName = name
 
-        if (textWidth > width) {
-          var substringLength = findMaxSubstringLength(name, width - margin.right, fontSize)
+        if (textWidth > widthTemp) {
+          var substringLength = findMaxSubstringLength(name, widthTemp - marginTreemap.right, fontSizeTreemap)
 
           if (substringLength > 1) {
-            truncatedName = name.substring(0, findMaxSubstringLength(name, width - margin.right, fontSize)) + "..."
+            truncatedName = name.substring(0, findMaxSubstringLength(name, widthTemp - marginTreemap.right, fontSizeTreemap)) + "..."
           }
           else {
             truncatedName = ""
           }
         }
 
-        if (textHeight > height) {
+        if (textHeight > heightTemp) {
           truncatedName = ""
         }
 
         return truncatedName
       })
-      .attr("font-size", fontSize)
+      .attr("font-size", fontSizeTreemap)
       .attr("fill", "white")
 }
 
@@ -300,7 +300,7 @@ function findMaxSubstringLength(text, desiredWidth, fontSize) {
   while (low <= high) {
     var mid = Math.floor((low + high) / 2);
     var substr = text.substr(0, mid + 1);
-    var width = getTextWidth(substr, fontSize) + margin.right + margin.left;
+    var width = getTextWidth(substr, fontSize) + marginTreemap.right + marginTreemap.left;
 
     if (width <= desiredWidth) {
       maxSubstrLength = mid + 1;
