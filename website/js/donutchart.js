@@ -1,14 +1,13 @@
 // set the dimensions and margins of the graph
-var widthDonut = 450
-    heightDonut = 450
+var widthDonut = 600
+    heightDonut = 500
     marginDonut = 40
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 var radius = Math.min(widthDonut, heightDonut) / 2 - marginDonut
 
 // set the color scale
-var color = d3.scaleOrdinal()
-  .range(["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]);
+var colorRangeDonut = ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]
 
 var dropMenuDonut = document.getElementById("category-donut")
 var sliderDonut = d3.select("#slider-donut")
@@ -117,7 +116,11 @@ function updateCategoryOptions() {
 sliderDonut.on("input", updateCategoryOptions)
 
 function updateDonutChart(data) {
-console.log(data)
+var words = data.map(function(d) { return d.word; })
+var colorDonut = d3.scaleOrdinal()
+    .domain(words)
+    .range(colorRangeDonut);
+
 // remove the previous svg if it exists
 d3.select("#donutchart").selectAll("svg").remove();
 
@@ -132,12 +135,11 @@ var svg = d3.select("#donutchart")
 // Compute the position of each group on the pie:
 var pie = d3.pie()
   .sort(null) // Do not sort group by size
-  .value(function(d) {return d.count; })
-var data_ready = pie(d3.entries(data))
+  .value(function(d) {return d.value; })
 
 // The arc generator
 var arc = d3.arc()
-  .innerRadius(radius * 0.5)         // This is the size of the donut hole
+  .innerRadius(radius * 0.5) // This is the size of the donut hole
   .outerRadius(radius * 0.8)
 
 // Another arc that won't be drawn. Just for labels positioning
@@ -146,27 +148,19 @@ var outerArc = d3.arc()
   .outerRadius(radius * 0.9)
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-var slices = svg.selectAll('allSlices')
-    .data(data_ready)
-
-slices.exit().remove()
-
-slices
+svg.selectAll('allSlices')
+  .data(pie(data))
   .enter()
   .append('path')
   .attr('d', arc)
-  .attr('fill', function(d){ return(color(d.data.word)) })
+  .attr('fill', function(d){ return(colorDonut(d.data.word)) })
   .attr("stroke", "white")
   .style("stroke-width", "2px")
   .style("opacity", 0.7)
 
 // Add the polylines between chart and labels:
-var lines = svg.selectAll('allPolylines')
-    .data(data_ready)
-
-lines.exit().remove()
-
-lines
+svg.selectAll('allPolylines')
+  .data(pie(data))
   .enter()
   .append('polyline')
     .attr("stroke", "black")
@@ -182,17 +176,11 @@ lines
     })
 
 // Add the polylines between chart and labels:
-var labels = svg.selectAll('allLabels')
-    .data(data_ready)
-
-labels.exit().remove()
-
-labels
-  .selectAll('allLabels')
-  .data(data_ready)
+svg.selectAll('allLabels')
+  .data(pie(data))
   .enter()
   .append('text')
-    .text( function(d) { console.log(d.data.word) ; return d.data.word } )
+    .text( function(d) { return d.data.word } )
     .attr('transform', function(d) {
         var pos = outerArc.centroid(d);
         var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
@@ -236,11 +224,8 @@ function updateDonutChartCategoryChange() {
 dropMenuDonut.addEventListener('change', updateDonutChartCategoryChange)
 
 function initializeDonutChart() {
-console.log("initializeDonutChart")
 var sliderValueDonut = parseInt(sliderDonut.node().value);
-console.log(sliderValueDonut)
 var categoryOptionsDonut = categoriesDonut[sliderValueDonut];
-console.log(categoryOptionsDonut)
 
 // Clear existing options
 dropMenuDonut.innerHTML = '';

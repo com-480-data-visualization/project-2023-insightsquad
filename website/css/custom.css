@@ -565,6 +565,10 @@ div.google-visualization-tooltip > ul > li > span {
     text-align: center;
 }
 
+#donut-chart {
+    align-items: start;
+}
+
 #top {
     position: fixed;
     width: 100%;
