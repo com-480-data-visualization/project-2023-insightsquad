@@ -199,7 +199,6 @@ function update(data, dataType) {
       .attr("width", function (d) { return d.x1 - d.x0 })
       .attr("height", function (d) { return d.y1 - d.y0 })
       .style("stroke", "black")
-      .style("opacity", 0.75)
       .style("fill", function(d) { 
         return "#" + color(d.data.name)
       })
@@ -241,6 +240,10 @@ function update(data, dataType) {
           }
 
       })
+      .style("opacity", 0)
+      .transition()
+      .duration(500)
+      .style("opacity", 0.75)
 
 
   // And to add the text labels
@@ -258,7 +261,7 @@ function update(data, dataType) {
       .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
       .attr("opacity", 0)
       .transition()
-      .duration(800)
+      .duration(500)
       .attr("opacity", 1)
       .attr("x", function(d){ return d.x0 + 8})    // +8 to adjust position (more right)
       .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)

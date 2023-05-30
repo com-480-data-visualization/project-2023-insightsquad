@@ -211,6 +211,17 @@ labelsDonut
     .transition()
     .duration(500)
     .style("opacity", 1)
+
+svg.append('text')
+    .text('Word count')
+    .attr('class', 'chart-title')
+    .style('text-anchor', 'middle')
+    .style('font-size', '30px')
+    .style("opacity", 0)
+    .transition()
+    .duration(500)
+    .style("opacity", 1)
+
 }
 
 function updateDonutChartCategoryChange() {
