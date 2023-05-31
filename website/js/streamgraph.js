@@ -1,46 +1,51 @@
-// set the dimensions and margins of the graph
-var margin = {top: 20, right: 30, bottom: 0, left: 10},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var totWidth = 860,
+    totHeight = 520;
+var margins = {top: 20, right: 10, bottom: 0, left: 10};
+var width = totWidth - margins.left - margins.right,
+    height = totHeight - margins.top - margins.bottom;
 
 // append the svg object to the body of the page
-var svgStreamgrah = d3.select("#streamgraph")
+var svgStreamgraph = d3.select("#streamgraph")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", totWidth)
+    .attr("height", totHeight)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + margins.left + "," + margins.top + ")");
 
-// Parse the Data
 var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
 d3.csv(path, function(data) {
-
-  // List of groups = header of the csv files
-  var keys = data.columns.slice(1)
-
-  // Add X axis
+  // X axis 
   var x = d3.scaleLinear()
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
-  svgStreamgrah.append("g")
+  svgStreamgraph.append("g")
     .attr("transform", "translate(0," + height*0.8 + ")")
-    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([2008, 2012, 2016, 2020]))
+    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([2008, 2010, 2012, 2014, 2016, 2018, 2020]))
     .select(".domain").remove()
-  // Customization
-  svgStreamgrah.selectAll(".tick line").attr("stroke", "#b8b8b8")
 
-  // Add X axis label:
-  svgStreamgrah.append("text")
+  // X axis labels
+  svgStreamgraph.append("text")
       .attr("text-anchor", "end")
       .attr("x", width)
       .attr("y", height-30 )
       .text("Time (year)");
 
-  // Add Y axis
+  // Y axis
   var y = d3.scaleLinear()
-    .domain([0, 50000])
-    .range([ height, 0 ]);
+    .domain([-100000, 100000])
+    .range([height, 0]);
+  
+  // Add Y axis label:
+  svgStreamgraph.append("text")
+    .attr("text-anchor", "middle")
+    .attr("transform", "translate(0, " + (height / 2) + ") rotate(-90)")
+    .text("Downloads comparison");
+
+  // Customize tick lines
+  svgStreamgraph.selectAll(".tick line").attr("stroke", "#b8b8b8")
+  
+  var keys = data.columns.slice(1)
 
   // color palette
   var color = d3.scaleOrdinal()
@@ -54,7 +59,7 @@ d3.csv(path, function(data) {
     (data)
 
   // create a tooltip
-  var Tooltip = svgStreamgrah
+  var Tooltip = svgStreamgraph
     .append("text")
     .attr("x", 0)
     .attr("y", 0)
@@ -85,7 +90,7 @@ d3.csv(path, function(data) {
     .y1(function(d) { return y(d[1]); })
 
   // Show the areas
-  svgStreamgrah
+  svgStreamgraph
     .selectAll("mylayers")
     .data(stackedData)
     .enter()
