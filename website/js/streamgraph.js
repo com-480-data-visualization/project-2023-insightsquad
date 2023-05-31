@@ -25,7 +25,7 @@ d3.csv(path, function(data) {
     .range([ 0, width ]);
   svgStreamgrah.append("g")
     .attr("transform", "translate(0," + height*0.8 + ")")
-    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([1900, 1925, 1975, 2000]))
+    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([2008, 2012, 2016, 2020]))
     .select(".domain").remove()
   // Customization
   svgStreamgrah.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -39,7 +39,7 @@ d3.csv(path, function(data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([-100000, 100000])
+    .domain([0, 50000])
     .range([ height, 0 ]);
 
   // color palette
