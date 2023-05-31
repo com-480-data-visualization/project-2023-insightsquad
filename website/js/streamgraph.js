@@ -1,8 +1,30 @@
+// Set size constants
 var totWidth = 860,
     totHeight = 520;
 var margins = {top: 20, right: 10, bottom: 0, left: 10};
 var width = totWidth - margins.left - margins.right,
     height = totHeight - margins.top - margins.bottom;
+
+// Load data
+var appStoreData, playStoreData, editorsChoiceData
+
+var appStorePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
+var playStorePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/play_store_grouped_grouped.csv'
+var editorsChoicePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/editors_choice_grouped_grouped.csv'
+
+d3.csv(appStorePath, function(data) {
+  appStoreData = data
+})
+d3.csv(playStorePath, function(data) {
+  playStoreData = data
+})
+d3.csv(editorsChoicePath, function(data) {
+  editorsChoiceData = data
+})
+
+var appStoreDataRadius = 150000
+var playStoreDataRadius = 250000
+var editorsChoiceDataRadius = 100
 
 // append the svg object to the body of the page
 var svgStreamgraph = d3.select("#streamgraph")
@@ -13,9 +35,8 @@ var svgStreamgraph = d3.select("#streamgraph")
     .attr("transform",
           "translate(" + margins.left + "," + margins.top + ")");
 
-var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
-d3.csv(path, function(data) {
-  // X axis 
+function buildStreamgraph(data, dataRadius) {
+
   var x = d3.scaleLinear()
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
@@ -33,14 +54,14 @@ d3.csv(path, function(data) {
 
   // Y axis
   var y = d3.scaleLinear()
-    .domain([-100000, 100000])
+    .domain([-dataRadius, dataRadius])
     .range([height, 0]);
   
   // Add Y axis label:
   svgStreamgraph.append("text")
     .attr("text-anchor", "middle")
     .attr("transform", "translate(0, " + (height / 2) + ") rotate(-90)")
-    .text("Downloads comparison");
+    .text("Genres of newly created apps");
 
   // Customize tick lines
   svgStreamgraph.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -101,5 +122,50 @@ d3.csv(path, function(data) {
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
+}
 
-})
+var sliderStreamgraph = d3.select("#slider-streamgraph")
+
+function updateStreamgraphOnSliderChange() {
+  // Remove previous svg
+  d3.select("#streamgraph").selectAll("svg").remove()
+  svgStreamgraph = d3.select("#streamgraph")
+  .append("svg")
+    .attr("width", totWidth)
+    .attr("height", totHeight)
+  .append("g")
+    .attr("transform",
+          "translate(" + margins.left + "," + margins.top + ")");
+
+  var sliderValue = parseInt(sliderStreamgraph.node().value)
+
+  if (sliderValue === 1) {
+    buildStreamgraph(playStoreData, playStoreDataRadius)
+  }
+  else if (sliderValue === 2) {
+    buildStreamgraph(appStoreData, appStoreDataRadius)
+  }
+  else if (sliderValue === 3) {
+    update(editorsChoiceData, editorsChoiceDataRadius)
+  }
+}
+
+sliderStreamgraph.on("input", updateStreamgraphOnSliderChange)
+
+var sliderValue = parseInt(sliderStreamgraph.node().value)
+
+if (sliderValue === 1) {
+  d3.csv(playStorePath, function(data) {
+    buildStreamgraph(data, playStoreDataRadius)
+  })
+}
+else if (sliderValue === 2) {
+  d3.csv(appStorePath, function(data) {
+    buildStreamgraph(data, appStoreDataRadius)
+  })
+}
+else if (sliderValue === 3) {
+  d3.csv(editorsChoicePath, function(data) {
+    update(data, editorsChoiceDataRadius)
+  })
+}
