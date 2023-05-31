@@ -38,13 +38,13 @@ var editorsChoiceCategories = ['Education', 'Music & Audio', 'Tools', 'Business'
 var sliderTreemap = d3.select("#slider-treemap")
 
 // Read data
-var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/'
-var androidDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_category_count.csv'
-var appleDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/apple_store_category_count.csv'
-var editorsChoiceDataPath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/play_store_editors_choice_category_count.csv'
-var androidData
-var appleData
-var editorsChoiceData
+var pathTreemap = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/treemap/'
+var androidDataPathTreemap = pathTreemap + 'play_store_category_count.csv'
+var appleDataPathTreemap = pathTreemap + 'apple_store_category_count.csv'
+var editorsChoiceDataPathTreemap = pathTreemap + 'play_store_editors_choice_category_count.csv'
+var androidDataTreemap
+var appleDataTreemap
+var editorsChoiceDataTreemap
 var androidTopAppsAction, androidTopAppsAdventure, androidTopAppsArcade, androidTopAppsArtDesign, androidTopAppsAutoVehicles, androidTopAppsBeauty, 
   androidTopAppsBoard, androidTopAppsBooksReference, androidTopAppsBusiness, androidTopAppsCard, androidTopAppsCasino, androidTopAppsCasual, androidTopAppsComics, 
   androidTopAppsCommunication, androidTopAppsDating, androidTopAppsEducation, androidTopAppsEducational, androidTopAppsEntertainment, androidTopAppsEvents, 
@@ -68,34 +68,34 @@ var editorsChoiceTopAppsAction, editorsChoiceTopAppsAdventure, editorsChoiceTopA
   editorsChoiceTopAppsSimulation, editorsChoiceTopAppsSocial, editorsChoiceTopAppsSports, editorsChoiceTopAppsStrategy, editorsChoiceTopAppsTools, editorsChoiceTopAppsTravelLocal, editorsChoiceTopAppsTrivia,
   editorsChoiceTopAppsVideoPlayersEditors, editorsChoiceTopAppsWeather, editorsChoiceTopAppsWord
 
-d3.csv(androidDataPath, function(data) {
-  androidData = data
+d3.csv(androidDataPathTreemap, function(data) {
+  androidDataTreemap = data
 })
 
-d3.csv(appleDataPath, function(data) {
-  appleData = data
+d3.csv(appleDataPathTreemap, function(data) {
+  appleDataTreemap = data
 })
 
-d3.csv(editorsChoiceDataPath, function(data) {
-  editorsChoiceData = data
+d3.csv(editorsChoiceDataPathTreemap, function(data) {
+  editorsChoiceDataTreemap = data
 })
 
 androidCategories.forEach(function(category) {
-  d3.csv(path + "play_store_top_apps_in_" + category + ".csv", function(data) {
+  d3.csv(pathTreemap + "play_store_top_apps_in_" + category + ".csv", function(data) {
     categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
     window["androidTopApps" + categoryFormatted] = data
   })
 })
 
 appleCategories.forEach(function(category) {
-  d3.csv(path + "apple_store_top_apps_in_" + category + ".csv", function(data) {
+  d3.csv(pathTreemap + "apple_store_top_apps_in_" + category + ".csv", function(data) {
     categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
     window["appleTopApps" + categoryFormatted] = data
   })
 })
 
 editorsChoiceCategories.forEach(function(category) {
-  d3.csv(path + "play_store_editors_choice_top_apps_in_" + category + ".csv", function(data) {
+  d3.csv(pathTreemap + "play_store_editors_choice_top_apps_in_" + category + ".csv", function(data) {
     categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
     window["editorsChoiceTopApps" + categoryFormatted] = data
   })
@@ -116,16 +116,16 @@ function updateTreemapOnSliderChange() {
       // Set the HTML content to an empty string
       d3.select("#category-info").html("").style("opacity", 1);
     });
-  var sliderValue = parseInt(sliderTreemap.node().value)
+  var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
-  if (sliderValue === 1) {
-    update(androidData, sliderValue)
+  if (sliderValueTreemap === 1) {
+    update(androidDataTreemap, sliderValueTreemap)
   }
-  else if (sliderValue === 2) {
-    update(appleData, sliderValue)
+  else if (sliderValueTreemap === 2) {
+    update(appleDataTreemap, sliderValueTreemap)
   }
-  else if (sliderValue === 3) {
-    update(editorsChoiceData, sliderValue)
+  else if (sliderValueTreemap === 3) {
+    update(editorsChoiceDataTreemap, sliderValueTreemap)
   }
 }
 
@@ -338,20 +338,24 @@ function getTextWidth(text, fontSize) {
 
 sliderTreemap.on("input", updateTreemapOnSliderChange)
 
-var sliderValue = parseInt(sliderTreemap.node().value)
+function initializeTreemap() {
+  var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
-if (sliderValue === 1) {
-  d3.csv(androidDataPath, function(data) {
-    update(data, sliderValue)
+if (sliderValueTreemap === 1) {
+  d3.csv(androidDataPathTreemap, function(data) {
+    update(data, sliderValueTreemap)
   })
 }
-else if (sliderValue === 2) {
-  d3.csv(appleDataPath, function(data) {
-    update(data, sliderValue)
+else if (sliderValueTreemap === 2) {
+  d3.csv(appleDataPathTreemap, function(data) {
+    update(data, sliderValueTreemap)
   })
 }
-else if (sliderValue === 3) {
-  d3.csv(editorsChoiceDataPath, function(data) {
-    update(data, sliderValue)
+else if (sliderValueTreemap === 3) {
+  d3.csv(editorsChoiceDataPathTreemap, function(data) {
+    update(data, sliderValueTreemap)
   })
 }
+}
+
+initializeTreemap()

@@ -6,25 +6,25 @@ var width = totWidth - margins.left - margins.right,
     height = totHeight - margins.top - margins.bottom;
 
 // Load data
-var appStoreData, playStoreData, editorsChoiceData
+var appStoreDataStreamgraph, playStoreDataStreamgraph, editorsChoiceDataStreamgraph
 
-var appStorePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
-var playStorePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/play_store_grouped_grouped.csv'
-var editorsChoicePath = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/editors_choice_grouped_grouped.csv'
+var appStorePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
+var playStorePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/play_store_grouped_grouped.csv'
+var editorsChoicePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/editors_choice_grouped_grouped.csv'
 
-d3.csv(appStorePath, function(data) {
-  appStoreData = data
+d3.csv(appStorePathStreamgraph, function(data) {
+  appStoreDataStreamgraph = data
 })
-d3.csv(playStorePath, function(data) {
-  playStoreData = data
+d3.csv(playStorePathStreamgraph, function(data) {
+  playStoreDataStreamgraph = data
 })
-d3.csv(editorsChoicePath, function(data) {
-  editorsChoiceData = data
+d3.csv(editorsChoicePathStreamgraph, function(data) {
+  editorsChoiceDataStreamgraph = data
 })
 
-var appStoreDataRadius = 150000
-var playStoreDataRadius = 250000
-var editorsChoiceDataRadius = 100
+var appStoreDataStreamgraphRadius = 150000
+var playStoreDataStreamgraphRadius = 250000
+var editorsChoiceDataStreamgraphRadius = 100
 
 // append the svg object to the body of the page
 var svgStreamgraph = d3.select("#streamgraph")
@@ -140,32 +140,36 @@ function updateStreamgraphOnSliderChange() {
   var sliderValue = parseInt(sliderStreamgraph.node().value)
 
   if (sliderValue === 1) {
-    buildStreamgraph(playStoreData, playStoreDataRadius)
+    buildStreamgraph(playStoreDataStreamgraph, playStoreDataStreamgraphRadius)
   }
   else if (sliderValue === 2) {
-    buildStreamgraph(appStoreData, appStoreDataRadius)
+    buildStreamgraph(appStoreDataStreamgraph, appStoreDataStreamgraphRadius)
   }
   else if (sliderValue === 3) {
-    update(editorsChoiceData, editorsChoiceDataRadius)
+    buildStreamgraph(editorsChoiceDataStreamgraph, editorsChoiceDataStreamgraphRadius)
   }
 }
 
 sliderStreamgraph.on("input", updateStreamgraphOnSliderChange)
 
-var sliderValue = parseInt(sliderStreamgraph.node().value)
+function initializeStreamgraph() {
+  var sliderValue = parseInt(sliderStreamgraph.node().value)
 
 if (sliderValue === 1) {
-  d3.csv(playStorePath, function(data) {
-    buildStreamgraph(data, playStoreDataRadius)
+  d3.csv(playStorePathStreamgraph, function(data) {
+    buildStreamgraph(data, playStoreDataStreamgraphRadius)
   })
 }
 else if (sliderValue === 2) {
-  d3.csv(appStorePath, function(data) {
-    buildStreamgraph(data, appStoreDataRadius)
+  d3.csv(appStorePathStreamgraph, function(data) {
+    buildStreamgraph(data, appStoreDataStreamgraphRadius)
   })
 }
 else if (sliderValue === 3) {
-  d3.csv(editorsChoicePath, function(data) {
-    buildStreamgraph(data, editorsChoiceDataRadius)
+  d3.csv(editorsChoicePathStreamgraph, function(data) {
+    buildStreamgraph(data, editorsChoiceDataStreamgraphRadius)
   })
 }
+}
+
+initializeStreamgraph()
