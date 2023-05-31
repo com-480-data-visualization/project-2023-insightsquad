@@ -13,7 +13,8 @@ var svgStreamgrah = d3.select("#streamgraph")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv", function(data) {
+var path = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
+d3.csv(path, function(data) {
 
   // List of groups = header of the csv files
   var keys = data.columns.slice(1)
