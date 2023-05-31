@@ -166,6 +166,6 @@ else if (sliderValue === 2) {
 }
 else if (sliderValue === 3) {
   d3.csv(editorsChoicePath, function(data) {
-    update(data, editorsChoiceDataRadius)
+    buildStreamgraph(data, editorsChoiceDataRadius)
   })
 }
