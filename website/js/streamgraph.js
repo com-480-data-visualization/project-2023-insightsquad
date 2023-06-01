@@ -7,24 +7,61 @@ var width = totWidth - margins.left - margins.right,
 
 // Load data
 var appStoreDataStreamgraph, playStoreDataStreamgraph, editorsChoiceDataStreamgraph
+var appStoreCRDataStreamgraph, playStoreCRDataStreamgraph, editorsChoiceCRDataStreamgraph
 
 var appStorePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_grouped_grouped.csv'
 var playStorePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/play_store_grouped_grouped.csv'
 var editorsChoicePathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/editors_choice_grouped_grouped.csv'
+var appStoreCRPathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/apple_store_cr_grouped.csv'
+var playStoreCRPathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/play_store_cr_grouped.csv'
+var editorsChoiceCRPathStreamgraph = 'https://raw.githubusercontent.com/com-480-data-visualization/project-2023-insightsquad/master/website/data/streamgraph/editors_choice_cr_grouped.csv'
+
 
 d3.csv(appStorePathStreamgraph, function(data) {
   appStoreDataStreamgraph = data
+  // console.log("appStoreDataStreamgraph READ")
 })
 d3.csv(playStorePathStreamgraph, function(data) {
   playStoreDataStreamgraph = data
+  // console.log("playStoreDataStreamgraph READ")
 })
 d3.csv(editorsChoicePathStreamgraph, function(data) {
   editorsChoiceDataStreamgraph = data
+  // console.log("editorsChoiceDataStreamgraph READ")
+})
+d3.csv(appStoreCRPathStreamgraph, function(data) {
+  appStoreCRDataStreamgraph = data
+  // console.log("appStoreCRDataStreamgraph READ")
+})
+d3.csv(playStoreCRPathStreamgraph, function(data) {
+  playStoreCRDataStreamgraph = data
+  // console.log("playStoreCRDataStreamgraph READ")
+})
+d3.csv(editorsChoiceCRPathStreamgraph, function(data) {
+  editorsChoiceCRDataStreamgraph = data
+  // console.log("editorsChoiceCRDataStreamgraph READ")
 })
 
-var appStoreDataStreamgraphRadius = 150000
-var playStoreDataStreamgraphRadius = 250000
-var editorsChoiceDataStreamgraphRadius = 100
+var sliderGenresPathMap = {
+  1: playStorePathStreamgraph,
+  2: appStorePathStreamgraph,
+  3: editorsChoicePathStreamgraph
+}
+var sliderCRPathMap = {
+  1: playStoreCRPathStreamgraph,
+  2: appStoreCRPathStreamgraph,
+  3: editorsChoiceCRPathStreamgraph
+}
+var sliderRadiusMap = {
+  1: 250000,
+  2: 150000,
+  3: 100
+}
+var sliderCRRadiusMap = {
+  1: 450000,
+  2: 250000,
+  3: 200
+}
 
 // append the svg object to the body of the page
 var svgStreamgraph = d3.select("#streamgraph")
@@ -124,11 +161,13 @@ function buildStreamgraph(data, dataRadius) {
       .on("mouseleave", mouseleave)
 }
 
-var sliderStreamgraph = d3.select("#slider-streamgraph")
+var sliderStreamgraph1 = d3.select("#slider-streamgraph1")
+var sliderStreamgraph2 = d3.select("#slider-streamgraph2")
 
 function updateStreamgraphOnSliderChange() {
   // Remove previous svg
   d3.select("#streamgraph").selectAll("svg").remove()
+  // Build new svg
   svgStreamgraph = d3.select("#streamgraph")
   .append("svg")
     .attr("width", totWidth)
@@ -137,39 +176,55 @@ function updateStreamgraphOnSliderChange() {
     .attr("transform",
           "translate(" + margins.left + "," + margins.top + ")");
 
-  var sliderValue = parseInt(sliderStreamgraph.node().value)
+  var sliderValue1 = parseInt(sliderStreamgraph1.node().value)
+  var sliderValue2 = parseInt(sliderStreamgraph2.node().value)
+  
+  if (sliderValue2 === 1) {
+    switch (sliderValue1) {
+      case 1:
+        buildStreamgraph(playStoreDataStreamgraph, sliderRadiusMap[sliderValue1])
+        break
+      case 2:
+        buildStreamgraph(appStoreDataStreamgraph, sliderRadiusMap[sliderValue1])
+        break
+      case 3:
+        buildStreamgraph(editorsChoiceDataStreamgraph, sliderRadiusMap[sliderValue1])
+        break
+    }
+  }
+  else if (sliderValue2 === 2) {
+    switch (sliderValue1) {
+      case 1:
+        buildStreamgraph(playStoreCRDataStreamgraph, sliderCRRadiusMap[sliderValue1])
+        break
+      case 2:
+        buildStreamgraph(appStoreCRDataStreamgraph, sliderCRRadiusMap[sliderValue1])
+        break
+      case 3:
+        buildStreamgraph(editorsChoiceCRDataStreamgraph, sliderCRRadiusMap[sliderValue1])
+        break
+    }
+  }
 
-  if (sliderValue === 1) {
-    buildStreamgraph(playStoreDataStreamgraph, playStoreDataStreamgraphRadius)
-  }
-  else if (sliderValue === 2) {
-    buildStreamgraph(appStoreDataStreamgraph, appStoreDataStreamgraphRadius)
-  }
-  else if (sliderValue === 3) {
-    buildStreamgraph(editorsChoiceDataStreamgraph, editorsChoiceDataStreamgraphRadius)
-  }
 }
 
-sliderStreamgraph.on("input", updateStreamgraphOnSliderChange)
+sliderStreamgraph1.on("input", updateStreamgraphOnSliderChange)
+sliderStreamgraph2.on("input", updateStreamgraphOnSliderChange)
 
 function initializeStreamgraph() {
-  var sliderValue = parseInt(sliderStreamgraph.node().value)
+  var sliderValue1 = parseInt(sliderStreamgraph1.node().value)
+  var sliderValue2 = parseInt(sliderStreamgraph2.node().value)
 
-if (sliderValue === 1) {
-  d3.csv(playStorePathStreamgraph, function(data) {
-    buildStreamgraph(data, playStoreDataStreamgraphRadius)
-  })
-}
-else if (sliderValue === 2) {
-  d3.csv(appStorePathStreamgraph, function(data) {
-    buildStreamgraph(data, appStoreDataStreamgraphRadius)
-  })
-}
-else if (sliderValue === 3) {
-  d3.csv(editorsChoicePathStreamgraph, function(data) {
-    buildStreamgraph(data, editorsChoiceDataStreamgraphRadius)
-  })
-}
+  if (sliderValue2 === 1) {
+    d3.csv(sliderGenresPathMap[sliderValue1], function(data) {
+      buildStreamgraph(data, sliderRadiusMap[sliderValue1])
+    })
+  }
+  else if (sliderValue2 === 2) {
+    d3.csv(sliderCRPathMap[sliderValue1], function(data) {
+      buildStreamgraph(data, sliderCRRadiusMap[sliderValue1])
+    })
+  }
 }
 
 initializeStreamgraph()

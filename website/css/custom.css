@@ -229,7 +229,20 @@ section {
     width: 400px;
 }
 
-#slider-streamgraph {
+#sliders-box {
+    float: left;
+    clear: none; 
+}
+
+#slider-streamgraph1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 400px;
+}
+
+#slider-streamgraph2 {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;

@@ -89,14 +89,24 @@
   <div class="container">
     <div class="row">
       <h2 class="section-heading">Number of apps created each year</h2>
-      <div id="slider-container-streamgraph">
-        <label for="slider-streamgraph">Select Data:</label>
-        <input type="range" min="1" max="3" value="1" id="slider-streamgraph" list="slider-streamgraph-labels">
-        <datalist id="slider-streamgraph-labels">
-          <option value="1" label="Android"></option>
-          <option value="2" label="Apple"></option>
-          <option value="3" label="Editors Choice"></option>
-        </datalist>
+      <div id="sliders-box">
+        <div id="slider-container-streamgraph1">
+          <label for="slider-streamgraph1">Data source:</label>
+          <input type="range" min="1" max="3" value="1" id="slider-streamgraph1" list="slider-streamgraph-labels1">
+          <datalist id="slider-streamgraph-labels1">
+            <option value="1" label="Android"></option>
+            <option value="2" label="Apple"></option>
+            <option value="3" label="Editor's Choice"></option>
+          </datalist>
+        </div>
+        <div id="slider-container-streamgraph2">
+          <label for="slider-streamgraph2">Split by:</label>
+          <input type="range" min="1" max="2" value="1" id="slider-streamgraph2" list="slider-streamgraph-labels2">
+          <datalist id="slider-streamgraph-labels2">
+            <option value="1" label="Category"></option>
+            <option value="2" label="Content rating"></option>
+          </datalist>
+        </div>
       </div>
       <div id="streamgraph" class="col-lg-8 col-lg-offset-2">
       </div>  
