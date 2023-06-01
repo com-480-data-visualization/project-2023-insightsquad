@@ -124,7 +124,7 @@ function buildStreamgraph(data, dataRadius) {
       .on("mouseleave", mouseleave)
 }
 
-var sliderStreamgraph = d3.select("#slider-streamgraph")
+var sliderStreamgraph = d3.select("#slider-streamgraph1")
 
 function updateStreamgraphOnSliderChange() {
   // Remove previous svg
