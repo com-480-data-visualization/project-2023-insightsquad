@@ -243,7 +243,7 @@ function updateTreemap(data, dataType) {
       .style("opacity", 0)
       .transition()
       .duration(500)
-      .style("opacity", 0.75)
+      .style("opacity", 0.8)
 
 
   // And to add the text labels

@@ -38,6 +38,7 @@
     <nav class="navigation__container">
       <ul class="navigation__list">
         <li><a href="#home">Home</a></li>
+        <li><a href="#intro-section">Intro</a></li>
         <li><a href="#plot1">Sankey</a></li>
         <li><a href="#plot2">Streamgraph</a></li>
         <li><a href="#plot3">Treemap</a></li>
@@ -77,24 +78,35 @@
               </svg>
             </div>
             <div class="column">
-              <!-- <h1>Dramatically Engage</h1> -->
-              <h2 class="home-page-title hidden-element">Over 1,500,000 apps</h2>
-              <h2 class="home-page-title hidden-element">Over 400,000,000 downloads</h2>
+              <h1 class="home-page-title hidden-element">Over 1,500,000 apps</h1>
+              <h1 class="home-page-title hidden-element">Over 400,000,000 downloads</h1>
             </div>
           </div>
           <div class="row">
             <div id="div-btn-home-page" class="hidden-element">
-              <a href="#plot1" class="btn btn-primary btn-lg" id="btn-home-page">Engage Now</a>
+              <a href="#intro-section" class="btn btn-primary btn-lg" id="btn-home-page">Engage Now</a>
             </div>
           </div>
         </div>
     </div>
 </header>
 
+<section id="intro-section" class="intro-text">
+  <div class="container container-intro">
+    <div class="row">
+      <h1 class="section-heading">Introduction</h1>
+      <p class="section-paragraph">The App Store and Google Play Store are widely recognized platforms where developers can showcase and distribute their mobile applications to millions of users worldwide. These app stores host a vast array of apps spanning various categories, catering to diverse user interests and needs.</p>
+      <p class="section-paragraph">Our primary aim is to empower you with valuable insights into the factors that contribute to the success of Android applications. By analyzing the extensive dataset available, we strive to unravel the secrets behind app triumphs, uncover emerging trends, and shed light on failure cases.</p>
+      <p class="section-paragraph">Whether you are an app developer, market researcher, or simply curious about the world of mobile applications, our website serves as a valuable resource to explore, analyze, and gain valuable insights from the wealth of data available from the App Store and Google Play Store.</p>
+      <p class="section-paragraph">Start your journey now and unlock the secrets that lie within the vibrant realm of app success!</p>
+    </div>
+  </div>
+</section>
+
 <section id="plot1" class="intro">
   <div class="container">
     <div class="row">
-      <h2 class="section-heading">Sankey Diagram</h2>
+      <h1 class="section-heading">Sankey Diagram</h1>
       <div id="slider-container">
         <input type="range" min="1" max="3" value="1" id="slider">
         <label for="slider">Select Data:</label>
@@ -114,9 +126,9 @@
 </section>
 
 <section id="plot2" class="content">
-  <div class="container">
+  <div class="container container-streamgraph">
     <div class="row">
-      <h2 class="section-heading">Number of apps created each year</h2>
+      <h1 class="section-heading">Number of apps created each year</h1>
       <div id="sliders-box">
         <div id="slider-container-streamgraph1">
           <label for="slider-streamgraph1">Data source:</label>
@@ -146,7 +158,7 @@
 <section id="plot3" class="content content-2">
   <div class="container-treemap">
     <div class="row">
-      <h2 class="section-heading">Apps per category</h2>
+      <h1 class="section-heading">How many apps in each category?</h1>
       <div id="slider-container-treemap">
         <label for="slider-treemap">Select Data:</label>
         <input type="range" min="1" max="3" value="1" id="slider-treemap" list="slider-treemap-labels">
@@ -170,13 +182,13 @@
 <section id="plot4" class="content">
   <div class="container">
     <div class="row">
-      <h2 class="section-heading">More results</h2>
+      <h1 class="section-heading">More results</h1>
       <div id="slider-container-donut">
         <label for="slider-donut">Select Data:</label>
         <input type="range" min="1" max="3" value="1" id="slider-donut" list="slider-donut-labels">
         <datalist id="slider-donut-labels">
           <option value="1" label="Android"></option>
-          <option value="2" id="apple-label" label="Apple"></option>
+          <option value="2" class="apple-label" label="Apple"></option>
           <option value="3" label="Editors Choice"></option>
         </datalist>
       </div>

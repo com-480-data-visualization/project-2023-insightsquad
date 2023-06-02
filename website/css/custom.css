@@ -52,7 +52,7 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 header .header-content .header-content-inner p {
@@ -103,7 +103,8 @@ option {
     }
 
 	header .header-content .header-content-inner h1 {
-    	font-size: 100px;
+    	font-size: 50px;
+        font-weight: 700;
 		}
 
     header .header-content .header-content-inner p {
@@ -136,6 +137,25 @@ option {
 #google-play-icon {
     height: 160px;
     width: auto;
+}
+
+.container-intro {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 8%;
+    margin-right: 8%;
+    width: auto;
+}
+
+.container-streamgraph {
+    text-align: right;
+}
+
+.section-paragraph {
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 30px;
 }
 
 .container-treemap {
@@ -203,16 +223,26 @@ section {
     margin-bottom: 20px;
 }
 
+.intro-text {
+    color: black;
+    background-color: #f2f2f2;
+    padding: 70px 0;
+    text-align: center;
+    min-height: 100vh;
+}
+
 .intro {
 	color: #fff;
     background-color: #121212;
     padding: 70px 0;
     text-align: center;
+    min-height: 100vh;
 }
 
 .content {
     padding: 75px 0;
     background-color: #f2f2f2;
+    min-height: 100vh;
 }
 
 .content-2 {
@@ -279,11 +309,12 @@ section {
 }
 
 #sliders-box {
-    float: left;
+    float: right;
     clear: none; 
 }
 
 #slider-container-streamgraph1 {
+    text-align: left;
     margin-bottom: 40px;
 }
 
@@ -293,6 +324,10 @@ section {
     margin-left: 30px;
     margin-right: 30px;
     width: 400px;
+}
+
+#slider-container-streamgraph2 {
+    text-align: left;
 }
 
 #slider-streamgraph2 {
@@ -727,6 +762,7 @@ div.google-visualization-tooltip > ul > li > span {
     text-transform: uppercase;
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
+    margin-right: 30px;
 }
 
 li::marker {
@@ -794,7 +830,7 @@ li::marker {
 }
 
 .navigation__list>li a:hover{
-    color:#5f668d
+    color:#2072F3
 }
 
 .navigation__burger{
