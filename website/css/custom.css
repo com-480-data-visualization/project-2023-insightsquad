@@ -270,6 +270,10 @@ section {
     width: auto;
 }
 
+#category {
+    color: black;
+}
+
 .button-group button {
     margin-top: 20px;
     margin-bottom: 10px;
