@@ -16,4 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		targetElement.scrollIntoView({ behavior: 'smooth' });
 	  });
 	});
+
+	var buttonLink = document.querySelector('.btn');
+
+	buttonLink.addEventListener('click', function(e) {
+		e.preventDefault();
+		var targetId = this.getAttribute('href');
+		var targetElement = document.querySelector(targetId);
+		targetElement.scrollIntoView({ behavior: 'smooth' });
+	});
   });

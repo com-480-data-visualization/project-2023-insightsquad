@@ -33,8 +33,7 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
-    background-image: url('../images/header.jpg');
+    color: #f2f2f2;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -100,7 +99,7 @@ option {
     header .header-content .header-content-inner {
         margin-right: auto;
         margin-left: auto;
-        max-width: 1000px;
+        max-width: 1400px;
     }
 
 	header .header-content .header-content-inner h1 {
@@ -113,6 +112,30 @@ option {
         max-width: 80%;
         font-size: 18px;
     }
+}
+
+#top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding-top: 10px;
+    background-color: #121212;
+}
+
+#icons {
+    justify-content: space-between;
+}
+
+#app-store-icon {
+    height: 160px;
+    width: auto;
+    margin-right: 40px;
+}
+
+#google-play-icon {
+    height: 160px;
+    width: auto;
 }
 
 .container-treemap {
@@ -128,11 +151,11 @@ option {
     width: 50%;
 }
 
-.column-left {
+.column-left-75 {
     width: 75%;
 }
 
-.column-right {
+.column-right-25 {
     width: 25%;
 }
 
@@ -140,6 +163,23 @@ option {
     content: "";
     display: table;
     clear: both;
+}
+
+.home-page-title {
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+}
+
+#div-btn-home-page {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#row-title {
+    text-align: center;
+    padding-top: 100px;
 }
 
 section {
@@ -481,9 +521,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: yellowgreen;
+    border-color: #121212;
     color: #fff;
-    background-color: yellowgreen;
+    background-color: #121212;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -495,9 +535,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: limegreen;
+    border-color: #2072F3;
     color: #fff;
-    background-color: limegreen;
+    background-color: #2072F3;
 }
 
 .btn-primary:active,
@@ -524,12 +564,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: yellowgreen;
-    background-color: yellowgreen;
+    border-color: #121212;
+    background-color: #121212;
 }
 
 .btn-primary .badge {
-    color: yellowgreen;
+    color: #121212;
     background-color: #fff;
 }
 
@@ -591,24 +631,6 @@ div.google-visualization-tooltip > ul > li > span {
     align-items: start;
 }
 
-#top {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-    padding-top: 10px;
-    background-color: black;
-}
-
-#top::after {
-    content: "";
-    display: block;
-    position: relative;
-    bottom: 0;
-    height: 15px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
 .navigation__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -651,9 +673,9 @@ div.google-visualization-tooltip > ul > li > span {
 }
 
 .logo {
-    color: #585858;
+    color: white;
     font-size: 34px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .navigation__container {
@@ -663,6 +685,7 @@ div.google-visualization-tooltip > ul > li > span {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 45%;
+    margin-left: 10%;
 }
 
 .navigation__burger {
@@ -681,7 +704,9 @@ div.google-visualization-tooltip > ul > li > span {
 }
 
 .navigation__list>li a {
-    color: var(--grey2);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
     text-transform: uppercase;
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
@@ -701,6 +726,7 @@ li::marker {
   }
 
 .navigation {
+    color: white;
     width:100%;
     height:60px;
     z-index:10
@@ -744,14 +770,14 @@ li::marker {
 }
 
 .navigation__list>li a{
-    color:var(--grey2);
+    color: rgb(255, 255, 255);
     text-transform:uppercase;
     -webkit-transition:color .2s ease-in-out;
     transition:color .2s ease-in-out
 }
 
 .navigation__list>li a:hover{
-    color:#787878
+    color:#5f668d
 }
 
 .navigation__burger{
