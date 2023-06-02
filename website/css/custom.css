@@ -5,14 +5,14 @@ body {
     font-family: "Archivo", sans-serif;
 
     
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: var(--grey1);
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
     font-weight: 600;
 }
 
 a {
-    color: yellowgreen;
+    color: #121212;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -20,7 +20,7 @@ a {
 
 a:hover,
 a:focus {
-    color: forestgreen;
+    color: #2072F3;
 }
 
 p {
@@ -74,8 +74,8 @@ datalist {
     margin-left: 10px;
 }
 
-#apple-label {
-    margin-left: 20px;
+.apple-label {
+    margin-left: 25px;
 }
   
 option {
@@ -182,6 +182,15 @@ option {
     padding-top: 100px;
 }
 
+.hidden-element {
+    opacity: 0;
+}
+
+.visible-element {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
 section {
     align-items: center;
     justify-content: center;
@@ -274,6 +283,10 @@ section {
     clear: none; 
 }
 
+#slider-container-streamgraph1 {
+    margin-bottom: 40px;
+}
+
 #slider-streamgraph1 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -288,6 +301,10 @@ section {
     margin-left: 30px;
     margin-right: 30px;
     width: 400px;
+}
+
+#slider-container-donut {
+    margin-bottom: 40px;
 }
 
 #slider-donut {

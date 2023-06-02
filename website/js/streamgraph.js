@@ -1,6 +1,6 @@
 // Set size constants
 var totWidth = 860,
-    totHeight = 520;
+    totHeight = 600;
 var margins = {top: 20, right: 10, bottom: 0, left: 10};
 var width = totWidth - margins.left - margins.right,
     height = totHeight - margins.top - margins.bottom;
@@ -79,7 +79,10 @@ function buildStreamgraph(data, dataRadius) {
     .range([ 0, width ]);
   svgStreamgraph.append("g")
     .attr("transform", "translate(0," + height*0.8 + ")")
-    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([2008, 2010, 2012, 2014, 2016, 2018, 2020]))
+    .call(d3.axisBottom(x)
+      .tickSize(-height*.7)
+      .tickValues([2008, 2010, 2012, 2014, 2016, 2018, 2020])
+      .tickFormat(d3.format("d")))
     .select(".domain").remove()
 
   // X axis labels
@@ -108,7 +111,7 @@ function buildStreamgraph(data, dataRadius) {
   // color palette
   var color = d3.scaleOrdinal()
     .domain(keys)
-    .range(d3.schemeDark2);
+    .range(["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]);
 
   //stack the data?
   var stackedData = d3.stack()

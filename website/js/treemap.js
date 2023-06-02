@@ -119,17 +119,17 @@ function updateTreemapOnSliderChange() {
   var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
   if (sliderValueTreemap === 1) {
-    update(androidDataTreemap, sliderValueTreemap)
+    updateTreemap(androidDataTreemap, sliderValueTreemap)
   }
   else if (sliderValueTreemap === 2) {
-    update(appleDataTreemap, sliderValueTreemap)
+    updateTreemap(appleDataTreemap, sliderValueTreemap)
   }
   else if (sliderValueTreemap === 3) {
-    update(editorsChoiceDataTreemap, sliderValueTreemap)
+    updateTreemap(editorsChoiceDataTreemap, sliderValueTreemap)
   }
 }
 
-function update(data, dataType) {
+function updateTreemap(data, dataType) {
   var color = d3.scaleOrdinal()
   .range(palettesTreemap[Math.floor(Math.random() * 20) + 1])
 
@@ -343,17 +343,17 @@ function initializeTreemap() {
 
 if (sliderValueTreemap === 1) {
   d3.csv(androidDataPathTreemap, function(data) {
-    update(data, sliderValueTreemap)
+    updateTreemap(data, sliderValueTreemap)
   })
 }
 else if (sliderValueTreemap === 2) {
   d3.csv(appleDataPathTreemap, function(data) {
-    update(data, sliderValueTreemap)
+    updateTreemap(data, sliderValueTreemap)
   })
 }
 else if (sliderValueTreemap === 3) {
   d3.csv(editorsChoiceDataPathTreemap, function(data) {
-    update(data, sliderValueTreemap)
+    updateTreemap(data, sliderValueTreemap)
   })
 }
 }

@@ -116,9 +116,8 @@ function updateCategoryOptions() {
 sliderDonut.on("input", updateCategoryOptions)
 
 function updateDonutChart(data) {
-var words = data.map(function(d) { return d.word; })
 var colorDonut = d3.scaleOrdinal()
-    .domain(words)
+    .domain(data.columns.slice(1))
     .range(colorRangeDonut);
 
 // remove the previous svg if it exists
