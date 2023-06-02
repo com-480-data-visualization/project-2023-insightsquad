@@ -3,7 +3,7 @@ var marginTreemap = {top: 10, right: 10, bottom: 10, left: 10},
   widthTreemap = document.getElementsByClassName("column-left-75")[0].offsetWidth,
   heightTreemap = 900,
   tile = d3.treemapResquarify,
-  fontSizeTreemap = "16px",
+  fontSizeTreemap = "20px",
   colorsAndroid = d3.scaleOrdinal()
     .range(["#6eb728", "#589220", "#426d18", "#8bc552", "#a8d37e"]),
   colorsApple = d3.scaleOrdinal()
@@ -14,15 +14,15 @@ var marginTreemap = {top: 10, right: 10, bottom: 10, left: 10},
     3: ["264653","3d85c6", "2a9d8f","e9c46a","f4a261","e76f51"], // OUI
     4: ["1b54b4","023e8a","0077b6","0096c7","00b4d8","48cae4","90e0ef","ade8f4","caf0f8"],  
     5: ["0f4094","1b54b4","0077b6","00b4d8","90e0ef","caf0f8"],
-    6: ['e9c46a', 'ffa62b', '16697a', '82c0cc', 'ede7e3', '489fb5'],
+    6: ['e9c46a', 'ffa62b', '16697a', '82c0cc', 'd8cdc6', '489fb5'],
     7: ['f7b267', 'd8433b', 'f79d65', 'f25c54', 'f4845f', 'f27059'],
-    8: ["16697a","489fb5","82c0cc","ede7e3","e9c46a","ffa62b"],
+    8: ["16697a","489fb5","82c0cc","d8cdc6","e9c46a","ffa62b"],
     9: ["f7b267","f79d65","f4845f","f27059","f25c54", "d8433b"],
-    10: ["ffc4d6","ffa6c1","ff87ab","ff5d8f","ff97b7","ffacc5","ffcad4","f4acb7"],
-    11: ['ccff33', '70e000', '007200', '004b23', '9ef01a', '008000', '006400', '38b000'],
+    10: ['e76f51', 'f4a261', 'e9c46a', '2a9d8f', '3d85c6', '264653'],
+    11: ['b7e332', '70e000', '007200', '004b23', '9ef01a', '008000', '006400', '38b000'],
     12: ["250902","38040e","640d14","800e13","ad2831", "eb4954"],
-    13: ["30f2f2","ffd23f","ff6f59","3066be","a0a4b8","8e7cc3"],
-    14: ['9336fd', 'f050ae', 'fdf148', 'a0e426', 'f77976', '52e3e1', '33a8c7', 'd883ff', 'ffab00'],
+    13: ["2bd8d8","ffd23f","eb5841","3066be","a0a4b8","8e7cc3"],
+    14: ["e9c46a", "f4a261", "e76f51", "2a9d8f", "264653", "3d85c6"],
     15: ['e76f51', '2a9d8f', 'f4a261', '264653', 'e9c46a', '3d85c6'], // OUI
     16: ['e9c46a', 'f4a261', '3d85c6', '2a9d8f', '264653', 'e76f51'], // OUI
     17: ['94d2bd', '0a9396', 'bb3e03', 'ca6702', '001219', 'e9d8a6', 'ee9b00', 'ae2012', '005f73', '9b2226'], // OUI
@@ -200,6 +200,7 @@ function updateTreemap(data, dataType) {
       .attr("height", function (d) { return d.y1 - d.y0 })
       .style("stroke", "black")
       .style("fill", function(d) { 
+        console.log(color(d.data.name))
         return "#" + color(d.data.name)
       })
       .on("mouseover", function(d) {
@@ -243,7 +244,7 @@ function updateTreemap(data, dataType) {
       .style("opacity", 0)
       .transition()
       .duration(500)
-      .style("opacity", 0.8)
+      .style("opacity", 0.90)
 
 
   // And to add the text labels
@@ -257,20 +258,20 @@ function updateTreemap(data, dataType) {
   textLabels
     .enter()
     .append("text")
-      .attr("x", function(d){ return d.x0 + 8})    // +8 to adjust position (more right)
-      .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
+      .attr("x", function(d){ return d.x0 + 10})    // +8 to adjust position (more right)
+      .attr("y", function(d){ return d.y0 + 25})    // +20 to adjust position (lower)
       .attr("opacity", 0)
       .transition()
       .duration(500)
       .attr("opacity", 1)
-      .attr("x", function(d){ return d.x0 + 8})    // +8 to adjust position (more right)
-      .attr("y", function(d){ return d.y0 + 20})    // +20 to adjust position (lower)
+      .attr("x", function(d){ return d.x0 + 10})    // +8 to adjust position (more right)
+      .attr("y", function(d){ return d.y0 + 25})    // +20 to adjust position (lower)
       .text(function(d){ 
         var name = d.data.name
         var widthTemp = d.x1 - d.x0
         var heightTemp = d.y1 - d.y0
         var textWidth = getTextWidth(name, fontSizeTreemap) + marginTreemap.right
-        var textHeight = parseInt(fontSizeTreemap.substring(0, 2)) + 8
+        var textHeight = parseInt(fontSizeTreemap.substring(0, 2)) + 12
         var truncatedName = name
 
         if (textWidth > widthTemp) {
@@ -291,7 +292,8 @@ function updateTreemap(data, dataType) {
         return truncatedName
       })
       .attr("font-size", fontSizeTreemap)
-      .attr("fill", "white")
+      .attr("fill", "#ffffff")
+      .attr("font-weight", "600")
 }
 
 // Helper function to find the maximum substring length that fits within the desired width
