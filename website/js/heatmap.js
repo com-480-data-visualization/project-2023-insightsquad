@@ -107,9 +107,18 @@ function updateHeatmapChart(data) {
         .select(".domain").remove()
     
       // Build color scale
+        // get the max value of the third column of data
+        
+        // apply logaritmic scale to all values in the third column
+        data.forEach(function(d) {
+
+            d.value = +d.value;
+            d.value = Math.log(d.value);
+        });
+        var maxValue = d3.max(data, function(d) { return +d.value; })
         var myColor = d3.scaleLinear()
-        .range(["white", "#69b3a2"])
-        .domain([1,100])
+        .range(["white", "blue"])
+        .domain([1,maxValue])
         
     
       // create a tooltip

@@ -204,6 +204,21 @@
         <div id="heatmap"></div>
         <script src="js/heatmap.js"></script>
       </div>     
+      
+      <div id="category-container-stacked">
+        <div id="slider-container-stacked">
+          <label for="slider-donut">Select amount:</label>
+          <input type="range" min="1" max="4" value="1" id="slider-stacked" list="slider-stacked-labels">
+          <datalist id="slider-stacked-labels">
+            <option value="1" label="All"></option>
+            <option value="1000" class="Top 1000" label="Apple"></option>
+            <option value="100" label="Top 100"></option>
+            <option value="10" label="Top 10"></option>
+          </datalist>
+        </div>
+        <div id="stacked"></div>
+        <script src="js/stacked.js"></script>
+      </div>  
     </div>
 </section>
 
