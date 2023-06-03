@@ -83,12 +83,16 @@ function updateCategoryOptions() {
       dropMenuDonut.appendChild(option);
     });
 
-    if (sliderValueDonut == 1) {
-        updateDonutChart(androidDataDonut)
-    } else if (sliderValueDonut == 2) {
-        updateDonutChart(appleDataDonut)
-    } else if (sliderValueDonut == 3) {
-        updateDonutChart(editorsChoiceDataDonut)
+    switch (sliderValueDonut) {
+        case 1:
+            updateDonutChart(androidDataDonut)
+            break;
+        case 2:
+            updateDonutChart(appleDataDonut)
+            break;
+        case 3:
+            updateDonutChart(editorsChoiceDataDonut)
+            break;
     }
 }
 
@@ -206,27 +210,31 @@ function updateDonutChartCategoryChange() {
     var dropMenuDonutValue = dropMenuDonut.value
     var sliderValueDonut = parseInt(sliderDonut.node().value);
 
-    if (sliderValueDonut == 1) {
-        if (dropMenuDonutValue == "All") {
-            updateDonutChart(androidDataDonut)
-        }
-        else {
-            updateDonutChart(window["androidWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
-        }
-    } else if (sliderValueDonut == 2) {
-        if (dropMenuDonutValue == "All") {
-            updateDonutChart(appleDataDonut)
-        }
-        else {
-            updateDonutChart(window["appleWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
-        }
-    } else if (sliderValueDonut == 3) {
-        if (dropMenuDonutValue == "All") {
-            updateDonutChart(editorsChoiceDataDonut)
-        }
-        else {
-            updateDonutChart(window["editorsChoiceWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
-        }
+    switch (sliderValueDonut) {
+        case 1:
+            if (dropMenuDonutValue == "All") {
+                updateDonutChart(androidDataDonut)
+            }
+            else {
+                updateDonutChart(window["androidWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
+            }
+            break;
+        case 2:
+            if (dropMenuDonutValue == "All") {
+                updateDonutChart(appleDataDonut)
+            }
+            else {
+                updateDonutChart(window["appleWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
+            }
+            break;
+        case 3:
+            if (dropMenuDonutValue == "All") {
+                updateDonutChart(editorsChoiceDataDonut)
+            }
+            else {
+                updateDonutChart(window["editorsChoiceWordsCount" + dropMenuDonutValue.replace(/ /g, '').replace(/&/g, '')])
+            }
+            break;
     }
 }
 
@@ -250,20 +258,22 @@ categoryOptionsDonut.forEach((category) => {
     option.textContent = category;
     dropMenuDonut.appendChild(option);
 });
-if (sliderValueDonut === 1) {
-    d3.csv(androidDataPathDonut, function(data) {
-        updateDonutChart(data)
-    })
-  }
-  else if (sliderValueDonut === 2) {
-    d3.csv(appleDataPathDonut, function(data) {
-        updateDonutChart(data)
-    })
-  }
-  else if (sliderValueDonut === 3) {
-    d3.csv(editorsChoiceDataPathDonut, function(data) {
-        updateDonutChart(data)
-    })
+switch (sliderValueDonut) {
+    case 1:
+        d3.csv(androidDataPathDonut, function(data) {
+            updateDonutChart(data)
+        })
+        break;
+    case 2:
+        d3.csv(appleDataPathDonut, function(data) {
+            updateDonutChart(data)
+        })
+        break;
+    case 3:
+        d3.csv(editorsChoiceDataPathDonut, function(data) {
+            updateDonutChart(data)
+        })
+        break;
   }
 }
 
