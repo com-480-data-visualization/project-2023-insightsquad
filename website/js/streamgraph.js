@@ -78,9 +78,9 @@ function buildStreamgraph(data, dataRadius) {
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
   svgStreamgraph.append("g")
-    .attr("transform", "translate(0," + height*0.8 + ")")
+    .attr("transform", "translate(0," + height*0.9 + ")")
     .call(d3.axisBottom(x)
-      .tickSize(-height*.7)
+      .tickSize(-height*0.80)
       .tickValues([2008, 2010, 2012, 2014, 2016, 2018, 2020])
       .tickFormat(d3.format("d")))
     .select(".domain").remove()
@@ -89,7 +89,7 @@ function buildStreamgraph(data, dataRadius) {
   svgStreamgraph.append("text")
       .attr("text-anchor", "end")
       .attr("x", width)
-      .attr("y", height-30 )
+      .attr("y", height-10)
       .text("Time (year)");
 
   // Y axis
