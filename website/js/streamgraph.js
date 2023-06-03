@@ -99,9 +99,12 @@ function buildStreamgraph(data, dataRadius) {
   
   // Add Y axis label:
   svgStreamgraph.append("text")
-    .attr("text-anchor", "middle")
-    .attr("transform", "translate(0, " + (height / 2) + ") rotate(-90)")
-    .text("Genres of newly created apps");
+    .attr("class", "chart-label")
+    .attr("x", -(margins.left)*0.65)
+    .attr("y", -(margins.top/8))
+    .attr("text-anchor", "start")
+    .attr("font-size", "20px")
+    .text("Genres of newly created apps")
 
   // Customize tick lines
   svgStreamgraph.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -122,8 +125,8 @@ function buildStreamgraph(data, dataRadius) {
   // create a tooltip
   var Tooltip = svgStreamgraph
     .append("text")
-    .attr("x", 0)
-    .attr("y", 0)
+    .attr("x", 3)
+    .attr("y", 75)
     .style("opacity", 0)
     .style("font-size", 17)
 
