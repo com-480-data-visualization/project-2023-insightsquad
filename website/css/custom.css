@@ -177,6 +177,7 @@ footer {
 }
 
 .chart-description {
+    text-align: justify;
     font-size: 16px;
     font-weight: 200;
     margin-top: 20px;
