@@ -107,9 +107,15 @@
   <div class="container">
     <div class="row">
       <h1 class="section-heading">Sankey Diagram</h1>
+      <div class="column">
       <div id="slider-container">
-        <input type="range" min="1" max="3" value="1" id="slider">
         <label for="slider">Select Data:</label>
+        <input type="range" min="1" max="3" value="1" id="slider" list="slider-sankey-labels">
+        <datalist id="slider-sankey-labels">
+          <option value="1" label="Android"></option>
+          <option value="2" class="apple-label" label="Apple"></option>
+          <option value="3" label="Editor's Choice"></option>
+        </datalist>
       </div>
       <div id="category-container">
         <label for="category">Select Category:</label>
@@ -117,6 +123,12 @@
           <option value="Education">Education</option>
         </select>
       </div>
+      </div>
+      <div class="column">
+        <p class="chart-description"></p>
+      </div>
+    </div>
+    <div class="row">
         <div id="sankey-labels">
         </div>
         <div id="sankey"></div>
@@ -129,6 +141,13 @@
   <div class="container container-streamgraph">
     <div class="row">
       <h1 class="section-heading">Number of apps created each year</h1>
+      <div class="column" style="text-align: justify;">
+        <p class="chart-description">Each year, lots of applications are born but it is not necessarily uniform across all categories and age rating. 
+          We focused our attention to the 10 biggest categories otherwise the smaller ones would be crushed and we would not see anything.</p>
+        <p class="chart-description"><b>Hover</b> one of the area to display the name of the correspond category or age rating on the top left of the chart. 
+          Use the first <b>slider</b> to change between datasets and the second one to change the way we split applications.</p>
+        </div> 
+      <div class="column">
       <div id="sliders-box">
         <div id="slider-container-streamgraph1">
           <label for="slider-streamgraph1">Data source:</label>
@@ -148,7 +167,8 @@
           </datalist>
         </div>
       </div>
-      <div id="streamgraph" class="col-lg-8 col-lg-offset-2">
+      </div>
+      <div id="streamgraph" class="col-lg-8 col-lg-offset-3">
       </div>  
       <script src="js/streamgraph.js"></script>           
     </div>
@@ -168,6 +188,11 @@
           <option value="3" label="Editors Choice"></option>
         </datalist>
       </div>
+      <p class="chart-description">You ever wondered which category was the biggest in terms of applications? Wonder no more as this visualization was made for you. 
+        With a glimpse of an eye, you henceforth know it.</p>
+      <p class="chart-description">Each tile size represents the proportion of applications in the category, <b>click</b> on one of them to display the 10 most downloaded/reviewed 
+        applications for that specific category. <br><b>Hover</b> a tile to display its name, the number of applications and the percentage it represents.
+        Use the <b>slider</b> to change between datasets.</p>
       <div class="column column-left-75">
         <div id="treemap"></div>
       <script src="js/treemap.js"></script>
@@ -199,6 +224,7 @@
           <option value="---">---</option>
         </select>
       </div>
+        <p class="chart-description">With the huge number of applications, can we find a pattern in the naming convention? <br>The chart showcases the 10 most used words overall or by category. <br>Simply chose one in the <b>drop down menu</b> above.</p>
         <div id="donutchart"></div>
         <script src="js/donutchart.js"></script>  
       </div>
