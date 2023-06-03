@@ -29,6 +29,11 @@ p {
     line-height: 1.5;
 }
 
+b {
+    font-weight: 600;
+    color: #2072F3;
+}
+
 header {
     position: relative;
     width: 100%;
@@ -77,6 +82,13 @@ datalist {
 
 .apple-label {
     margin-left: 25px;
+}
+
+#slider-stacked-labels {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 420px;
 }
   
 option {
@@ -162,6 +174,12 @@ footer {
     font-size: 20px;
     font-weight: 200;
     margin-bottom: 30px;
+}
+
+.chart-description {
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 20px;
 }
 
 .container-treemap {
@@ -328,6 +346,24 @@ section {
     width: 120px;
 }
 
+#slider-container {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#category-container {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#slider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 400px;
+}
+
 #slider-treemap{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -356,6 +392,7 @@ section {
 
 #slider-container-streamgraph2 {
     text-align: left;
+    margin-bottom: 40px;
 }
 
 #slider-streamgraph2 {
@@ -371,6 +408,14 @@ section {
 }
 
 #slider-donut {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 400px;
+}
+
+#slider-stacked {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
