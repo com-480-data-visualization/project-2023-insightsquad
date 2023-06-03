@@ -44,28 +44,6 @@ var appleDataPathTreemap = pathTreemap + 'apple_store_category_count.csv'
 var editorsChoiceDataPathTreemap = pathTreemap + 'play_store_editors_choice_category_count.csv'
 var androidDataTreemap, appleDataTreemap, editorsChoiceDataTreemap, androidDataTopAppsOverall, appleDataTopAppsOverall, editorsChoiceDataTopAppsOverall
 
-var androidTopAppsAction, androidTopAppsAdventure, androidTopAppsArcade, androidTopAppsArtDesign, androidTopAppsAutoVehicles, androidTopAppsBeauty, 
-  androidTopAppsBoard, androidTopAppsBooksReference, androidTopAppsBusiness, androidTopAppsCard, androidTopAppsCasino, androidTopAppsCasual, androidTopAppsComics, 
-  androidTopAppsCommunication, androidTopAppsDating, androidTopAppsEducation, androidTopAppsEducational, androidTopAppsEntertainment, androidTopAppsEvents, 
-  androidTopAppsFinance, androidTopAppsFoodDrink, androidTopAppsHealthFitness, androidTopAppsHouseHome, androidTopAppsLibrariesDemo, androidTopAppsLifestyle, 
-  androidTopAppsMapsNavigation, androidTopAppsMedical, androidTopAppsMusic, androidTopAppsMusicAudio, androidTopAppsNewsMagazines, androidTopAppsParenting, 
-  androidTopAppsPersonalization, androidTopAppsPhotography, androidTopAppsPuzzle, androidTopAppsRacing, androidTopAppsRolePlaying, androidTopAppsShopping, 
-  androidTopAppsSimulation, androidTopAppsSocial, androidTopAppsSports, androidTopAppsStrategy, androidTopAppsTools, androidTopAppsTravelLocal, androidTopAppsTrivia, 
-  androidTopAppsVideoPlayersEditors, androidTopAppsWeather, androidTopAppsWord
-
-var appleTopAppsBook, appleTopAppsBusiness, appleTopAppsDeveloperTools, appleTopAppsEducation, appleTopAppsEntertainment, appleTopAppsFinance, appleTopAppsFoodDrink,
-  appleTopAppsGames, appleTopAppsGraphicsDesign, appleTopAppsHealthFitness, appleTopAppsLifestyle, appleTopAppsMagazinesNewspapers, appleTopAppsMedical, appleTopAppsMusic,
-  appleTopAppsNavigation, appleTopAppsNews, appleTopAppsPhotoVideo, appleTopAppsProductivity, appleTopAppsReference, appleTopAppsShopping, appleTopAppsSocialNetworking,
-  appleTopAppsSports, appleTopAppsStickers, appleTopAppsTravel, appleTopAppsUtilities, appleTopAppsWeather
-
-var editorsChoiceTopAppsAction, editorsChoiceTopAppsAdventure, editorsChoiceTopAppsArcade, editorsChoiceTopAppsArtDesign, editorsChoiceTopAppsAutoVehicles, editorsChoiceTopAppsBeauty,
-  editorsChoiceTopAppsBoard, editorsChoiceTopAppsBooksReference, editorsChoiceTopAppsBusiness, editorsChoiceTopAppsCard, editorsChoiceTopAppsCasual, editorsChoiceTopAppsComics,
-  editorsChoiceTopAppsCommunication, editorsChoiceTopAppsDating, editorsChoiceTopAppsEducation, editorsChoiceTopAppsEducational, editorsChoiceTopAppsEntertainment, editorsChoiceTopAppsEvents,
-  editorsChoiceTopAppsFinance, editorsChoiceTopAppsFoodDrink, editorsChoiceTopAppsHealthFitness, editorsChoiceTopAppsHouseHome, editorsChoiceTopAppsLifestyle,
-  editorsChoiceTopAppsMapsNavigation, editorsChoiceTopAppsMedical, editorsChoiceTopAppsMusic, editorsChoiceTopAppsMusicAudio, editorsChoiceTopAppsNewsMagazines, editorsChoiceTopAppsParenting,
-  editorsChoiceTopAppsPhotography, editorsChoiceTopAppsPuzzle, editorsChoiceTopAppsRacing, editorsChoiceTopAppsRolePlaying, editorsChoiceTopAppsShopping,
-  editorsChoiceTopAppsSimulation, editorsChoiceTopAppsSocial, editorsChoiceTopAppsSports, editorsChoiceTopAppsStrategy, editorsChoiceTopAppsTools, editorsChoiceTopAppsTravelLocal, editorsChoiceTopAppsTrivia,
-  editorsChoiceTopAppsVideoPlayersEditors, editorsChoiceTopAppsWeather, editorsChoiceTopAppsWord
 
 d3.csv(androidDataPathTreemap, function(data) {
   androidDataTreemap = data
@@ -113,33 +91,21 @@ editorsChoiceCategories.forEach(function(category) {
 })
 
 function updateTreemapOnSliderChange() {
-  d3.select("#category-info")
-    .style("opacity", 1)
-    .transition()
-    .duration(500) // Set the duration of the transition in milliseconds
-    .style("opacity", 0)
-    .on("start", function() {
-      // This function is called when the transition starts
-      // You can perform any necessary tasks here before the transition begins
-    })
-    .on("end", function() {
-      // This function is called when the transition ends
-      // Set the HTML content to an empty string
-      d3.select("#category-info").html("").style("opacity", 1);
-    });
   var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
-  if (sliderValueTreemap === 1) {
-    updateTreemap(androidDataTreemap, sliderValueTreemap)
-    updateCategoryInfoOverall(androidDataTopAppsOverall)
-  }
-  else if (sliderValueTreemap === 2) {
-    updateTreemap(appleDataTreemap, sliderValueTreemap)
-    updateCategoryInfoOverall(appleDataTopAppsOverall)
-  }
-  else if (sliderValueTreemap === 3) {
-    updateTreemap(editorsChoiceDataTreemap, sliderValueTreemap)
-    updateCategoryInfoOverall(editorsChoiceDataTopAppsOverall)
+  switch (sliderValueTreemap) {
+    case 1:
+      updateTreemap(androidDataTreemap, sliderValueTreemap)
+      updateCategoryInfoOverall(androidDataTopAppsOverall)
+      break
+    case 2:
+      updateTreemap(appleDataTreemap, sliderValueTreemap)
+      updateCategoryInfoOverall(appleDataTopAppsOverall)
+      break
+    case 3:
+      updateTreemap(editorsChoiceDataTreemap, sliderValueTreemap)
+      updateCategoryInfoOverall(editorsChoiceDataTopAppsOverall)
+      break
   }
 }
 
@@ -194,9 +160,6 @@ function updateTreemap(data, dataType) {
     .style("font-size", fontSizeTreemap)
     .style("border-radius", "3px");
 
-  // Category info
-  var categoryInfo = d3.select("#category-info")
-    
   // Use this information to add rectangles:
   var tiles = svgTreemap.selectAll("rect")
     .data(root.leaves())
@@ -228,31 +191,7 @@ function updateTreemap(data, dataType) {
         tooltip.style("visibility", "hidden")
       })
       .on("click", function(d) {
-          if (dataType === 1) {
-            var topApps = window["androidTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
-            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
-            topApps.forEach(function(app, index) {
-              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
-            })
-            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
-          } 
-          else if (dataType === 2){
-            var topApps = window["appleTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
-            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of reviews)</h3>"
-            topApps.forEach(function(app, index) {
-              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
-            })
-            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
-          }
-          else if (dataType === 3) {
-            var topApps = window["editorsChoiceTopApps" + d.data.name.replace(/ /g, '').replace(/&/g, '')]
-            var topAppsHtml = "<h3>Top apps in " + d.data.name + "<br>(Number of downloads)</h3>"
-            topApps.forEach(function(app, index) {
-              topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
-            })
-            categoryInfo.html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
-          }
-
+        updateCategoryInfo(dataType, d.data.name)
       })
       .style("opacity", 0)
       .transition()
@@ -358,30 +297,31 @@ sliderTreemap.on("input", updateTreemapOnSliderChange)
 function initializeTreemap() {
   var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
-if (sliderValueTreemap === 1) {
-  d3.csv(androidDataPathTreemap, function(data) {
-    updateTreemap(data, sliderValueTreemap)
-    d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
-      updateCategoryInfoOverall(data)
-    })
-  })
-}
-else if (sliderValueTreemap === 2) {
-  d3.csv(appleDataPathTreemap, function(data) {
-    updateTreemap(data, sliderValueTreemap)
-    d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
-      updateCategoryInfoOverall(data)
-    })
-  })
-}
-else if (sliderValueTreemap === 3) {
-  d3.csv(editorsChoiceDataPathTreemap, function(data) {
-    updateTreemap(data, sliderValueTreemap)
-    d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
-      updateCategoryInfoOverall(data)
-    })
-  })
-}
+  switch (sliderValueTreemap) {
+    case 1:
+      d3.csv(androidDataPathTreemap, function(data) {
+        updateTreemap(data, sliderValueTreemap)
+        d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
+          updateCategoryInfoOverall(data)
+        })
+      })
+      break
+    case 2:
+      d3.csv(appleDataPathTreemap, function(data) {
+        updateTreemap(data, sliderValueTreemap)
+        d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
+          updateCategoryInfoOverall(data)
+        })
+      })
+    case 3:
+      d3.csv(editorsChoiceDataPathTreemap, function(data) {
+        updateTreemap(data, sliderValueTreemap)
+        d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
+          updateCategoryInfoOverall(data)
+        })
+      })
+      break
+  }
 }
 
 initializeTreemap()
@@ -394,4 +334,37 @@ function updateCategoryInfoOverall(data) {
   })
 
   d3.select("#category-info").html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+}
+
+/** 
+ * @brief Function executed when choosing a specific category in the treemap
+ *  
+ * Anything that will be shown after choosing a specific category in the
+ * treemap should be implemented in this function. 
+ * 
+ * This function is called in the 'updateTreemap' function.
+ * 
+ * @param dataType On which data is the category chosen (integer 1, 2 or 3)
+ * @param categoryName Name of the chosen category
+ */
+function updateCategoryInfo(dataType, categoryName) {
+  var windowDTElementPrefixMap = {
+    1: "androidTopApps",
+    2: "appleTopApps",
+    3: "editorsChoiceTopApps"
+  }
+  var unitsOfMeasurementMap = {
+    1: "Number of downloads",
+    2: "Number of reviews",
+    3: "Number of downloads"
+  }
+
+  var topApps = window[windowDTElementPrefixMap[dataType] + categoryName.replace(/ /g, '').replace(/&/g, '')]
+  var topAppsHtml = "<h3>Top apps in " + categoryName + "<br>(" + unitsOfMeasurementMap[dataType] + ")</h3>"
+
+  topApps.forEach(function(app, index) {
+    topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
+  })
+  d3.select("#category-info")
+    .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
 }
