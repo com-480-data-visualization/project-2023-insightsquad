@@ -84,6 +84,7 @@
         legend: { position: 'top', maxLines: 3 },
         bar: { groupWidth: '75%' },
         isStacked: true,
+        backgroundColor: '#f2f2f2',
       };
 
     chart.draw(dataTable, options);

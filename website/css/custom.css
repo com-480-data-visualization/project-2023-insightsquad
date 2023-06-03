@@ -86,9 +86,13 @@ datalist {
 
 #slider-stacked-labels {
     display: flex;
-    margin-left: 10px;
+    margin-left: 25px;
     justify-content: space-between;
-    width: 420px;
+    width: 430px;
+}
+
+.top-10-label {
+    margin-left: 25px;
 }
   
 option {

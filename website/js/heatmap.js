@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var marginHeatmap = {top: 80, right: 25, bottom: 30, left: 40},
+var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 40},
   widthHeatmap = 800 - marginHeatmap.left - marginHeatmap.right,
   heightHeatmap = 450 - marginHeatmap.top - marginHeatmap.bottom;
 
@@ -173,26 +173,7 @@ function updateHeatmapChart(data) {
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
-   
-    
-    // Add title to graph
-    svg.append("text")
-            .attr("x", 0)
-            .attr("y", -50)
-            .attr("text-anchor", "left")
-            .style("font-size", "22px")
-            .text("A d3.js heatmap");
-    
-    // Add subtitle to graph
-    svg.append("text")
-            .attr("x", 0)
-            .attr("y", -20)
-            .attr("text-anchor", "left")
-            .style("font-size", "14px")
-            .style("fill", "grey")
-            .style("max-width", 400)
-            .text("A short description of the take-away message of this chart.");
-    
+
 }
 
 function updateHeatmapChartCategoryChange() {
