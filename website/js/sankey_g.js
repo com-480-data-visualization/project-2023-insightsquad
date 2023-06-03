@@ -41,6 +41,7 @@ const categories = {
       .then(response => response.text())
       .then(csvData => {
         const dataTable = new google.visualization.DataTable();
+        console.log(csvData);
         
         // Split the CSV data into rows
         const rows = csvData.trim().split('\n');
@@ -180,6 +181,7 @@ const categories = {
     
     // use the selected data and category to create the appropriate CSV file path
     const csvFilePath = `data/sankey/${selectedData}_${selectedCategory}.csv`;
+    console.log(csvFilePath)
   
     fetchDataAndCreateDataTable(csvFilePath, drawSankeyDiagram);
   
@@ -188,13 +190,15 @@ const categories = {
   // Function to return the appropriate data based on the slider value
   function getDataBasedOnSliderValue() {
     const sliderValue = parseInt(slider.value);
+    console.log(sliderValue)
     
-    if (sliderValue === 1) {
-      return "android";
-    } else if (sliderValue === 2) {
-      return "ios";
-    } else {
-      return "editor";
+    switch (sliderValue) {
+      case 1:
+        return "android";
+      case 2:
+        return "ios";
+      case 3:
+        return "editor";
     }
   }
   
