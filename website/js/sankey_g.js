@@ -41,6 +41,7 @@ const categories = {
       .then(response => response.text())
       .then(csvData => {
         const dataTable = new google.visualization.DataTable();
+        console.log(csvData);
         
         // Split the CSV data into rows
         const rows = csvData.trim().split('\n');
@@ -189,12 +190,13 @@ const categories = {
   function getDataBasedOnSliderValue() {
     const sliderValue = parseInt(slider.value);
     
-    if (sliderValue === 1) {
-      return "android";
-    } else if (sliderValue === 2) {
-      return "ios";
-    } else {
-      return "editor";
+    switch (sliderValue) {
+      case 1:
+        return "android";
+      case 2:
+        return "ios";
+      case 3:
+        return "editor";
     }
   }
   
