@@ -181,6 +181,7 @@ const categories = {
     
     // use the selected data and category to create the appropriate CSV file path
     const csvFilePath = `data/sankey/${selectedData}_${selectedCategory}.csv`;
+    console.log(csvFilePath)
   
     fetchDataAndCreateDataTable(csvFilePath, drawSankeyDiagram);
   
@@ -189,6 +190,7 @@ const categories = {
   // Function to return the appropriate data based on the slider value
   function getDataBasedOnSliderValue() {
     const sliderValue = parseInt(slider.value);
+    console.log(sliderValue)
     
     switch (sliderValue) {
       case 1:
