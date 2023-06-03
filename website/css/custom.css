@@ -29,13 +29,6 @@ p {
     line-height: 1.5;
 }
 
-h1 {
-    font-size: 34px;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
 header {
     position: relative;
     width: 100%;
@@ -232,6 +225,8 @@ section {
   }
 
 .section-heading {
+    font-size: 34px;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
 }
