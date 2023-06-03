@@ -8,7 +8,7 @@ const categories = {
   google.charts.load('current', {'packages':['sankey']});
   
   // Retrieve necessary elements from the DOM
-  const slider = document.getElementById('slider');
+  const slider = document.getElementById('slider_sankey');
   const categorySelect = document.getElementById('category');
   const diagramContainer = document.getElementById('sankey');
   
@@ -146,7 +146,7 @@ const categories = {
       2: ["Category","Reviews","Rating","Content Rating","Price"],
       3: ["Category","Downloads","Rating","Ads or In-App Purchases","Price"]
     };
-    const selectedData = getDataBasedOnSliderValue();
+    const selectedData = getDataBasedOnSliderValueSankey();
     const selectedCategory = categorySelect.value;
     // get the html element with id sankey-labels
     const sankeyLabels = document.getElementById("sankey-labels");
@@ -188,7 +188,7 @@ const categories = {
   }
   
   // Function to return the appropriate data based on the slider value
-  function getDataBasedOnSliderValue() {
+  function getDataBasedOnSliderValueSankey() {
     const sliderValue = parseInt(slider.value);
     console.log(sliderValue)
     
