@@ -108,16 +108,9 @@ function updateHeatmapChart(data) {
         .select(".domain").remove()
     
       // Build color scale
-        // get the max value of the third column of data
-        
-        // apply logaritmic scale to all values in the third column
-        data.forEach(function(d) {
-
-            d.value = +d.value;
-            d.value = Math.log(d.value);
-        });
         var maxValue = d3.max(data, function(d) { return +d.value; })
-        var myColor = d3.scaleLinear()
+        var myColor = d3.scaleLog()
+        .base(10)
         .range(["white", "blue"])
         .domain([1,maxValue])
         
@@ -142,7 +135,8 @@ function updateHeatmapChart(data) {
           .style("opacity", 1)
       }
       var mousemove = function(d) {
-        value = (!isFinite(d.value)) ? 0 : (d.value !== 0) ? d.value.toFixed(2) : 0
+        valueNumber = +d.value
+        value = (!isFinite(valueNumber)) ? 0 : valueNumber
         tooltip
           .html("The exact value of<br>this cell is: " + value)
           .style("top", (d3.event.pageY+10)+"px")
