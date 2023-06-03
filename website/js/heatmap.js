@@ -67,6 +67,7 @@ function updateHeatMapOnSliderChange() {
 }
 
 sliderHeatmap.on("input", updateHeatMapOnSliderChange)
+sliderHeatmap.on("change", updateCategoryOptions)
 
 function updateHeatmapChart(data) {
     d3.select("#heatmap").selectAll("svg").remove();

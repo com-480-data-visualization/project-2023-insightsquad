@@ -180,9 +180,10 @@
 </section>
 
 <section id="plot4" class="content">
-  <div class="container">
+  <div class="container-more-results">
     <div class="row">
       <h1 class="section-heading">More results</h1>
+      <div class="column column-left-45">
       <div id="slider-container-donut">
         <label for="slider-donut">Select Data:</label>
         <input type="range" min="1" max="3" value="1" id="slider-donut" list="slider-donut-labels">
@@ -197,13 +198,14 @@
         <select id="category-donut">
           <option value="---">---</option>
         </select>
+      </div>
         <div id="donutchart"></div>
-        <script src="js/donutchart.js"></script>
-      </div>     
-      <div id="category-container-heatmap">
+        <script src="js/donutchart.js"></script>  
+      </div>
+      <div class="column column-right-55">
         <div id="heatmap"></div>
         <script src="js/heatmap.js"></script>
-      </div>     
+      </div>
     </div>
 </section>
 
