@@ -113,20 +113,6 @@ editorsChoiceCategories.forEach(function(category) {
 })
 
 function updateTreemapOnSliderChange() {
-  d3.select("#category-info")
-    .style("opacity", 1)
-    .transition()
-    .duration(500) // Set the duration of the transition in milliseconds
-    .style("opacity", 0)
-    .on("start", function() {
-      // This function is called when the transition starts
-      // You can perform any necessary tasks here before the transition begins
-    })
-    .on("end", function() {
-      // This function is called when the transition ends
-      // Set the HTML content to an empty string
-      d3.select("#category-info").html("").style("opacity", 1);
-    });
   var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
   if (sliderValueTreemap === 1) {
