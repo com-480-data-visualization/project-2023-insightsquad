@@ -42,9 +42,8 @@ var pathTreemap = 'https://raw.githubusercontent.com/com-480-data-visualization/
 var androidDataPathTreemap = pathTreemap + 'play_store_category_count.csv'
 var appleDataPathTreemap = pathTreemap + 'apple_store_category_count.csv'
 var editorsChoiceDataPathTreemap = pathTreemap + 'play_store_editors_choice_category_count.csv'
-var androidDataTreemap
-var appleDataTreemap
-var editorsChoiceDataTreemap
+var androidDataTreemap, appleDataTreemap, editorsChoiceDataTreemap, androidDataTopAppsOverall, appleDataTopAppsOverall, editorsChoiceDataTopAppsOverall
+
 var androidTopAppsAction, androidTopAppsAdventure, androidTopAppsArcade, androidTopAppsArtDesign, androidTopAppsAutoVehicles, androidTopAppsBeauty, 
   androidTopAppsBoard, androidTopAppsBooksReference, androidTopAppsBusiness, androidTopAppsCard, androidTopAppsCasino, androidTopAppsCasual, androidTopAppsComics, 
   androidTopAppsCommunication, androidTopAppsDating, androidTopAppsEducation, androidTopAppsEducational, androidTopAppsEntertainment, androidTopAppsEvents, 
@@ -78,6 +77,18 @@ d3.csv(appleDataPathTreemap, function(data) {
 
 d3.csv(editorsChoiceDataPathTreemap, function(data) {
   editorsChoiceDataTreemap = data
+})
+
+d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
+  androidDataTopAppsOverall = data
+})
+
+d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
+  appleDataTopAppsOverall = data
+})
+
+d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
+  editorsChoiceDataTopAppsOverall = data
 })
 
 androidCategories.forEach(function(category) {
@@ -120,12 +131,15 @@ function updateTreemapOnSliderChange() {
 
   if (sliderValueTreemap === 1) {
     updateTreemap(androidDataTreemap, sliderValueTreemap)
+    updateCategoryInfoOverall(androidDataTopAppsOverall)
   }
   else if (sliderValueTreemap === 2) {
     updateTreemap(appleDataTreemap, sliderValueTreemap)
+    updateCategoryInfoOverall(appleDataTopAppsOverall)
   }
   else if (sliderValueTreemap === 3) {
     updateTreemap(editorsChoiceDataTreemap, sliderValueTreemap)
+    updateCategoryInfoOverall(editorsChoiceDataTopAppsOverall)
   }
 }
 
@@ -200,7 +214,6 @@ function updateTreemap(data, dataType) {
       .attr("height", function (d) { return d.y1 - d.y0 })
       .style("stroke", "black")
       .style("fill", function(d) { 
-        console.log(color(d.data.name))
         return "#" + color(d.data.name)
       })
       .on("mouseover", function(d) {
@@ -294,6 +307,8 @@ function updateTreemap(data, dataType) {
       .attr("font-size", fontSizeTreemap)
       .attr("fill", "#ffffff")
       .attr("font-weight", "600")
+
+  
 }
 
 // Helper function to find the maximum substring length that fits within the desired width
@@ -346,18 +361,37 @@ function initializeTreemap() {
 if (sliderValueTreemap === 1) {
   d3.csv(androidDataPathTreemap, function(data) {
     updateTreemap(data, sliderValueTreemap)
+    d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
+      updateCategoryInfoOverall(data)
+    })
   })
 }
 else if (sliderValueTreemap === 2) {
   d3.csv(appleDataPathTreemap, function(data) {
     updateTreemap(data, sliderValueTreemap)
+    d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
+      updateCategoryInfoOverall(data)
+    })
   })
 }
 else if (sliderValueTreemap === 3) {
   d3.csv(editorsChoiceDataPathTreemap, function(data) {
     updateTreemap(data, sliderValueTreemap)
+    d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
+      updateCategoryInfoOverall(data)
+    })
   })
 }
 }
 
 initializeTreemap()
+
+function updateCategoryInfoOverall(data) {
+  topAppsOverall = "<h3>Top apps</h3>"
+
+  data.forEach(function(app, index) {
+    topAppsOverall += "<p>" + (index + 1) + ". " + app.name + "</p>"
+  })
+
+  d3.select("#category-info").html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+}
