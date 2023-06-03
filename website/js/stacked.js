@@ -79,12 +79,37 @@
     const palette = palettes[Math.floor(Math.random() * 20) + 1];
   
     var options = {
+        animation:{
+            duration: 1000,
+            easing: 'inAndOut',
+            startup: true,
+          },
+        hAxis:{
+            title: 'Business Model',
+            titleTextStyle: {
+              color: 'Black'
+            },
+            direction: -1,
+          },
+          vAxis:{
+            title: '# Apps',
+            titleTextStyle: {
+              color: 'Black'
+            },
+            direction: 1,
+          },
+        colors: palette,
+        
+        
+        backgroundColor: 'red',
+        dataOpacity: 0.6,
         width: 600,
         height: 400,
         legend: { position: 'top', maxLines: 3 },
         bar: { groupWidth: '75%' },
         isStacked: true,
         backgroundColor: '#f2f2f2',
+        title: "Business Model"
       };
 
     chart.draw(dataTable, options);
