@@ -78,9 +78,9 @@ function buildStreamgraph(data, dataRadius) {
     .domain(d3.extent(data, function(d) { return d.year; }))
     .range([ 0, width ]);
   svgStreamgraph.append("g")
-    .attr("transform", "translate(0," + height*0.8 + ")")
+    .attr("transform", "translate(0," + height*0.9 + ")")
     .call(d3.axisBottom(x)
-      .tickSize(-height*.7)
+      .tickSize(-height*0.80)
       .tickValues([2008, 2010, 2012, 2014, 2016, 2018, 2020])
       .tickFormat(d3.format("d")))
     .select(".domain").remove()
@@ -89,7 +89,7 @@ function buildStreamgraph(data, dataRadius) {
   svgStreamgraph.append("text")
       .attr("text-anchor", "end")
       .attr("x", width)
-      .attr("y", height-30 )
+      .attr("y", height-10)
       .text("Time (year)");
 
   // Y axis
@@ -99,9 +99,12 @@ function buildStreamgraph(data, dataRadius) {
   
   // Add Y axis label:
   svgStreamgraph.append("text")
-    .attr("text-anchor", "middle")
-    .attr("transform", "translate(0, " + (height / 2) + ") rotate(-90)")
-    .text("Genres of newly created apps");
+    .attr("class", "chart-label")
+    .attr("x", -(margins.left)*0.65)
+    .attr("y", -(margins.top/8))
+    .attr("text-anchor", "start")
+    .attr("font-size", "20px")
+    .text("Genres of newly created apps")
 
   // Customize tick lines
   svgStreamgraph.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -122,8 +125,8 @@ function buildStreamgraph(data, dataRadius) {
   // create a tooltip
   var Tooltip = svgStreamgraph
     .append("text")
-    .attr("x", 0)
-    .attr("y", 0)
+    .attr("x", 3)
+    .attr("y", 75)
     .style("opacity", 0)
     .style("font-size", 17)
 

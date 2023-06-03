@@ -172,6 +172,14 @@ footer {
     width: auto;
 }
 
+.container-more-results {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 8%;
+    margin-right: 8%;
+    width: auto;
+}
+
 .column {
     float: left;
     width: 50%;
@@ -183,6 +191,14 @@ footer {
 
 .column-right-25 {
     width: 25%;
+}
+
+.column-left-45 {
+    width: 45%;
+}
+
+.column-right-55 {
+    width: 55%;
 }
 
 .row:after {
