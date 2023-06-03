@@ -123,7 +123,7 @@ function updateHeatmapChart(data) {
         
     
       // create a tooltip
-      var tooltip = d3.select("#my_dataviz")
+      var tooltip = d3.select("body")
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
@@ -142,10 +142,11 @@ function updateHeatmapChart(data) {
           .style("opacity", 1)
       }
       var mousemove = function(d) {
+        value = (!isFinite(d.value)) ? 0 : (d.value !== 0) ? d.value.toFixed(2) : 0
         tooltip
-          .html("The exact value of<br>this cell is: " + d.value)
-          .style("left", (d3.mouse(this)[0]+70) + "px")
-          .style("top", (d3.mouse(this)[1]) + "px")
+          .html("The exact value of<br>this cell is: " + value)
+          .style("top", (d3.event.pageY+10)+"px")
+          .style("left",(d3.event.pageX+10)+"px")
       }
       var mouseleave = function(d) {
         tooltip
