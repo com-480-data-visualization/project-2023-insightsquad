@@ -31,13 +31,9 @@ var marginTreemap = {top: 10, right: 10, bottom: 10, left: 10},
     20: ["001219","005f73","0a9396","94d2bd","e9d8a6","ee9b00","ca6702","bb3e03","ae2012","9b2226"] // OUI
   };
 
-var androidCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Personalization', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Libraries & Demo', 'Casino', 'Music', 'Parenting', 'Comics'];
-var appleCategories = ['Games', 'Business', 'Education', 'Utilities', 'Lifestyle', 'Food & Drink', 'Health & Fitness', 'Productivity', 'Entertainment', 'Shopping', 'Finance', 'Travel', 'Sports', 'Music', 'Medical', 'Photo & Video', 'Social Networking', 'News', 'Reference', 'Navigation', 'Stickers', 'Book', 'Weather', 'Graphics & Design', 'Developer Tools', 'Magazines & Newspapers'];
-var editorsChoiceCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Music', 'Parenting', 'Comics'];
-
-// var appleCategories = ['education', 'book', 'reference', 'news', 'lifestyle', 'health_fitness', 'games', 'medical', 'food_drink', 'sports', 'shopping', 'entertainment', 'utilities', 'stickers', 'productivity', 'music', 'photo_video', 'travel', 'business', 'social_networking', 'magazines_newspapers', 'navigation', 'finance', 'weather', 'graphics_design', 'developer_tools']
-// var androidCategories = ['adventure', 'tools', 'productivity', 'communication', 'social', 'libraries_demo', 'lifestyle', 'personalization', 'racing', 'maps_navigation', 'travel_local', 'food_drink', 'books_reference', 'medical', 'puzzle', 'entertainment', 'arcade', 'auto_vehicles', 'photography', 'health_fitness', 'education', 'shopping', 'board', 'music_audio', 'sports', 'beauty', 'business', 'educational', 'finance', 'news_magazines', 'casual', 'art_design', 'house_home', 'card', 'events', 'trivia', 'weather', 'strategy', 'word', 'video_players_editors', 'action', 'simulation', 'music', 'dating', 'role_playing', 'casino', 'comics', 'parenting']
-// var editorsChoiceCategories = ['health_fitness', 'strategy', 'adventure', 'word', 'education', 'puzzle', 'simulation', 'entertainment', 'role_playing', 'video_players_editors', 'action', 'travel_local', 'shopping', 'lifestyle', 'casual', 'racing', 'sports', 'books_reference', 'music_audio', 'photography', 'business', 'arcade', 'card', 'medical', 'music', 'food_drink', 'social', 'communication', 'art_design', 'productivity', 'news_magazines', 'finance', 'dating', 'weather', 'parenting', 'board', 'educational', 'events', 'maps_navigation', 'comics', 'house_home', 'beauty', 'auto_vehicles', 'tools', 'trivia']
+var appleCategories = ['education', 'book', 'reference', 'news', 'lifestyle', 'health_fitness', 'games', 'medical', 'food_drink', 'sports', 'shopping', 'entertainment', 'utilities', 'stickers', 'productivity', 'music', 'photo_video', 'travel', 'business', 'social_networking', 'magazines_newspapers', 'navigation', 'finance', 'weather', 'graphics_design', 'developer_tools']
+var androidCategories = ['adventure', 'tools', 'productivity', 'communication', 'social', 'libraries_demo', 'lifestyle', 'personalization', 'racing', 'maps_navigation', 'travel_local', 'food_drink', 'books_reference', 'medical', 'puzzle', 'entertainment', 'arcade', 'auto_vehicles', 'photography', 'health_fitness', 'education', 'shopping', 'board', 'music_audio', 'sports', 'beauty', 'business', 'educational', 'finance', 'news_magazines', 'casual', 'art_design', 'house_home', 'card', 'events', 'trivia', 'weather', 'strategy', 'word', 'video_players_editors', 'action', 'simulation', 'music', 'dating', 'role_playing', 'casino', 'comics', 'parenting']
+var editorsChoiceCategories = ['health_fitness', 'strategy', 'adventure', 'word', 'education', 'puzzle', 'simulation', 'entertainment', 'role_playing', 'video_players_editors', 'action', 'travel_local', 'shopping', 'lifestyle', 'casual', 'racing', 'sports', 'books_reference', 'music_audio', 'photography', 'business', 'arcade', 'card', 'medical', 'music', 'food_drink', 'social', 'communication', 'art_design', 'productivity', 'news_magazines', 'finance', 'dating', 'weather', 'parenting', 'board', 'educational', 'events', 'maps_navigation', 'comics', 'house_home', 'beauty', 'auto_vehicles', 'tools', 'trivia']
 
 var sliderTreemap = d3.select("#slider-treemap")
 
@@ -46,6 +42,10 @@ var pathTreemap = 'https://raw.githubusercontent.com/com-480-data-visualization/
 var androidDataPathTreemap = pathTreemap + 'play_store_category_count.csv'
 var appleDataPathTreemap = pathTreemap + 'apple_store_category_count.csv'
 var editorsChoiceDataPathTreemap = pathTreemap + 'play_store_editors_choice_category_count.csv'
+var androidTopAppsPath = pathTreemap + 'ps_top_apps.csv'
+var appleTopAppsPath = pathTreemap + 'as_top_apps.csv'
+var editorsChoiceTopAppsPath = pathTreemap + 'ps_ec_top_apps.csv'
+
 var androidDataTreemap, appleDataTreemap, editorsChoiceDataTreemap, androidDataTopAppsOverall, appleDataTopAppsOverall, editorsChoiceDataTopAppsOverall
 
 
@@ -61,39 +61,33 @@ d3.csv(editorsChoiceDataPathTreemap, function(data) {
   editorsChoiceDataTreemap = data
 })
 
-d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
+d3.csv(androidTopAppsPath, function(data) {
   androidDataTopAppsOverall = data
 })
 
-d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
+d3.csv(appleTopAppsPath, function(data) {
   appleDataTopAppsOverall = data
 })
 
-d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
+d3.csv(editorsChoiceTopAppsPath, function(data) {
   editorsChoiceDataTopAppsOverall = data
 })
 
 androidCategories.forEach(function(category) {
-  d3.csv(pathTreemap + "play_store_top_apps_in_" + category + ".csv", function(data) {
-    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
-    window["androidTopApps" + categoryFormatted] = data
+  d3.csv(pathTreemap + "ps_top_apps_" + category + ".csv", function(data) {
+    window["androidTopApps" + category] = data
   })
-  // d3.csv(pathTreemap + "ps_top_apps_" + category + ".csv", function(data) {
-  //   window["androidTopApps" + category] = data
-  // })
 })
 
 appleCategories.forEach(function(category) {
-  d3.csv(pathTreemap + "apple_store_top_apps_in_" + category + ".csv", function(data) {
-    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
-    window["appleTopApps" + categoryFormatted] = data
-  })
+  d3.csv(pathTreemap + "as_top_apps_" + category + ".csv", function(data) {
+      window["appleTopApps" + category] = data
+    })
 })
 
 editorsChoiceCategories.forEach(function(category) {
-  d3.csv(pathTreemap + "play_store_editors_choice_top_apps_in_" + category + ".csv", function(data) {
-    categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
-    window["editorsChoiceTopApps" + categoryFormatted] = data
+  d3.csv(pathTreemap + "ps_ec_top_apps_" + category + ".csv", function(data) {
+    window["editorsChoiceTopApps" + category] = data
   })
 })
 
@@ -103,15 +97,15 @@ function updateTreemapOnSliderChange() {
   switch (sliderValueTreemap) {
     case 1:
       updateTreemap(androidDataTreemap, sliderValueTreemap)
-      updateCategoryInfoOverall(androidDataTopAppsOverall)
+      updateCategoryInfoOverall(androidDataTopAppsOverall, sliderValueTreemap)
       break
     case 2:
       updateTreemap(appleDataTreemap, sliderValueTreemap)
-      updateCategoryInfoOverall(appleDataTopAppsOverall)
+      updateCategoryInfoOverall(appleDataTopAppsOverall, sliderValueTreemap)
       break
     case 3:
       updateTreemap(editorsChoiceDataTreemap, sliderValueTreemap)
-      updateCategoryInfoOverall(editorsChoiceDataTopAppsOverall)
+      updateCategoryInfoOverall(editorsChoiceDataTopAppsOverall, sliderValueTreemap)
       break
   }
 }
@@ -308,23 +302,23 @@ function initializeTreemap() {
     case 1:
       d3.csv(androidDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(pathTreemap + "play_store_top_apps.csv", function(data) {
-          updateCategoryInfoOverall(data)
+        d3.csv(androidTopAppsPath, function(data) {
+          updateCategoryInfoOverall(data, sliderValueTreemap)
         })
       })
       break
     case 2:
       d3.csv(appleDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(pathTreemap + "apple_store_top_apps.csv", function(data) {
-          updateCategoryInfoOverall(data)
+        d3.csv(appleTopAppsPath, function(data) {
+          updateCategoryInfoOverall(data, sliderValueTreemap)
         })
       })
     case 3:
       d3.csv(editorsChoiceDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(pathTreemap + "play_store_editors_choice_top_apps.csv", function(data) {
-          updateCategoryInfoOverall(data)
+        d3.csv(editorsChoiceTopAppsPath, function(data) {
+          updateCategoryInfoOverall(data, sliderValueTreemap)
         })
       })
       break
@@ -333,17 +327,31 @@ function initializeTreemap() {
 
 initializeTreemap()
 
-function updateCategoryInfoOverall(data) {
+function updateCategoryInfoOverall(data, sliderValueTreemap) {
   topAppsOverall = "<h3>Top apps</h3>"
 
   data.forEach(function(app, index) {
-    topAppsOverall += "<p>" + (index + 1) + ". " + app.name + "</p>"
+    topAppsOverall += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
   })
 
   d3.select("#category-info")
     .html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+    
+  var specificAppHtml = 
+    "<p> App name: " + data[0].App_Name + "</p>" + 
+    "<p> Content rating: " + data[0].Content_Rating + "</p>" +
+    "<p> App is free: " + data[0].Free + "</p>"
+  switch (sliderValueTreemap) {
+    case 1:
+    case 3:
+      specificAppHtml += "<p> Installs: " + data[0].Maximum_Installs + "</p>"
+      break
+    case 2:
+      specificAppHtml += "<p> Reviews: " + data[0].Reviews + "</p>"
+      break
+  }
   d3.select("#specific-app-info")
-    .html(data[0].name)
+    .html(specificAppHtml)
 }
 
 /** 
@@ -369,14 +377,29 @@ function updateCategoryInfo(dataType, categoryName) {
     3: "Number of downloads"
   }
 
-  var topApps = window[windowDTElementPrefixMap[dataType] + categoryName.replace(/ /g, '').replace(/&/g, '')]
+  var categoryNameFormatted = categoryName.toLowerCase().replace(/ & /g, '_').replace(/ /g, '_')
+  var topApps = window[windowDTElementPrefixMap[dataType] + categoryNameFormatted]
   var topAppsHtml = "<h3>Top apps in " + categoryName + "<br>(" + unitsOfMeasurementMap[dataType] + ")</h3>"
 
   topApps.forEach(function(app, index) {
-    topAppsHtml += "<p>" + (index + 1) + ". " + app.name + "</p>"
+    topAppsHtml += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
+  
+  var specificAppHtml = 
+    "<p> App name: " + topApps[0].App_Name + "</p>" + 
+    "<p> Content rating: " + topApps[0].Content_Rating + "</p>" +
+    "<p> App is free: " + topApps[0].Free + "</p>"
+  switch (dataType) {
+      case 1:
+      case 3:
+        specificAppHtml += "<p> Installs: " + topApps[0].Maximum_Installs + "</p>"
+        break
+      case 2:
+        specificAppHtml += "<p> Reviews: " + topApps[0].Reviews + "</p>"
+        break
+    }
   d3.select("#specific-app-info")
-    .html(topApps[0].name)
+    .html(specificAppHtml)
 }
