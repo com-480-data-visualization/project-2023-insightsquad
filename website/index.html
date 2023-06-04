@@ -208,8 +208,8 @@
             <div class="container-more-results"> 
                 <div class="row"> 
                     <h1 class="section-heading">More results</h1> 
-                    <div class="column column-left-45"> 
-                        <p class="chart-description">With the huge number of applications, can we find a pattern in the<br>naming convention?  <br>The chart showcases the 10 most used words overall or by category.</p>
+                    <div class="column column-left-45 box-donut"> 
+                        <p class="chart-description">With the huge number of applications, can we find a pattern in the naming convention?  <br>The chart showcases the 10 most used words overall or by category.</p>
                         <p class="chart-description">Simply chose one category in the <b>drop down menu</b> above. <br>You can also change between datasets with the <b>slider</b></p>
                         <div id="slider-container-donut"> 
                             <label for="slider-donut">Select Data:</label>                             
@@ -229,7 +229,7 @@
                         <div id="donutchart"></div>                         
                         <script src="js/donutchart.js"></script>                         
                     </div>                     
-                    <div class="column column-right-55"> 
+                    <div class="column column-right-55 box-heatmap"> 
                         <p class="chart-description">Heatmap of the number of apps in each category and rating. Unfortunately, we don't have the data for the Apple dataset.</p> 
                         <p class="chart-description"><b>Hover the cell</b> to display the number of applications there is for that category and rating. <br> 
           Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p> 
@@ -237,7 +237,7 @@
                         <script src="js/heatmap.js"></script>                         
                     </div>                     
                 </div>                 
-                <div class="row"> 
+                <div class="row box-stacked"> 
                     <div id="category-container-stacked"> 
                         <div id="slider-container-stacked"> 
                             <label for="slider-donut">Select amount:</label>                             
