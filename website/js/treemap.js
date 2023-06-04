@@ -328,30 +328,23 @@ function initializeTreemap() {
 initializeTreemap()
 
 function updateCategoryInfoOverall(data, sliderValueTreemap) {
-  topAppsOverall = "<h3>Top apps</h3>"
+  topAppsHtml = "<h3>Top apps</h3>"
 
   data.forEach(function(app, index) {
-    topAppsOverall += "<a href='#'><p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
+    topAppsHtml += "<a id='category_app_" + index + "'>" 
+    topAppsHtml += "<p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
   })
 
   d3.select("#category-info")
-    .html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+    .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
     
-  var specificAppHtml = 
-    "<p> App name: " + data[0].App_Name + "</p>" + 
-    "<p> Content rating: " + data[0].Content_Rating + "</p>" +
-    "<p> App is free: " + data[0].Free + "</p>"
-  switch (sliderValueTreemap) {
-    case 1:
-    case 3:
-      specificAppHtml += "<p> Installs: " + data[0].Maximum_Installs + "</p>"
-      break
-    case 2:
-      specificAppHtml += "<p> Reviews: " + data[0].Reviews + "</p>"
-      break
-  }
-  d3.select("#specific-app-info")
-    .html(specificAppHtml)
+  data.forEach(function (app, index) {
+    var button = document.getElementById("category_app_" + index)
+    button.addEventListener('click', function() {
+      setSpecifiedAppHtml(app, sliderValueTreemap)
+    });
+  })
+  
 }
 
 /** 
@@ -382,25 +375,34 @@ function updateCategoryInfo(dataType, categoryName) {
   var topAppsHtml = "<h3>Top apps in " + categoryName + "<br>(" + unitsOfMeasurementMap[dataType] + ")</h3>"
 
   topApps.forEach(function(app, index) {
-    topAppsHtml += "<a href='#'><p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
+    topAppsHtml += "<a id='category_app_" + index + "'>" 
+    topAppsHtml += "<p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
-  
-  // var specificAppHtml = 
-  //   "<p> App name: " + topApps[0].App_Name + "</p>" + 
-  //   "<p> Content rating: " + topApps[0].Content_Rating + "</p>" +
-  //   "<p> App is free: " + topApps[0].Free + "</p>"
-  // switch (dataType) {
-  //     case 1:
-  //     case 3:
-  //       specificAppHtml += "<p> Installs: " + topApps[0].Maximum_Installs + "</p>"
-  //       break
-  //     case 2:
-  //       specificAppHtml += "<p> Reviews: " + topApps[0].Reviews + "</p>"
-  //       break
-  //   }
-  var specificAppHtml = "<a href='#'><p>Click me!</p></a>"
+  topApps.forEach(function (app, index) {
+    var button = document.getElementById("category_app_" + index)
+    button.addEventListener('click', function() {
+      setSpecifiedAppHtml(app, dataType)
+    });
+  })
+
+}
+
+function setSpecifiedAppHtml(appData, dataType) {
+  var specificAppHtml = 
+    "<p> App name: " + appData.App_Name + "</p>" + 
+    "<p> Content rating: " + appData.Content_Rating + "</p>" +
+    "<p> App is free: " + appData.Free + "</p>"
+  switch (dataType) {
+      case 1:
+      case 3:
+        specificAppHtml += "<p> Installs: " + appData.Maximum_Installs + "</p>"
+        break
+      case 2:
+        specificAppHtml += "<p> Reviews: " + appData.Reviews + "</p>"
+        break
+    }
   d3.select("#specific-app-info")
     .html(specificAppHtml)
 }

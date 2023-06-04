@@ -474,10 +474,6 @@ section {
     text-decoration: none;
 }
 
-p.clickable {
-    background-color: #121212;
-    color: white;
-}
 p.clickable:hover {
     color: #2072F3;
 }
