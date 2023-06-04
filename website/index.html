@@ -1,298 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>App data visualization</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="css/custom.css" rel="stylesheet">
-
-
-    <!-- Custom Fonts from Google -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    
-</head>
-
-<body>
-
-<!-- d3 code -->
-<script src="https://d3js.org/d3.v4.js"></script>  
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-
-<!-- google charts code -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<!-- Navigation -->
-<div id="top" class="navigation">
-  <div class="navigation__wrapper wrapper--large">
-    <p class="navigation__logo logo">InsightSquad</p>
-    <nav class="navigation__container">
-      <ul class="navigation__list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#intro-section">About</a></li>
-        <li><a href="#plot1">Sankey</a></li>
-        <li><a href="#plot2">Streamgraph</a></li>
-        <li><a href="#plot3">Treemap</a></li>
-        <li><a href="#plot4">More</a></li>
-      </ul>
-    </nav>
-    <div class="navigation__burger">
-      <span class="navigation__burger-el navigation__burger-el--top"></span>
-      <span class="navigation__burger-el navigation__burger-el--middle"></span>
-      <span class="navigation__burger-el navigation__burger-el--bottom"></span>
-    </div>
-  </div>
-</div>
-
-<header id="home">
-    <video id="background-video" autoplay loop muted>
-    <source src="data/video/background_vid.mp4" type="video/mp4">
-    <!-- Add additional video source formats here for cross-browser compatibility -->
-  </video>
-    <div class="header-content">
-        <div class="header-content-inner">
-          <div class="row" id="row-title">
-            <div class="column" id="icons">
-              <svg version="1.1" id="app-store-icon" class="hidden-element" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve">
-                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="400.05" y1="798.7717" x2="400.05" y2="-1.2283" gradientTransform="matrix(1 0 0 -1 0 798.7717)">
-                  <stop offset="0" style="stop-color:#18BFFB"/>
-                  <stop offset="1" style="stop-color:#2072F3"/>
-                </linearGradient>
-                <path fill="url(#SVGID_1_)" d="M638.4,0H161.6C72.3,0,0,72.3,0,161.6v476.9C0,727.7,72.3,800,161.6,800h476.9  c89.2,0,161.6-72.3,161.6-161.6V161.6C800,72.3,727.7,0,638.4,0z"/>
-                <path fill="#FFFFFF" d="M396.6,183.8l16.2-28c10-17.5,32.3-23.4,49.8-13.4s23.4,32.3,13.4,49.8L319.9,462.4h112.9  c36.6,0,57.1,43,41.2,72.8H143c-20.2,0-36.4-16.2-36.4-36.4c0-20.2,16.2-36.4,36.4-36.4h92.8l118.8-205.9l-37.1-64.4  c-10-17.5-4.1-39.6,13.4-49.8c17.5-10,39.6-4.1,49.8,13.4L396.6,183.8L396.6,183.8z M256.2,572.7l-35,60.7  c-10,17.5-32.3,23.4-49.8,13.4S148,614.5,158,597l26-45C213.4,542.9,237.3,549.9,256.2,572.7L256.2,572.7z M557.6,462.6h94.7  c20.2,0,36.4,16.2,36.4,36.4c0,20.2-16.2,36.4-36.4,36.4h-52.6l35.5,61.6c10,17.5,4.1,39.6-13.4,49.8c-17.5,10-39.6,4.1-49.8-13.4  c-59.8-103.7-104.7-181.3-134.5-233c-30.5-52.6-8.7-105.4,12.8-123.3C474.2,318.1,509.9,380,557.6,462.6L557.6,462.6z"/>
-              </svg>
-              <svg id="google-play-icon" class="hidden-element" viewBox="0 0 28.99 31.99" xmlns="http://www.w3.org/2000/svg">
-                <g data-name="Capa 2">
-                    <g data-name="Capa 1">
-                        <path d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z" style="fill:#ea4335"/>
-                        <path d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z" style="fill:#fbbc04"/>
-                        <path d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z" style="fill:#4285f4"/>
-                        <path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" style="fill:#34a853"/>
-                    </g>
-                </g>
-              </svg>
-            </div>
-            <div class="column">
-              <h1 class="home-page-title hidden-element">Over 3,543,000  apps</h1>
-              <h1 class="home-page-title hidden-element">Over 741,624,857,532 downloads</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div id="div-btn-home-page" class="hidden-element">
-              <a href="#intro-section" class="btn btn-primary btn-lg" id="btn-home-page">Engage Now</a>
-            </div>
-          </div>
-        </div>
-    </div>
-</header>
-
-<section id="intro-section" class="intro-text">
-  <div class="container container-intro">
-    <div class="row">
-      <h1 class="section-heading">About</h1>
-      <p class="section-paragraph">The App Store and Google Play Store are widely recognized platforms where developers can showcase and distribute their mobile applications to millions of users worldwide. These stores host a vast array of apps spanning various categories, catering to diverse user interests and needs.</p>
-      <p class="section-paragraph">Our primary aim is to empower you with valuable insights into the factors that contribute to the success of Android and Apple applications. By analyzing the extensive dataset available, we strive to unravel the secrets behind app triumphs, uncover emerging trends, and shed light on failure cases.</p>
-      <p class="section-paragraph">Whether you are an app developer, market researcher, or simply curious about the world of mobile applications, our website serves as a valuable resource to explore, analyze, and gain knowledge from the wealth of data available from the App Store and Google Play Store.</p>
-      <p class="section-paragraph">Start your journey now and unlock the secrets that lie within the vibrant realm of app success!</p>
-    </div>
-  </div>
-</section>
-
-<section id="plot1" class="intro">
-  <div class="container">
-    <div class="row">
-      <h1 class="section-heading">Sankey Diagram</h1>
-      <div class="column">
-      <div id="slider-container">
-        <label for="slider">Select Data:</label>
-        <input type="range" min="1" max="3" value="1" id="slider_sankey" list="slider-sankey-labels">
-        <datalist id="slider-sankey-labels">
-          <option value="1" label="Android"></option>
-          <option value="2" class="apple-label" label="Apple"></option>
-          <option value="3" label="Editor's Choice"></option>
-        </datalist>
-      </div>
-      <div id="category-container">
-        <label for="category">Select Category:</label>
-        <select id="category">
-          <option value="Education">Education</option>
-        </select>
-      </div>
-      </div>
-      <div class="column">
-        <p class="chart-description">Sometimes it is cool to have an overview of a category, that let you know how many applications have less than 1,000 downloads, 
-          if they are free or not and whether they have ads and/or in-app purchases.</p>
-          <p class="chart-description"><b>Hover</b> one of the link to display from and to which label we are going, and how many applications are concerned.
-            Use the <b>slider</b> to change between datasets and the <b>drop down menu</b> to change the category.</p>
-          <p class="chart-description"><em>IAP: In-App Purchases</em></p>
-      </div>
-    </div>
-    <div class="row">
-        <div id="sankey-labels">
-        </div>
-        <div id="sankey"></div>
-      <script src="js/sankey_g.js"></script> 
-    </div>
-  </div>
-</section>
-
-<section id="plot2" class="content">
-  <div class="container container-streamgraph">
-    <div class="row">
-      <h1 class="section-heading">Number of apps created each year</h1>
-      <div class="column" style="text-align: justify;">
-        <p class="chart-description">Each year, lots of applications are born but it is not necessarily uniform across all categories and age rating. 
-          We focused our attention to the 10 biggest categories otherwise the smaller ones would be crushed and we would not see anything.</p>
-        <p class="chart-description"><b>Hover</b> one of the area to display the name of the correspond category or age rating on the top left of the chart. 
-          Use the first <b>slider</b> to change between datasets and the second one to change the way we split applications.</p>
-        </div> 
-      <div class="column">
-      <div id="sliders-box">
-        <div id="slider-container-streamgraph1">
-          <label for="slider-streamgraph1">Data source:</label>
-          <input type="range" min="1" max="3" value="1" id="slider-streamgraph1" list="slider-streamgraph-labels1">
-          <datalist id="slider-streamgraph-labels1">
-            <option value="1" label="Android"></option>
-            <option value="2" class="apple-label" label="Apple"></option>
-            <option value="3" label="Editor's Choice"></option>
-          </datalist>
-        </div>
-        <div id="slider-container-streamgraph2">
-          <label for="slider-streamgraph2">Split by:</label>
-          <input type="range" min="1" max="2" value="1" id="slider-streamgraph2" list="slider-streamgraph-labels2">
-          <datalist id="slider-streamgraph-labels2">
-            <option value="1" label="Category"></option>
-            <option value="2" label="Content rating"></option>
-          </datalist>
-        </div>
-      </div>
-      </div>
-      <div id="streamgraph" class="col-lg-8 col-lg-offset-3">
-      </div>  
-      <script src="js/streamgraph.js"></script>           
-    </div>
-  </div>
-</section>
-
-<section id="plot3" class="content content-2">
-  <div class="container-treemap">
-    <div class="row">
-      <h1 class="section-heading">How many apps in each category?</h1>
-      <div id="slider-container-treemap">
-        <label for="slider-treemap">Select Data:</label>
-        <input type="range" min="1" max="3" value="1" id="slider-treemap" list="slider-treemap-labels">
-        <datalist id="slider-treemap-labels">
-          <option value="1" label="Android"></option>
-          <option value="2" class="apple-label" label="Apple"></option>
-          <option value="3" label="Editors Choice"></option>
-        </datalist>
-      </div>
-      <p class="chart-description">You ever wondered which category was the biggest in terms of applications? Wonder no more as this visualization was made for you. 
-        With a glimpse of an eye, you henceforth know it.</p>
-      <p class="chart-description">Each tile size represents the proportion of applications in the category, <b>click</b> on one of them to display the 10 most downloaded/reviewed 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->         
+        <title>App data visualization</title>         
+        <!-- Bootstrap Core CSS -->         
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet"> 
+        <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->         
+        <link href="css/custom.css" rel="stylesheet"> 
+        <!-- Custom Fonts from Google -->         
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> 
+    </head>     
+    <body> 
+        <!-- d3 code -->         
+        <script src="https://d3js.org/d3.v4.js"></script>         
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>         
+        <!-- google charts code -->         
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>         
+        <!-- Navigation -->         
+        <div id="top" class="navigation"> 
+            <div class="navigation__wrapper wrapper--large"> 
+                <p class="navigation__logo logo">InsightSquad</p> 
+                <nav class="navigation__container"> 
+                    <ul class="navigation__list"> 
+                        <li><a href="#home">Home</a>
+                        </li>                         
+                        <li><a href="#intro-section">About</a>
+                        </li>                         
+                        <li><a href="#plot1">Sankey</a>
+                        </li>                         
+                        <li><a href="#plot2">Streamgraph</a>
+                        </li>                         
+                        <li><a href="#plot3">Treemap</a>
+                        </li>                         
+                        <li><a href="#plot4">More</a>
+                        </li>                         
+                    </ul>                     
+                </nav>                 
+                <div class="navigation__burger"> <span class="navigation__burger-el navigation__burger-el--top"></span> <span class="navigation__burger-el navigation__burger-el--middle"></span> <span class="navigation__burger-el navigation__burger-el--bottom"></span> 
+                </div>                 
+            </div>             
+        </div>         
+        <header id="home"> 
+            <video id="background-video" autoplay loop muted> 
+                <source src="data/video/background_vid.mp4" type="video/mp4"> 
+                <!-- Add additional video source formats here for cross-browser compatibility -->                 
+            </video>             
+            <div class="header-content"> 
+                <div class="header-content-inner"> 
+                    <div class="row" id="row-title"> 
+                        <div class="column" id="icons"> 
+                            <svg version="1.1" id="app-store-icon" class="hidden-element" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve"> 
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="400.05" y1="798.7717" x2="400.05" y2="-1.2283" gradientTransform="matrix(1 0 0 -1 0 798.7717)"> 
+                                    <stop offset="0" style="stop-color:#18BFFB"/> 
+                                    <stop offset="1" style="stop-color:#2072F3"/> 
+                                </linearGradient>                                 
+                                <path fill="url(#SVGID_1_)" d="M638.4,0H161.6C72.3,0,0,72.3,0,161.6v476.9C0,727.7,72.3,800,161.6,800h476.9  c89.2,0,161.6-72.3,161.6-161.6V161.6C800,72.3,727.7,0,638.4,0z"/> 
+                                <path fill="#FFFFFF" d="M396.6,183.8l16.2-28c10-17.5,32.3-23.4,49.8-13.4s23.4,32.3,13.4,49.8L319.9,462.4h112.9  c36.6,0,57.1,43,41.2,72.8H143c-20.2,0-36.4-16.2-36.4-36.4c0-20.2,16.2-36.4,36.4-36.4h92.8l118.8-205.9l-37.1-64.4  c-10-17.5-4.1-39.6,13.4-49.8c17.5-10,39.6-4.1,49.8,13.4L396.6,183.8L396.6,183.8z M256.2,572.7l-35,60.7  c-10,17.5-32.3,23.4-49.8,13.4S148,614.5,158,597l26-45C213.4,542.9,237.3,549.9,256.2,572.7L256.2,572.7z M557.6,462.6h94.7  c20.2,0,36.4,16.2,36.4,36.4c0,20.2-16.2,36.4-36.4,36.4h-52.6l35.5,61.6c10,17.5,4.1,39.6-13.4,49.8c-17.5,10-39.6,4.1-49.8-13.4  c-59.8-103.7-104.7-181.3-134.5-233c-30.5-52.6-8.7-105.4,12.8-123.3C474.2,318.1,509.9,380,557.6,462.6L557.6,462.6z"/> 
+                            </svg>                             
+                            <svg id="google-play-icon" class="hidden-element" viewBox="0 0 28.99 31.99" xmlns="http://www.w3.org/2000/svg"> 
+                                <g data-name="Capa 2"> 
+                                    <g data-name="Capa 1"> 
+                                        <path d="M13.54 15.28.12 29.34a3.66 3.66 0 0 0 5.33 2.16l15.1-8.6Z" style="fill:#ea4335"/> 
+                                        <path d="m27.11 12.89-6.53-3.74-7.35 6.45 7.38 7.28 6.48-3.7a3.54 3.54 0 0 0 1.5-4.79 3.62 3.62 0 0 0-1.5-1.5z" style="fill:#fbbc04"/> 
+                                        <path d="M.12 2.66a3.57 3.57 0 0 0-.12.92v24.84a3.57 3.57 0 0 0 .12.92L14 15.64Z" style="fill:#4285f4"/> 
+                                        <path d="m13.64 16 6.94-6.85L5.5.51A3.73 3.73 0 0 0 3.63 0 3.64 3.64 0 0 0 .12 2.65Z" style="fill:#34a853"/> 
+                                    </g>                                     
+                                </g>                                 
+                            </svg>                             
+                        </div>                         
+                        <div class="column"> 
+                            <h1 class="home-page-title hidden-element">Over 3,543,000  apps</h1> 
+                            <h1 class="home-page-title hidden-element">Over 741,624,857,532 downloads</h1> 
+                        </div>                         
+                    </div>                     
+                    <div class="row"> 
+                        <div id="div-btn-home-page" class="hidden-element"> <a href="#intro-section" class="btn btn-primary btn-lg" id="btn-home-page">Engage Now</a> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </header>         
+        <section id="intro-section" class="intro-text"> 
+            <div class="container container-intro"> 
+                <div class="row text-justify"> 
+                    <h1 class="section-heading">About</h1> 
+                    <p class="section-paragraph">The App Store and Google Play Store are widely recognized platforms where developers can showcase and distribute their mobile applications to millions of users worldwide. These stores host a vast array of apps spanning various categories, catering to diverse user interests and needs.</p> 
+                    <p class="section-paragraph">Our primary aim is to empower you with valuable insights into the factors that contribute to the success of Android and Apple applications. By analyzing the extensive dataset available, we strive to unravel the secrets behind app triumphs, uncover emerging trends, and shed light on failure cases.</p> 
+                    <p class="section-paragraph">Whether you are an app developer, market researcher, or simply curious about the world of mobile applications, our website serves as a valuable resource to explore, analyze, and gain knowledge from the wealth of data available from the App Store and Google Play Store.</p> 
+                    <p class="section-paragraph">Start your journey now and unlock the secrets that lie within the vibrant realm of app success!</p> 
+                </div>                 
+            </div>             
+        </section>         
+        <section id="plot1" class="intro"> 
+            <div class="container"> 
+                <div class="row"> 
+                    <h1 class="section-heading">Sankey Diagram</h1> 
+                    <div class="col-12 column text-justify"> 
+                        <p class="chart-description text-justify">Sometimes it is cool to have an overview of a category, that let you know how many applications have less than 1,000 downloads, 
+          if they are free or not and whether they have ads and/or in-app purchases.</p> 
+                        <p class="chart-description"><b>Hover</b> one of the link to display from and to which label we are going, and how many applications are concerned.
+            Use the <b>slider</b> to change between datasets and the <b>drop down menu</b> to change the category.</p> 
+                        <p class="chart-description"><em>IAP: In-App Purchases</em></p> 
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div id="slider-container"> 
+                        <label for="slider">Select Data:</label>                         
+                        <input type="range" min="1" max="3" value="1" id="slider_sankey" list="slider-sankey-labels"> 
+                        <datalist id="slider-sankey-labels"> 
+                            <option value="1" label="Android"></option>                             
+                            <option value="2" class="apple-label" label="Apple"></option>                             
+                            <option value="3" label="Editor's Choice"></option>                             
+                        </datalist>                         
+                    </div>
+                    <div id="category-container"> 
+                        <label for="category">Category:</label>                         
+                        <select id="category"> 
+                            <option value="Education">Education</option>                             
+                        </select>                         
+                    </div>                     
+                </div>                 
+                <div class="row"> 
+                    <div id="sankey-labels"> 
+</div>                     
+                    <div id="sankey"></div>                     
+                    <script src="js/sankey_g.js"></script>                     
+                </div>                 
+            </div>             
+        </section>         
+        <section id="plot2" class="content"> 
+            <div class="container container-streamgraph"> 
+                <div class="row"> 
+                    <h1 class="section-heading">Number of apps created each year</h1> 
+                    <div class="column" style="text-align: justify;"> 
+                        <p class="chart-description">Each year, lots of applications are born but it is not necessarily uniform across all categories and age rating. 
+          We focused our attention to the 10 biggest categories otherwise the smaller ones would be crushed and we would not see anything.</p> 
+                        <p class="chart-description"><b>Hover</b> one of the area to display the name of the correspond category or age rating on the top left of the chart. 
+          Use the first <b>slider</b> to change between datasets and the second one to change the way we split applications.</p> 
+                    </div>                     
+                    <div class="column"> 
+                        <div id="sliders-box"> 
+                            <div id="slider-container-streamgraph1"> 
+                                <label for="slider-streamgraph1">Select Data:</label>                                 
+                                <input type="range" min="1" max="3" value="1" id="slider-streamgraph1" list="slider-streamgraph-labels1"> 
+                                <datalist id="slider-streamgraph-labels1"> 
+                                    <option value="1" label="Android"></option>                                     
+                                    <option value="2" class="apple-label" label="Apple"></option>                                     
+                                    <option value="3" label="Editor's Choice"></option>                                     
+                                </datalist>                                 
+                            </div>                             
+                            <div id="slider-container-streamgraph2"> 
+                                <label for="slider-streamgraph2">Split by:</label>                                 
+                                <input type="range" min="1" max="2" value="1" id="slider-streamgraph2" list="slider-streamgraph-labels2"> 
+                                <datalist id="slider-streamgraph-labels2"> 
+                                    <option value="1" label="Category"></option>                                     
+                                    <option value="2" label="Content rating"></option>                                     
+                                </datalist>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div id="streamgraph"> 
+</div>                     
+                    <script src="js/streamgraph.js"></script>                     
+                </div>                 
+            </div>             
+        </section>         
+        <section id="plot3" class="content content-2"> 
+            <div class="container-treemap"> 
+                <div class="row"> 
+                    <h1 class="section-heading">How many apps in each category?</h1>                      
+                    <p class="chart-description">You ever wondered which category was the biggest in terms of applications? Wonder no more as this visualization was made for you. 
+        With a glimpse of an eye, you henceforth know it.</p> 
+                    <p class="chart-description">Each tile size represents the proportion of applications in the category, <b>click</b> on one of them to display the 10 most downloaded/reviewed 
         applications for that specific category. <br><b>Hover</b> a tile to display its name, the number of applications and the percentage it represents.
         Use the <b>slider</b> to change between datasets.</p>
-      <div class="column column-left-75">
-        <div id="treemap"></div>
-      <script src="js/treemap.js"></script>
-      </div>
-      <div class="column column-right-25">
-        <div id="category-info"></div>
-        <div id="specific-app-info"></div>
-      </div>  
-    </div>
-  </div>
-</section>
-
-<section id="plot4" class="content">
-  <div class="container-more-results">
-    <div class="row">
-      <h1 class="section-heading">More results</h1>
-      <div class="column column-left-45">
-      <div id="slider-container-donut">
-        <label for="slider-donut">Select Data:</label>
-        <input type="range" min="1" max="3" value="1" id="slider-donut" list="slider-donut-labels">
-        <datalist id="slider-donut-labels">
-          <option value="1" label="Android"></option>
-          <option value="2" class="apple-label" label="Apple"></option>
-          <option value="3" label="Editors Choice"></option>
-        </datalist>
-      </div>
-      <div id="category-container-donut">
-        <label for="category-donut">Select Category:</label>
-        <select id="category-donut">
-          <option value="---">---</option>
-        </select>
-      </div>
-        <p class="chart-description">With the huge number of applications, can we find a pattern in the naming convention? 
-          <br>The chart showcases the 10 most used words overall or by category.</p>
-        <p class="chart-description">Simply chose one category in the <b>drop down menu</b> above. <br>You can also change between datasets with the <b>slider</b></p>
-        <div id="donutchart"></div>
-        <script src="js/donutchart.js"></script>  
-      </div>
-      <div class="column column-right-55">
-        <p class="chart-description">Heatmap of the number of apps in each category and rating. Unfortunately, we don't have the data for the Apple dataset.</p>
-        <p class="chart-description"><b>Hover</b> the cell to display the number of applications there is for that category and rating. <br>
-          Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p>
-        <div id="heatmap"></div>
-        <script src="js/heatmap.js"></script>
-      </div>     
-      
-    </div>
-    <div class="row">
-      <div id="category-container-stacked">
-        <div id="slider-container-stacked">
-          <label for="slider-donut">Select amount:</label>
-          <input type="range" min="1" max="4" value="1" id="slider-stacked" list="slider-stacked-labels">
-          <datalist id="slider-stacked-labels">
-            <option value="1" label="All"></option>
-            <option value="10" class="top-10-label" label="Top 10"></option>
-            <option value="100" class="top-100-label" label="Top 100"></option>
-            <option value="1000" class="top-1000-label" label="Top 1000"></option>
-          </datalist>
-        </div>
-        <div class="column column-left-45">
-        <div id="stacked"></div>
-        <script src="js/stacked.js"></script>
-        </div>
-        <div class="column column-right-55">
-          <p class="chart-description">We had a preview of applications that contained a mean of remuneration, be it in-app purchases or ads, in the Sankey diagram. 
-            But here we focus solely on that information! Unfortunately, we don't have the data for the Apple dataset.</p>
-          <p class="chart-description"><b>Hover</b> the area of the bar you are interested in to display the number of applications it contains.
-            Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p>
-          <p class="chart-description"><em>IAP: In-App Purchases</em></p>
-      </div>  
-    </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <p>App Data Visualization presented by Elia Fantini, Konrad Litwiński, Adrien Vauthey</p>
-</footer>
-
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-
-<!-- Custom Javascript -->
-<script src="js/custom.js"></script>
-
-</body>
-
+                    <div id="slider-container-treemap"> 
+                        <label for="slider-treemap">Select Data:</label>                         
+                        <input type="range" min="1" max="3" value="1" id="slider-treemap" list="slider-treemap-labels"> 
+                        <datalist id="slider-treemap-labels"> 
+                            <option value="1" label="Android"></option>                             
+                            <option value="2" class="apple-label" label="Apple"></option>                             
+                            <option value="3" label="Editors Choice"></option>                             
+                        </datalist>                         
+                    </div>                     
+                    <div class="column column-left-75"> 
+                        <div id="treemap"></div>                         
+                        <script src="js/treemap.js"></script>                         
+                    </div>                     
+                    <div class="column column-right-25"> 
+                        <div id="category-info"></div>                         
+                        <div id="specific-app-info"></div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <section id="plot4" class="content"> 
+            <div class="container-more-results"> 
+                <div class="row"> 
+                    <h1 class="section-heading">More results</h1> 
+                    <div class="column column-left-45"> 
+                        <div id="slider-container-donut"> 
+                            <label for="slider-donut">Select Data:</label>                             
+                            <input type="range" min="1" max="3" value="1" id="slider-donut" list="slider-donut-labels"> 
+                            <datalist id="slider-donut-labels"> 
+                                <option value="1" label="Android"></option>                                 
+                                <option value="2" class="apple-label" label="Apple"></option>                                 
+                                <option value="3" label="Editors Choice"></option>                                 
+                            </datalist>                             
+                        </div>                         
+                        <div id="category-container-donut"> 
+                            <label for="category-donut">Select Category:</label>                             
+                            <select id="category-donut"> 
+                                <option value="---">---</option>                                 
+                            </select>                             
+                        </div>                         
+                        <p class="chart-description">With the huge number of applications, can we find a pattern in the naming convention?  <br>The chart showcases the 10 most used words overall or by category.</p> 
+                        <p class="chart-description">Simply chose one category in the <b>drop down menu</b> above. <br>You can also change between datasets with the <b>slider</b></p> 
+                        <div id="donutchart"></div>                         
+                        <script src="js/donutchart.js"></script>                         
+                    </div>                     
+                    <div class="column column-right-55"> 
+                        <p class="chart-description">Heatmap of the number of apps in each category and rating. Unfortunately, we don't have the data for the Apple dataset.</p> 
+                        <p class="chart-description"><b>Hover</b> the cell to display the number of applications there is for that category and rating. <br> 
+          Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p> 
+                        <div id="heatmap"></div>                         
+                        <script src="js/heatmap.js"></script>                         
+                    </div>                     
+                </div>                 
+                <div class="row"> 
+                    <div id="category-container-stacked"> 
+                        <div id="slider-container-stacked"> 
+                            <label for="slider-donut">Select amount:</label>                             
+                            <input type="range" min="1" max="4" value="1" id="slider-stacked" list="slider-stacked-labels"> 
+                            <datalist id="slider-stacked-labels"> 
+                                <option value="1" label="All"></option>                                 
+                                <option value="10" class="top-10-label" label="Top 10"></option>                                 
+                                <option value="100" class="top-100-label" label="Top 100"></option>                                 
+                                <option value="1000" class="top-1000-label" label="Top 1000"></option>                                 
+                            </datalist>                             
+                        </div>                         
+                        <div class="column column-left-45"> 
+                            <div id="stacked"></div>                             
+                            <script src="js/stacked.js"></script>                             
+                        </div>                         
+                        <div class="column column-right-55"> 
+                            <p class="chart-description">We had a preview of applications that contained a mean of remuneration, be it in-app purchases or ads, in the Sankey diagram. 
+            But here we focus solely on that information! Unfortunately, we don't have the data for the Apple dataset.</p> 
+                            <p class="chart-description"><b>Hover</b> the area of the bar you are interested in to display the number of applications it contains.
+            Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p> 
+                            <p class="chart-description"><em>IAP: In-App Purchases</em></p> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+        </section>         
+        <footer> 
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col-lg-12"> 
+                        <p>App Data Visualization presented by Elia Fantini, Konrad Litwiński, Adrien Vauthey</p> 
+                    </div>
+        </footer>         
+        <!-- jQuery -->         
+        <script src="js/jquery-1.11.3.min.js"></script>         
+        <!-- Bootstrap Core JavaScript -->         
+        <script src="js/bootstrap.min.js"></script>         
+        <!-- Plugin JavaScript -->         
+        <script src="js/jquery.easing.min.js"></script>         
+        <!-- Custom Javascript -->         
+        <script src="js/custom.js"></script>         
+    </body>     
 </html>

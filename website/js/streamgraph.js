@@ -1,9 +1,9 @@
 // Set size constants
-var totWidth = 860,
+var totWidth = 1170,
     totHeight = 600;
 var margins = {top: 20, right: 10, bottom: 0, left: 10};
-var width = totWidth - margins.left - margins.right,
-    height = totHeight - margins.top - margins.bottom;
+var width = totWidth ;
+    height = totHeight; 
 
 // Load data
 var appStoreDataStreamgraph, playStoreDataStreamgraph, editorsChoiceDataStreamgraph
@@ -111,10 +111,23 @@ function buildStreamgraph(data, dataRadius) {
   
   var keys = data.columns.slice(1)
 
+
+  const palettes = {
+    1: ['#7400b8', '#6930c3', '#5e60ce', '#5390d9', '#4ea8de', '#48bfe3', '#56cfe1', '#64dfdf', '#72efdd', '#80ffdb'],
+    2: ['#ff7b00', '#ff8800', '#ff9500', '#ffa200', '#ffaa00', '#ffb700', '#ffc300', '#ffd000', '#ffdd00', '#ffea00'],
+    3: ['#ff0000', '#ff8700', '#ffd300', '#deff0a', '#a1ff0a', '#0aff99', '#0aefff', '#147df5', '#580aff', '#be0aff'],
+    4: ['#ff0000', '#ff8700', '#ffd300', '#deff0a', '#a1ff0a', '#0aff99', '#0aefff', '#147df5', '#580aff', '#be0aff'],
+    5: ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'],
+    6: ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'],
+    7: ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'],
+    8: ['#001219', '#005f73', '#0a9396', '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'],
+  };
+  // choose a random color palette for the nodes 
+  const palette = palettes[Math.floor(Math.random() * 8) + 1];
   // color palette
   var color = d3.scaleOrdinal()
     .domain(keys)
-    .range(["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]);
+    .range(palette);
 
   //stack the data?
   var stackedData = d3.stack()
