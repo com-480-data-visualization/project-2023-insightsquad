@@ -1175,19 +1175,22 @@ a:hover {
 }
 
 .box-heatmap {
-    margin:    5px;
+    border-radius: 3px;
+    margin: 5px;
     width: 55%;
     padding:20px;
     background-color: #cfcfcf;
 }
 .box-donut {
+    border-radius: 3px;
     width: 40%;
-    margin:    5px;
+    margin: 5px;
     padding:20px;
-    background-color:  white;
+    background-color:white;
 }
 .box-stacked {
-    margin:    5px;
+    border-radius: 3px;
+    margin: 5px;
     padding:20px;
 }
 
