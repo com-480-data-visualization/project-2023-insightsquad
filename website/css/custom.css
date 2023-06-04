@@ -204,7 +204,18 @@ footer {
 .column {
     float: left;
     width: 50%;
-    padding: 10px;
+}
+
+.column-full {
+    float: left;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+
+.column-title {
+    float: left;
+    width: 50%;
 }
 
 .column-left-75 {
