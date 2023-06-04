@@ -1165,6 +1165,23 @@ a:hover {
     object-fit: cover;
 }
 
+.box-heatmap {
+    margin:    5px;
+    width: 55%;
+    padding:20px;
+    background-color: #cfcfcf;
+}
+.box-donut {
+    width: 40%;
+    margin:    5px;
+    padding:20px;
+    background-color:  white;
+}
+.box-stacked {
+    margin:    5px;
+    padding:20px;
+}
+
 :root {
     --main1: #fafafa;
     --main2: #a40000;
