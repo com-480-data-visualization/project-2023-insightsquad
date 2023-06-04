@@ -155,9 +155,38 @@ You can read the process book [here](https://github.com/com-480-data-visualizati
 
 The screencast of our website is accessible [here](https://drive.google.com/file/d/1TklwnKdvZ8M-itjKdlLYV5mVrG0qgubE/view?usp=sharing)
 
+# Local Website Setup Guide
 
-## Late policy
+This guide will walk you through the process of running a website locally on your machine. You will need to download the project repository, open it with Visual Studio Code (VSCode), and use Live Server to host the website.
 
-- < 24h: 80% of the grade for the milestone
-- < 48h: 70% of the grade for the milestone
+## Prerequisites
+
+Before you begin, make sure you have the following installed on your machine:
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [Live Server Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+## Step 1: Download the Project Repository
+
+1. Create a new folder on your machine where you want to store the project.
+2. Download the project repository files and extract them into the folder you just created.
+
+## Step 2: Open the Project in VSCode
+
+1. Open Visual Studio Code (VSCode).
+2. Click on "File" in the top menu and select "Open Folder".
+3. Navigate to the folder where you extracted the project repository files and select it.
+4. VSCode will open the project folder.
+
+## Step 3: Install and Use Live Server
+
+1. Open the Extensions view in VSCode by clicking on the square icon on the left sidebar or by pressing `Ctrl+Shift+X`.
+2. Search for "Live Server" in the search bar.
+3. Click on "Install" to install the Live Server extension.
+4. Once the extension is installed, you will see a "Go Live" button at the bottom-right corner of the VSCode window. Click on it.
+5. A new browser tab will open, and you will see your website running locally using Live Server.
+
+That's it! Any changes you make to the project files will automatically be reflected in the browser. 
+
+
 
