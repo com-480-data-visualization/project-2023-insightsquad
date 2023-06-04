@@ -132,7 +132,7 @@ function buildStreamgraph(data, dataRadius) {
     17: ['#643100', '#763a00', '#7f3e00', '#914600', '#af5500', '#b96619', '#c27731', '#cb8849', '#d49961', '#eacaae'],
   };
   // choose a random color palette for the nodes 
-  const palette = palettes[Math.floor(Math.random() * 8) + 1];
+  const palette = palettes[Math.floor(Math.random() * 17) + 1];
   // color palette
   var color = d3.scaleOrdinal()
     .domain(keys)

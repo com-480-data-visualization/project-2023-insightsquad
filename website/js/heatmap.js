@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 40},
+var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 60},
   widthHeatmap = 850 - marginHeatmap.left - marginHeatmap.right,
   heightHeatmap = 800 - marginHeatmap.top - marginHeatmap.bottom;
 
@@ -106,12 +106,30 @@ function updateHeatmapChart(data) {
         .style("font-size", 15)
         .call(d3.axisLeft(y).tickSize(0))
         .select(".domain").remove()
+      
+        const palettes = {
+          1: ['#0061ff', '#60efff'],
+          2: ['#40c9ff', '#e81cff'],
+          3: ['#ff930f', '#fff95b'],
+          4: ['#696eff', '#f8acff'],
+          5: ['#006e90', '#f18f01'],
+          6: ['#0a2463', '#fb3640'],
+          7: ['#57ebde', '#aefb2a'],
+          8: ['#ef798a', '#f7a9a8'],
+          9: ['#00ffff', '#8000ff'],
+          10: ['#ffc7f8', '#6bf8fa'],
+        };
+      
+        // choose a random color palette for the nodes 
+        const palette = palettes[Math.floor(Math.random() * 10) + 1];
+        // palette is an array of hex colors, pick one at random
+        const hexColor = palette[Math.floor(Math.random() * palette.length)];
     
       // Build color scale
         var maxValue = d3.max(data, function(d) { return +d.value; })
         var myColor = d3.scaleLog()
         .base(10)
-        .range(["white", "blue"])
+        .range(["white", hexColor])
         .domain([1,maxValue])
         
     
@@ -168,6 +186,21 @@ function updateHeatmapChart(data) {
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
+
+            // X axis label
+    svg.append("text")
+    .attr("x", widthHeatmap / 2)
+    .attr("y", heightHeatmap + marginHeatmap.top -130) // Adjust the position as needed
+    .style("text-anchor", "middle")
+    .text("# Downloads");
+
+// Y axis label
+svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -heightHeatmap/2 + 80)
+    .attr("y", -marginHeatmap.left + 20) // Adjust the position as needed
+    .style("text-anchor", "middle")
+    .text("Rating");
 
 }
 

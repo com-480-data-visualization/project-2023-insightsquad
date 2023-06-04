@@ -120,7 +120,7 @@ const palettes_donut = {
     17: ['#643100', '#763a00', '#7f3e00', '#914600', '#af5500', '#b96619', '#c27731', '#cb8849', '#d49961', '#eacaae'],
     };
     // choose a random color palette for the nodes 
-    const palette_donut = palettes_donut[Math.floor(Math.random() * 8) + 1];
+    const palette_donut = palettes_donut[Math.floor(Math.random() * 17) + 1];
     // color palette
     var colorDonut = d3.scaleOrdinal()
     .domain(data.columns.slice(1))
