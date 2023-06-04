@@ -456,6 +456,14 @@ section {
     text-decoration: none;
 }
 
+p.clickable {
+    background-color: #121212;
+    color: white;
+}
+p.clickable:hover {
+    color: #2072F3;
+}
+
 .promo-item {
     height: 200px;
     line-height: 180px;

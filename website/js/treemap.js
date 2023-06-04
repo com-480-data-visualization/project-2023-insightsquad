@@ -302,24 +302,24 @@ function initializeTreemap() {
     case 1:
       d3.csv(androidDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(androidTopAppsPath, function(data) {
-          updateCategoryInfoOverall(data, sliderValueTreemap)
-        })
+      })
+      d3.csv(androidTopAppsPath, function(data) {
+        updateCategoryInfoOverall(data, sliderValueTreemap)
       })
       break
     case 2:
       d3.csv(appleDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(appleTopAppsPath, function(data) {
-          updateCategoryInfoOverall(data, sliderValueTreemap)
-        })
+      })
+      d3.csv(appleTopAppsPath, function(data) {
+        updateCategoryInfoOverall(data, sliderValueTreemap)
       })
     case 3:
       d3.csv(editorsChoiceDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
-        d3.csv(editorsChoiceTopAppsPath, function(data) {
-          updateCategoryInfoOverall(data, sliderValueTreemap)
-        })
+      })
+      d3.csv(editorsChoiceTopAppsPath, function(data) {
+        updateCategoryInfoOverall(data, sliderValueTreemap)
       })
       break
   }
@@ -331,7 +331,7 @@ function updateCategoryInfoOverall(data, sliderValueTreemap) {
   topAppsOverall = "<h3>Top apps</h3>"
 
   data.forEach(function(app, index) {
-    topAppsOverall += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
+    topAppsOverall += "<a href='#'><p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
   })
 
   d3.select("#category-info")
@@ -382,24 +382,25 @@ function updateCategoryInfo(dataType, categoryName) {
   var topAppsHtml = "<h3>Top apps in " + categoryName + "<br>(" + unitsOfMeasurementMap[dataType] + ")</h3>"
 
   topApps.forEach(function(app, index) {
-    topAppsHtml += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
+    topAppsHtml += "<a href='#'><p class='clickable'>" + (index + 1) + ". " + app.App_Name + "</p></a>"
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
   
-  var specificAppHtml = 
-    "<p> App name: " + topApps[0].App_Name + "</p>" + 
-    "<p> Content rating: " + topApps[0].Content_Rating + "</p>" +
-    "<p> App is free: " + topApps[0].Free + "</p>"
-  switch (dataType) {
-      case 1:
-      case 3:
-        specificAppHtml += "<p> Installs: " + topApps[0].Maximum_Installs + "</p>"
-        break
-      case 2:
-        specificAppHtml += "<p> Reviews: " + topApps[0].Reviews + "</p>"
-        break
-    }
+  // var specificAppHtml = 
+  //   "<p> App name: " + topApps[0].App_Name + "</p>" + 
+  //   "<p> Content rating: " + topApps[0].Content_Rating + "</p>" +
+  //   "<p> App is free: " + topApps[0].Free + "</p>"
+  // switch (dataType) {
+  //     case 1:
+  //     case 3:
+  //       specificAppHtml += "<p> Installs: " + topApps[0].Maximum_Installs + "</p>"
+  //       break
+  //     case 2:
+  //       specificAppHtml += "<p> Reviews: " + topApps[0].Reviews + "</p>"
+  //       break
+  //   }
+  var specificAppHtml = "<a href='#'><p>Click me!</p></a>"
   d3.select("#specific-app-info")
     .html(specificAppHtml)
 }
