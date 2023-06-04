@@ -93,6 +93,11 @@ editorsChoiceCategories.forEach(function(category) {
 })
 
 function updateTreemapOnSliderChange() {
+  d3.select("#specific-app-info")
+    .transition()
+    .duration(500)
+    .style("opacity", "0")
+
   var sliderValueTreemap = parseInt(sliderTreemap.node().value)
 
   switch (sliderValueTreemap) {
@@ -407,4 +412,5 @@ function setSpecifiedAppHtml(appData, dataType) {
   }
   d3.select("#specific-app-info")
     .html(specificAppHtml)
+    .transition().duration(500).style("opacity", 1)
 }
