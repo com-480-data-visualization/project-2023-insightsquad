@@ -107,13 +107,29 @@ function updateHeatmapChart(data) {
         .call(d3.axisLeft(y).tickSize(0))
         .select(".domain").remove()
       
-
+        const palettes = {
+          1: ['#0061ff', '#60efff'],
+          2: ['#40c9ff', '#e81cff'],
+          3: ['#ff930f', '#fff95b'],
+          4: ['#696eff', '#f8acff'],
+          5: ['#006e90', '#f18f01'],
+          6: ['#0a2463', '#fb3640'],
+          7: ['#57ebde', '#aefb2a'],
+          8: ['#ef798a', '#f7a9a8'],
+          9: ['#00ffff', '#8000ff'],
+          10: ['#ffc7f8', '#6bf8fa'],
+        };
+      
+        // choose a random color palette for the nodes 
+        const palette = palettes[Math.floor(Math.random() * 10) + 1];
+        // palette is an array of hex colors, pick one at random
+        const hexColor = palette[Math.floor(Math.random() * palette.length)];
     
       // Build color scale
         var maxValue = d3.max(data, function(d) { return +d.value; })
         var myColor = d3.scaleLog()
         .base(10)
-        .range(["white", "blue"])
+        .range(["white", hexColor])
         .domain([1,maxValue])
         
     
