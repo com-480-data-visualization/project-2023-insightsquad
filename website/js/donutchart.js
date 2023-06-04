@@ -99,9 +99,33 @@ function updateCategoryOptions() {
 sliderDonut.on("input", updateCategoryOptions)
 
 function updateDonutChart(data) {
-var colorDonut = d3.scaleOrdinal()
+    
+const palettes_donut = {
+    1: ['#007f5f', '#2b9348', '#55a630', '#80b918', '#aacc00', '#bfd200', '#d4d700', '#dddf00', '#eeef20', '#ffff3f'],
+    2: ['#7400b8', '#6930c3', '#5e60ce', '#5390d9', '#4ea8de', '#48bfe3', '#56cfe1', '#64dfdf', '#72efdd', '#80ffdb'],
+    3: ['#012a4a', '#013a63', '#01497c', '#014f86', '#2a6f97', '#2c7da0', '#468faf', '#61a5c2', '#89c2d9', '#a9d6e5'],
+    4: ['#ff7b00', '#ff8800', '#ff9500', '#ffa200', '#ffaa00', '#ffb700', '#ffc300', '#ffd000', '#ffdd00', '#ffea00'],
+    5: ['#033270', '#1368aa', '#4091c9', '#9dcee2', '#fedfd4', '#f29479', '#f26a4f', '#ef3c2d', '#cb1b16', '#65010c'],
+    6: ['#b76935', '#a56336', '#935e38', '#815839', '#6f523b', '#5c4d3c', '#4a473e', '#38413f', '#263c41', '#143642'],
+    7: ['#eb5e28', '#f27f34', '#f9a03f', '#f6b049', '#f3c053', '#a1c349', '#94b33d', '#87a330', '#799431', '#6a8532'],
+    8: ['#264653', '#287271', '#2a9d8f', '#8ab17d', '#babb74', '#e9c46a', '#efb366', '#f4a261', '#ee8959', '#e76f51'],
+    9: ['#0c3e5e', '#155b87', '#2d92d1', '#74bbe8', '#97d1f4', '#0c5e50', '#158774', '#2ed1b5', '#74e8d4', '#97f4e5'],
+    10: ['#00193a', '#002b53', '#023f73', '#034780', '#7a0213', '#a10220', '#bf0a26', '#cd0c2b', '#131313', '#262626'],
+    11: ['#ff0072', '#ff177f', '#ff2e8c', '#ff4598', '#ff5ca5', '#ff74b2', '#ff8bbf', '#ffa2cb', '#ffb9d8', '#ffd0e5'],
+    12: ['#8ecae6', '#219ebc', '#126782', '#023047', '#ffb703', '#fd9e02', '#fb8500', '#bb3e03', '#ae2012', '#9b2226'],
+    13: ['#70b8ff', '#429bfa', '#147df5', '#095dd7', '#0000ff', '#0000b8', '#00008f', '#000079', '#000052', '#00003d'],
+    14: ['#f72585', '#b5179e', '#7209b7', '#560bad', '#480ca8', '#3a0ca3', '#159f91', '#1bccba', '#1ee3cf', '#92f2e8'],
+    15: ['#f2636a', '#dc4b4f', '#c63333', '#e94900', '#ef6803', '#f58606', '#c1b225', '#72a85f', '#229e99', '#36a7a2'],
+    16: ['#5c0000', '#751717', '#ba0c0c', '#ff0000', '#ffebeb', '#ecffeb', '#27a300', '#2a850e', '#2d661b', '#005c00'],
+    17: ['#643100', '#763a00', '#7f3e00', '#914600', '#af5500', '#b96619', '#c27731', '#cb8849', '#d49961', '#eacaae'],
+    };
+    // choose a random color palette for the nodes 
+    const palette_donut = palettes_donut[Math.floor(Math.random() * 8) + 1];
+    // color palette
+    var colorDonut = d3.scaleOrdinal()
     .domain(data.columns.slice(1))
-    .range(colorRangeDonut);
+    .range(palette_donut);
+    
 
 // remove the previous svg if it exists
 d3.select("#donutchart").selectAll("svg").remove();
