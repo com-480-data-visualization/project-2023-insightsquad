@@ -41,7 +41,6 @@ const categories = {
       .then(response => response.text())
       .then(csvData => {
         const dataTable = new google.visualization.DataTable();
-        console.log(csvData);
         
         // Split the CSV data into rows
         const rows = csvData.trim().split('\n');
