@@ -2,7 +2,7 @@
 var marginTreemap = {top: 50, right: 30, bottom: 0, left: 0},
   marginTreemapLabel = 10,
   widthTreemap = document.getElementsByClassName("column-left-75")[0].offsetWidth,
-  heightTreemap = 900,
+  heightTreemap = 800,
   tile = d3.treemapResquarify,
   fontSizeTreemap = "20px",
   colorsAndroid = d3.scaleOrdinal()
@@ -192,7 +192,7 @@ function updateTreemap(data, dataType) {
         tooltip.style("visibility", "visible")
       })
       .on("mousemove", function() {
-        tooltip.style("top", (d3.event.pageY+10)+"px").style("left",(d3.event.pageX+10)+"px")
+        tooltip.style("top", (d3.event.pageY-100)+"px").style("left",(d3.event.pageX+15)+"px")
       })
       .on("mouseout", function() {
         tooltip.style("visibility", "hidden")
