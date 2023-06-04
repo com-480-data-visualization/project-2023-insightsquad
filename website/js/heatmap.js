@@ -108,20 +108,16 @@ function updateHeatmapChart(data) {
         .select(".domain").remove()
       
         const palettes = {
-          1: ['#0061ff', '#60efff'],
-          2: ['#40c9ff', '#e81cff'],
-          3: ['#ff930f', '#fff95b'],
-          4: ['#696eff', '#f8acff'],
-          5: ['#006e90', '#f18f01'],
-          6: ['#0a2463', '#fb3640'],
-          7: ['#57ebde', '#aefb2a'],
-          8: ['#ef798a', '#f7a9a8'],
-          9: ['#00ffff', '#8000ff'],
-          10: ['#ffc7f8', '#6bf8fa'],
+          1: ['#ff0f7b', '#0061ff'],
+          2: ['#42047e', '#103783'],
+          3: ['#ff5400', '#d62828'],
+          4: ['#1dbde6', '#001a70'],
+          5: ['#ff4000', '#f18805'],
+          6: ['#008751', '#b0db43'],
         };
       
         // choose a random color palette for the nodes 
-        const palette = palettes[Math.floor(Math.random() * 10) + 1];
+        const palette = palettes[Math.floor(Math.random() * 6) + 1];
         // palette is an array of hex colors, pick one at random
         const hexColor = palette[Math.floor(Math.random() * palette.length)];
     
