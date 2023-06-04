@@ -104,10 +104,13 @@
         <section id="plot1" class="intro"> 
             <div class="container"> 
                 <div class="row"> 
-                    <h1 class="section-heading">Sankey Diagram</h1> 
+                    <h1 class="section-heading">Paths to success</h1> 
                     <div class="col-12 column-full text-justify"> 
-                        <p class="chart-description text-justify">Sometimes it is cool to have an overview of a category, that let you know how many applications have less than 1,000 downloads, 
-          if they are free or not and whether they have ads and/or in-app purchases.</p> 
+                        <p class="chart-description text-justify"> When you're building an app, there are so many choices to make. It can be overwhelming! But don't worry, we've got you covered.
+
+                            If you're wondering what factors contribute to app success, we've got a cool visualization tool for you. Just pick a category that interests you, and we'll show you the inside scoop. Oh, and don't forget to check out the Editor's Choice section to see what the top-notch app recommended from Google Play's experts have done.
+                            
+                            With our visualization, you can navigate the app world with confidence. No more guesswork, just data-driven insights to help you make the right decisions.</p> 
                         <p class="chart-description"><b>Hover one of the link</b> to display from and to which label we are going, and how many applications are concerned.
             Use the <b>slider</b> to change between datasets and the <b>drop down menu</b> to change the category.</p> 
                         <p class="chart-description"><em>IAP: In-App Purchases</em></p> 
@@ -141,10 +144,14 @@
         <section id="plot2" class="content"> 
             <div class="container container-streamgraph"> 
                 <div class="row"> 
-                    <h1 class="section-heading">Number of apps created each year</h1> 
+                    <h1 class="section-heading">Follow the trends</h1> 
                     <div class="column-full" style="text-align: justify;"> 
-                        <p class="chart-description">Each year, lots of applications are born but it is not necessarily uniform across all categories and age rating. 
-          We focused our attention to the 10 biggest categories otherwise the smaller ones would be crushed and we would not see anything.</p> 
+                        <p class="chart-description">Thinking about building your dream app? Wondering if it's the perfect time to bring your idea to life? 
+
+                            With this visualization, you can explore past trends and see how the app market has evolved over the years. It's like having a time machine for app trends! You can dive into the changes in the top 10 categories and age ratings and spot the winning trends that can skyrocket your app's success.
+                            
+                            So, why wait? Let's take a journey through time and find the perfect wave to ride for your app idea!
+                        </p> 
                         <p class="chart-description"><b>Hover one of the area</b> to display the name of the correspond category or age rating on the top left of the chart. 
           Use the first <b>slider</b> to change between datasets and the second one to change the way we split applications.</p> 
                     </div>                     
@@ -178,8 +185,8 @@
         <section id="plot3" class="content content-2"> 
             <div class="container-treemap"> 
                 <div class="row"> 
-                    <h1 class="section-heading">How many apps in each category?</h1> 
-                    <p class="chart-description">You ever wondered which category was the biggest in terms of applications? Wonder no more as this visualization was made for you. 
+                    <h1 class="section-heading">Size matters</h1> 
+                    <p class="chart-description"> Have you ever wondered which category is the biggest in terms of overall applications? Are you choosing the correct niche market to create your app? Which ones are the most downloaded apps of a certain category and which details distinguish  them?  Wonder no more as this visualization was made for you. 
         With a glimpse of an eye, you henceforth know it.</p> 
                     <p class="chart-description">Each tile size represents the proportion of applications in the category, <b>click on a tile</b> to display the 10 most downloaded/reviewed 
         applications for that specific category. <br><b>Hover a tile</b> to display its name, the number of applications and the percentage it represents.
@@ -207,9 +214,11 @@
         <section id="plot4" class="content"> 
             <div class="container-more-results"> 
                 <div class="row"> 
-                    <h1 class="section-heading">More results</h1> 
+                    <h1 class="section-heading">But also details count</h1> 
                     <div class="column column-left-45 box-donut"> 
-                        <p class="chart-description">With the huge number of applications, can we find a pattern in the naming convention?  <br>The chart showcases the 10 most used words overall or by category.</p>
+                        <p class="chart-description"> Choosing the right genre is not enough: unleash the hidden world within a category! Uncover intriguing patterns in the naming conventions of its apps, 
+                            and discover the most common topics and functionalities people want. 
+                              <br>The chart showcases the 10 most used words overall or by category.</p>
                         <p class="chart-description">Simply chose one category in the <b>drop down menu</b> above. <br>You can also change between datasets with the <b>slider</b></p>
                         <div id="slider-container-donut"> 
                             <label for="slider-donut">Select Data:</label>                             
@@ -230,7 +239,7 @@
                         <script src="js/donutchart.js"></script>                         
                     </div>                     
                     <div class="column column-right-55 box-heatmap"> 
-                        <p class="chart-description">Heatmap of the number of apps in each category and rating. Unfortunately, we don't have the data for the Apple dataset.</p> 
+                        <p class="chart-description">Is there a strict correlation between the rating of an app and its success in terms of downloads? Find it out in this heatmap. Unfortunately, Apple marketplace does not provide this information publicly, so the data will focus on Android apps only.</p> 
                         <p class="chart-description"><b>Hover the cell</b> to display the number of applications there is for that category and rating. <br> 
           Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>.</p> 
                         <div id="heatmap"></div>                         
@@ -255,9 +264,9 @@
                         </div>                         
                         <div class="column column-right-55"> 
                             <p class="chart-description">We had a preview of applications that contained a mean of remuneration, be it in-app purchases or ads, in the Sankey diagram. 
-            But here we focus solely on that information! Unfortunately, we don't have the data for the Apple dataset.</p> 
+            But here we focus solely on that information! Unfortunately, Apple marketplace does not provide this information publicly, so the data will focus on Android apps only.</p> 
                             <p class="chart-description"><b>Hover the area</b> of the bar you are interested in to display the number of applications it contains.
-            Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>. Use the <b>second slider</b> to change whether you want to look for all the applications or for the top 10/100/1000.</p> 
+            Select a category with the <b>drop down menu</b> and change between datasets with the <b>slider</b>. Use the <b>second slider</b> to change whether you want to look for all the applications or for the top 10/100/1000 in terms of downloads.</p> 
                             <p class="chart-description"><em>IAP: In-App Purchases</em></p> 
                         </div>                         
                     </div>                     
