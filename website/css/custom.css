@@ -203,8 +203,8 @@ footer {
 
 .column {
     float: left;
-    width: 100%;
-    margin-bottom: 90px;
+    width: 50%;
+    padding: 10px;
 }
 
 .column-left-75 {
