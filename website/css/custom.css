@@ -209,7 +209,7 @@ footer {
 .column-full {
     float: left;
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
 
@@ -230,10 +230,12 @@ footer {
 
 .column-left-45 {
     width: 45%;
+    padding-right: 1%;
 }
 
 .column-right-55 {
     width: 55%;
+    padding-left: 1%;
 }
 
 .container {
