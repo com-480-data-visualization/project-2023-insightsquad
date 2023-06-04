@@ -153,7 +153,7 @@ Here is our website: [App Data Visualization](https://com-480-data-visualization
 
 You can read the process book [here](https://github.com/com-480-data-visualization/project-2023-insightsquad/blob/master/Process%20Book.pdf)
 
-The screencast of our website is accessible [here]()
+The screencast of our website is accessible [here](https://drive.google.com/file/d/1TklwnKdvZ8M-itjKdlLYV5mVrG0qgubE/view?usp=sharing)
 
 
 ## Late policy
