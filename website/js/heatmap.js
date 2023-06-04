@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 40},
+var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 60},
   widthHeatmap = 850 - marginHeatmap.left - marginHeatmap.right,
   heightHeatmap = 800 - marginHeatmap.top - marginHeatmap.bottom;
 
@@ -106,6 +106,8 @@ function updateHeatmapChart(data) {
         .style("font-size", 15)
         .call(d3.axisLeft(y).tickSize(0))
         .select(".domain").remove()
+      
+
     
       // Build color scale
         var maxValue = d3.max(data, function(d) { return +d.value; })
@@ -168,6 +170,21 @@ function updateHeatmapChart(data) {
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
+
+            // X axis label
+    svg.append("text")
+    .attr("x", widthHeatmap / 2)
+    .attr("y", heightHeatmap + marginHeatmap.top -130) // Adjust the position as needed
+    .style("text-anchor", "middle")
+    .text("# Downloads");
+
+// Y axis label
+svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -heightHeatmap/2 + 80)
+    .attr("y", -marginHeatmap.left + 20) // Adjust the position as needed
+    .style("text-anchor", "middle")
+    .text("Rating");
 
 }
 
