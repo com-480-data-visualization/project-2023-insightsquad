@@ -88,8 +88,8 @@ function buildStreamgraph(data, dataRadius) {
   // X axis labels
   svgStreamgraph.append("text")
       .attr("text-anchor", "end")
-      .attr("x", width)
-      .attr("y", height-10)
+      .attr("x", width-30)
+      .attr("y", height-30)
       .text("Time (year)");
 
   // Y axis

@@ -314,6 +314,7 @@ function initializeTreemap() {
           updateCategoryInfoOverall(data, sliderValueTreemap)
         })
       })
+      break
     case 3:
       d3.csv(editorsChoiceDataPathTreemap, function(data) {
         updateTreemap(data, sliderValueTreemap)
@@ -331,23 +332,23 @@ function updateCategoryInfoOverall(data, sliderValueTreemap) {
   topAppsOverall = "<h3>Top apps</h3>"
 
   data.forEach(function(app, index) {
-    topAppsOverall += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
+    topAppsOverall += "<p class='chart-description'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p>"
   })
 
   d3.select("#category-info")
     .html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
     
   var specificAppHtml = 
-    "<p> App name: " + data[0].App_Name + "</p>" + 
-    "<p> Content rating: " + data[0].Content_Rating + "</p>" +
-    "<p> App is free: " + data[0].Free + "</p>"
+    "<p class='chart-description'><strong> App name:</strong> " + data[0].App_Name + "</p>" + 
+    "<p class='chart-description'><strong> Content rating:</strong> " + data[0].Content_Rating + "</p>" +
+    "<p class='chart-description'><strong> App is free:</strong> " + data[0].Free + "</p>"
   switch (sliderValueTreemap) {
     case 1:
     case 3:
-      specificAppHtml += "<p> Installs: " + data[0].Maximum_Installs + "</p>"
+      specificAppHtml += "<p class='chart-description'><strong> Installs:</strong> " + data[0].Maximum_Installs + "</p>"
       break
     case 2:
-      specificAppHtml += "<p> Reviews: " + data[0].Reviews + "</p>"
+      specificAppHtml += "<p class='chart-description'><strong> Reviews:</strong> " + data[0].Reviews + "</p>"
       break
   }
   d3.select("#specific-app-info")
@@ -382,24 +383,24 @@ function updateCategoryInfo(dataType, categoryName) {
   var topAppsHtml = "<h3>Top apps in " + categoryName + "<br>(" + unitsOfMeasurementMap[dataType] + ")</h3>"
 
   topApps.forEach(function(app, index) {
-    topAppsHtml += "<p>" + (index + 1) + ". " + app.App_Name + "</p>"
+    topAppsHtml += "<p class='chart-description'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p>"
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
   
   var specificAppHtml = 
-    "<p> App name: " + topApps[0].App_Name + "</p>" + 
-    "<p> Content rating: " + topApps[0].Content_Rating + "</p>" +
-    "<p> App is free: " + topApps[0].Free + "</p>"
+    "<p class='chart-description'><strong>App Name:</strong> " + topApps[0].App_Name + "</p>" + 
+    "<p class='chart-description'><strong>Content Rating:</strong> " + topApps[0].Content_Rating + "</p>" +
+    "<p class='chart-description'><strong>App is Free:</strong> " + topApps[0].Free + "</p>"
   switch (dataType) {
       case 1:
       case 3:
-        specificAppHtml += "<p> Installs: " + topApps[0].Maximum_Installs + "</p>"
+        specificAppHtml += "<p class='chart-description'><strong>Installs:</strong> " + topApps[0].Maximum_Installs + "</p>"
         break
       case 2:
-        specificAppHtml += "<p> Reviews: " + topApps[0].Reviews + "</p>"
+        specificAppHtml += "<p class='chart-description'><strong>Reviews:</strong> " + topApps[0].Reviews + "</p>"
         break
-    }
+  }
   d3.select("#specific-app-info")
     .html(specificAppHtml)
 }
