@@ -35,6 +35,10 @@ var androidCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Ent
 var appleCategories = ['Games', 'Business', 'Education', 'Utilities', 'Lifestyle', 'Food & Drink', 'Health & Fitness', 'Productivity', 'Entertainment', 'Shopping', 'Finance', 'Travel', 'Sports', 'Music', 'Medical', 'Photo & Video', 'Social Networking', 'News', 'Reference', 'Navigation', 'Stickers', 'Book', 'Weather', 'Graphics & Design', 'Developer Tools', 'Magazines & Newspapers'];
 var editorsChoiceCategories = ['Education', 'Music & Audio', 'Tools', 'Business', 'Entertainment', 'Lifestyle', 'Books & Reference', 'Health & Fitness', 'Productivity', 'Shopping', 'Food & Drink', 'Travel & Local', 'Finance', 'Arcade', 'Puzzle', 'Casual', 'Communication', 'Sports', 'Social', 'News & Magazines', 'Photography', 'Medical', 'Action', 'Maps & Navigation', 'Simulation', 'Adventure', 'Educational', 'Art & Design', 'Auto & Vehicles', 'House & Home', 'Video Players & Editors', 'Events', 'Trivia', 'Beauty', 'Board', 'Racing', 'Role Playing', 'Word', 'Strategy', 'Card', 'Weather', 'Dating', 'Music', 'Parenting', 'Comics'];
 
+// var appleCategories = ['education', 'book', 'reference', 'news', 'lifestyle', 'health_fitness', 'games', 'medical', 'food_drink', 'sports', 'shopping', 'entertainment', 'utilities', 'stickers', 'productivity', 'music', 'photo_video', 'travel', 'business', 'social_networking', 'magazines_newspapers', 'navigation', 'finance', 'weather', 'graphics_design', 'developer_tools']
+// var androidCategories = ['adventure', 'tools', 'productivity', 'communication', 'social', 'libraries_demo', 'lifestyle', 'personalization', 'racing', 'maps_navigation', 'travel_local', 'food_drink', 'books_reference', 'medical', 'puzzle', 'entertainment', 'arcade', 'auto_vehicles', 'photography', 'health_fitness', 'education', 'shopping', 'board', 'music_audio', 'sports', 'beauty', 'business', 'educational', 'finance', 'news_magazines', 'casual', 'art_design', 'house_home', 'card', 'events', 'trivia', 'weather', 'strategy', 'word', 'video_players_editors', 'action', 'simulation', 'music', 'dating', 'role_playing', 'casino', 'comics', 'parenting']
+// var editorsChoiceCategories = ['health_fitness', 'strategy', 'adventure', 'word', 'education', 'puzzle', 'simulation', 'entertainment', 'role_playing', 'video_players_editors', 'action', 'travel_local', 'shopping', 'lifestyle', 'casual', 'racing', 'sports', 'books_reference', 'music_audio', 'photography', 'business', 'arcade', 'card', 'medical', 'music', 'food_drink', 'social', 'communication', 'art_design', 'productivity', 'news_magazines', 'finance', 'dating', 'weather', 'parenting', 'board', 'educational', 'events', 'maps_navigation', 'comics', 'house_home', 'beauty', 'auto_vehicles', 'tools', 'trivia']
+
 var sliderTreemap = d3.select("#slider-treemap")
 
 // Read data
@@ -74,6 +78,9 @@ androidCategories.forEach(function(category) {
     categoryFormatted = category.replace(/ /g, '').replace(/&/g, '')
     window["androidTopApps" + categoryFormatted] = data
   })
+  // d3.csv(pathTreemap + "ps_top_apps_" + category + ".csv", function(data) {
+  //   window["androidTopApps" + category] = data
+  // })
 })
 
 appleCategories.forEach(function(category) {
@@ -333,7 +340,10 @@ function updateCategoryInfoOverall(data) {
     topAppsOverall += "<p>" + (index + 1) + ". " + app.name + "</p>"
   })
 
-  d3.select("#category-info").html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+  d3.select("#category-info")
+    .html(topAppsOverall).style("opacity", 0).transition().duration(500).style("opacity", 1)
+  d3.select("#specific-app-info")
+    .html(data[0].name)
 }
 
 /** 
@@ -367,4 +377,6 @@ function updateCategoryInfo(dataType, categoryName) {
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
+  d3.select("#specific-app-info")
+    .html(topApps[0].name)
 }
