@@ -27,6 +27,11 @@ p {
     line-height: 1.5;
 }
 
+p.clickable:hover {
+    color: #2072F3;
+    cursor: pointer;
+}
+
 b {
     font-weight: 600;
     color: #2072F3;
@@ -489,10 +494,6 @@ section {
     color: white;
     text-shadow: 0px 0px 40px black;
     text-decoration: none;
-}
-
-p.clickable:hover {
-    color: #2072F3;
 }
 
 .promo-item {

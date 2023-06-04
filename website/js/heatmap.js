@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var marginHeatmap = {top: 20, right: 25, bottom: 30, left: 40},
-  widthHeatmap = 800 - marginHeatmap.left - marginHeatmap.right,
-  heightHeatmap = 450 - marginHeatmap.top - marginHeatmap.bottom;
+  widthHeatmap = 850 - marginHeatmap.left - marginHeatmap.right,
+  heightHeatmap = 800 - marginHeatmap.top - marginHeatmap.bottom;
 
 
 // set the color scale
@@ -73,8 +73,8 @@ function updateHeatmapChart(data) {
     d3.select("#heatmap").selectAll("svg").remove();
     var svg = d3.select("#heatmap")
     .append("svg")
-      .attr("width", width + marginHeatmap.left + marginHeatmap.right)
-      .attr("height", height + marginHeatmap.top + marginHeatmap.bottom)
+      .attr("width", widthHeatmap + marginHeatmap.left + marginHeatmap.right)
+      .attr("height", heightHeatmap + marginHeatmap.top + marginHeatmap.bottom)
     .append("g")
       .attr("transform",
             "translate(" + marginHeatmap.left + "," + marginHeatmap.top + ")");
@@ -88,7 +88,7 @@ function updateHeatmapChart(data) {
     
       // Build X scales and axis:
       var x = d3.scaleBand()
-        .range([ 0, width ])
+        .range([ 0, widthHeatmap ])
         .domain(myGroups)
         .padding(0.05);
       svg.append("g")

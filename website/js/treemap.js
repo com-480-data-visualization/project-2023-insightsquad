@@ -1,5 +1,6 @@
 // set the dimensions and margins of the graph
-var marginTreemap = {top: 50, right: 50, bottom: 0, left: 0},
+var marginTreemap = {top: 50, right: 30, bottom: 0, left: 0},
+  marginTreemapLabel = 10,
   widthTreemap = document.getElementsByClassName("column-left-75")[0].offsetWidth,
   heightTreemap = 900,
   tile = d3.treemapResquarify,
@@ -211,27 +212,27 @@ function updateTreemap(data, dataType) {
   textLabels
     .enter()
     .append("text")
-      .attr("x", function(d){ return d.x0 + 10})    // +8 to adjust position (more right)
+      .attr("x", function(d){ return d.x0 + 10})    // +10 to adjust position (more right)
       .attr("y", function(d){ return d.y0 + 25})    // +20 to adjust position (lower)
       .attr("opacity", 0)
       .transition()
       .duration(500)
       .attr("opacity", 1)
-      .attr("x", function(d){ return d.x0 + 10})    // +8 to adjust position (more right)
+      .attr("x", function(d){ return d.x0 + 10})    // +10 to adjust position (more right)
       .attr("y", function(d){ return d.y0 + 25})    // +20 to adjust position (lower)
       .text(function(d){ 
         var name = d.data.name
         var widthTemp = d.x1 - d.x0
         var heightTemp = d.y1 - d.y0
-        var textWidth = getTextWidth(name, fontSizeTreemap) + marginTreemap.right
-        var textHeight = parseInt(fontSizeTreemap.substring(0, 2)) + 12
+        var textWidth = getTextWidth(name, fontSizeTreemap) + 2 * marginTreemapLabel
+        var textHeight = parseInt(fontSizeTreemap.substring(0, 2)) + marginTreemapLabel
         var truncatedName = name
 
         if (textWidth > widthTemp) {
-          var substringLength = findMaxSubstringLength(name, widthTemp - marginTreemap.right, fontSizeTreemap)
+          var substringLength = findMaxSubstringLength(name, widthTemp - marginTreemapLabel, fontSizeTreemap)
 
           if (substringLength > 1) {
-            truncatedName = name.substring(0, findMaxSubstringLength(name, widthTemp - marginTreemap.right, fontSizeTreemap)) + "..."
+            truncatedName = name.substring(0, findMaxSubstringLength(name, widthTemp - marginTreemapLabel, fontSizeTreemap)) + "..."
           }
           else {
             truncatedName = ""
@@ -260,7 +261,7 @@ function findMaxSubstringLength(text, desiredWidth, fontSize) {
   while (low <= high) {
     var mid = Math.floor((low + high) / 2);
     var substr = text.substr(0, mid + 1);
-    var width = getTextWidth(substr, fontSize) + marginTreemap.right + marginTreemap.left;
+    var width = getTextWidth(substr, fontSize) + 2 * marginTreemapLabel;
 
     if (width <= desiredWidth) {
       maxSubstrLength = mid + 1;
