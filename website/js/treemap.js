@@ -334,7 +334,7 @@ function updateCategoryInfoOverall(data, sliderValueTreemap) {
 
   data.forEach(function(app, index) {
     topAppsHtml += "<a id='category_app_" + index + "'>" 
-    topAppsHtml += "<p class='clickable'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p></a>"
+    topAppsHtml += "<p class='clickable chart-description'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p></a>"
   })
 
   d3.select("#category-info")
@@ -378,7 +378,7 @@ function updateCategoryInfo(dataType, categoryName) {
 
   topApps.forEach(function(app, index) {
     topAppsHtml += "<a id='category_app_" + index + "'>" 
-    topAppsHtml += "<p class='clickable'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p></a>"
+    topAppsHtml += "<p class='clickable chart-description'><strong>" + (index + 1) + ".</strong> " + app.App_Name + "</p></a>"
   })
   d3.select("#category-info")
     .html(topAppsHtml).style("opacity", 0).transition().duration(500).style("opacity", 1)
