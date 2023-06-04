@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var marginTreemap = {top: 10, right: 10, bottom: 10, left: 10},
+var marginTreemap = {top: 50, right: 50, bottom: 0, left: 0},
   widthTreemap = document.getElementsByClassName("column-left-75")[0].offsetWidth,
   heightTreemap = 900,
   tile = d3.treemapResquarify,
