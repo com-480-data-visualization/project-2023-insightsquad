@@ -149,6 +149,12 @@ Scikit-learn library  for more complex statistic to be done on the data.
 
 **80% of the final grade**
 
+Here is our website: [App Data Visualization](https://com-480-data-visualization.github.io/project-2023-insightsquad/website/index.html)
+
+You can read the process book [here](https://github.com/com-480-data-visualization/project-2023-insightsquad/blob/master/Process%20Book.pdf)
+
+The screencast of our website is accessible [here]()
+
 
 ## Late policy
 
